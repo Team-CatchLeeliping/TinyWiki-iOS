@@ -4,7 +4,7 @@ Tinydex-iOS Repository
 ## 🍎 Team CatchLeeliPing
 |<a href="https://github.com/etikpalc">@etikpalc</a>|<a href="https://github.com/kyxxgsoo">@kyxxgsoo</a>|
 |--|--|
-|<img width="100" src="https://github.com/user-attachments/assets/f8b1c39f-d816-4e89-bdf0-9b82962b9e16"/>|<img width="100" src="https://github.com/user-attachments/assets/1d69369d-0a2e-4577-b0f6-7c52db13d569"/>|
+|<img width="100" src="https://github.com/user-attachments/assets/b089d228-2d09-43f0-b825-9419b596bc45"/>|<img width="100" src="https://github.com/user-attachments/assets/1d69369d-0a2e-4577-b0f6-7c52db13d569"/>|
 |이수 [Design]|리버 [iOS]|
 
 
