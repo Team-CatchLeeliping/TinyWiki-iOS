@@ -8,12 +8,28 @@
 
 /* Begin PBXBuildFile section */
 		F35841402C99CE190067AC0E /* TinyDexApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F358413F2C99CE190067AC0E /* TinyDexApp.swift */; };
-		F35841422C99CE190067AC0E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35841412C99CE190067AC0E /* ContentView.swift */; };
 		F35841442C99CE1A0067AC0E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F35841432C99CE1A0067AC0E /* Assets.xcassets */; };
 		F35841472C99CE1A0067AC0E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F35841462C99CE1A0067AC0E /* Preview Assets.xcassets */; };
 		F35841512C99CE1A0067AC0E /* TinyDexTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35841502C99CE1A0067AC0E /* TinyDexTests.swift */; };
 		F358415B2C99CE1A0067AC0E /* TinyDexUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F358415A2C99CE1A0067AC0E /* TinyDexUITests.swift */; };
 		F358415D2C99CE1A0067AC0E /* TinyDexUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F358415C2C99CE1A0067AC0E /* TinyDexUITestsLaunchTests.swift */; };
+		F358416D2C99CE4D0067AC0E /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F358416C2C99CE4D0067AC0E /* OnboardingView.swift */; };
+		F35841702C99CE810067AC0E /* Helper+PretendardFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = F358416F2C99CE810067AC0E /* Helper+PretendardFont.swift */; };
+		F35841752C99CEAB0067AC0E /* SystemImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35841742C99CEAB0067AC0E /* SystemImage.swift */; };
+		F35841772C99CECB0067AC0E /* Icons.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F35841762C99CECB0067AC0E /* Icons.xcassets */; };
+		F35841792C99CED30067AC0E /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F35841782C99CED30067AC0E /* Colors.xcassets */; };
+		F35841802C99D0BE0067AC0E /* Hakgyoansim Dunggeunmiso OTF R.otf in Resources */ = {isa = PBXBuildFile; fileRef = F358417C2C99D0BD0067AC0E /* Hakgyoansim Dunggeunmiso OTF R.otf */; };
+		F35841812C99D0BE0067AC0E /* Hakgyoansim Dunggeunmiso TTF R.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F358417D2C99D0BD0067AC0E /* Hakgyoansim Dunggeunmiso TTF R.ttf */; };
+		F35841822C99D0BE0067AC0E /* Hakgyoansim Dunggeunmiso OTF B.otf in Resources */ = {isa = PBXBuildFile; fileRef = F358417E2C99D0BE0067AC0E /* Hakgyoansim Dunggeunmiso OTF B.otf */; };
+		F35841832C99D0BE0067AC0E /* Hakgyoansim Dunggeunmiso TTF B.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F358417F2C99D0BE0067AC0E /* Hakgyoansim Dunggeunmiso TTF B.ttf */; };
+		F35841872C99D5830067AC0E /* Path.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35841862C99D5830067AC0E /* Path.swift */; };
+		F358418A2C99D5CE0067AC0E /* DummyEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35841892C99D5CE0067AC0E /* DummyEntity.swift */; };
+		F358418D2C99D5E00067AC0E /* DummyUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F358418C2C99D5E00067AC0E /* DummyUseCase.swift */; };
+		F35841902C99D5F40067AC0E /* DummyInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = F358418F2C99D5F40067AC0E /* DummyInterface.swift */; };
+		F35841952C99D6200067AC0E /* DummyService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35841942C99D6200067AC0E /* DummyService.swift */; };
+		F35841982C99D63D0067AC0E /* DummyStubService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35841972C99D63D0067AC0E /* DummyStubService.swift */; };
+		F358419B2C99D6560067AC0E /* MockDataBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F358419A2C99D6560067AC0E /* MockDataBuilder.swift */; };
+		F358419E2C99D6690067AC0E /* DummyDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = F358419D2C99D6690067AC0E /* DummyDTO.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +52,6 @@
 /* Begin PBXFileReference section */
 		F358413C2C99CE190067AC0E /* TinyDex.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TinyDex.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F358413F2C99CE190067AC0E /* TinyDexApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TinyDexApp.swift; sourceTree = "<group>"; };
-		F35841412C99CE190067AC0E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		F35841432C99CE1A0067AC0E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F35841462C99CE1A0067AC0E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		F358414C2C99CE1A0067AC0E /* TinyDexTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TinyDexTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,6 +59,24 @@
 		F35841562C99CE1A0067AC0E /* TinyDexUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TinyDexUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F358415A2C99CE1A0067AC0E /* TinyDexUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TinyDexUITests.swift; sourceTree = "<group>"; };
 		F358415C2C99CE1A0067AC0E /* TinyDexUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TinyDexUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		F358416C2C99CE4D0067AC0E /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		F358416F2C99CE810067AC0E /* Helper+PretendardFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Helper+PretendardFont.swift"; sourceTree = "<group>"; };
+		F35841742C99CEAB0067AC0E /* SystemImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemImage.swift; sourceTree = "<group>"; };
+		F35841762C99CECB0067AC0E /* Icons.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Icons.xcassets; sourceTree = "<group>"; };
+		F35841782C99CED30067AC0E /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		F358417C2C99D0BD0067AC0E /* Hakgyoansim Dunggeunmiso OTF R.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Hakgyoansim Dunggeunmiso OTF R.otf"; sourceTree = "<group>"; };
+		F358417D2C99D0BD0067AC0E /* Hakgyoansim Dunggeunmiso TTF R.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Hakgyoansim Dunggeunmiso TTF R.ttf"; sourceTree = "<group>"; };
+		F358417E2C99D0BE0067AC0E /* Hakgyoansim Dunggeunmiso OTF B.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Hakgyoansim Dunggeunmiso OTF B.otf"; sourceTree = "<group>"; };
+		F358417F2C99D0BE0067AC0E /* Hakgyoansim Dunggeunmiso TTF B.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Hakgyoansim Dunggeunmiso TTF B.ttf"; sourceTree = "<group>"; };
+		F35841862C99D5830067AC0E /* Path.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Path.swift; sourceTree = "<group>"; };
+		F35841892C99D5CE0067AC0E /* DummyEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyEntity.swift; sourceTree = "<group>"; };
+		F358418C2C99D5E00067AC0E /* DummyUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyUseCase.swift; sourceTree = "<group>"; };
+		F358418F2C99D5F40067AC0E /* DummyInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyInterface.swift; sourceTree = "<group>"; };
+		F35841942C99D6200067AC0E /* DummyService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyService.swift; sourceTree = "<group>"; };
+		F35841972C99D63D0067AC0E /* DummyStubService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyStubService.swift; sourceTree = "<group>"; };
+		F358419A2C99D6560067AC0E /* MockDataBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDataBuilder.swift; sourceTree = "<group>"; };
+		F358419D2C99D6690067AC0E /* DummyDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyDTO.swift; sourceTree = "<group>"; };
+		F358419F2C99D6BB0067AC0E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,9 +127,12 @@
 		F358413E2C99CE190067AC0E /* TinyDex */ = {
 			isa = PBXGroup;
 			children = (
-				F358413F2C99CE190067AC0E /* TinyDexApp.swift */,
-				F35841412C99CE190067AC0E /* ContentView.swift */,
-				F35841432C99CE1A0067AC0E /* Assets.xcassets */,
+				F358419F2C99D6BB0067AC0E /* Info.plist */,
+				F35841842C99D56E0067AC0E /* Domain */,
+				F35841712C99CE8D0067AC0E /* Resource */,
+				F358416E2C99CE6C0067AC0E /* Helper */,
+				F358416A2C99CE2C0067AC0E /* Presentation */,
+				F35841692C99CE270067AC0E /* App */,
 				F35841452C99CE1A0067AC0E /* Preview Content */,
 			);
 			path = TinyDex;
@@ -125,6 +161,172 @@
 				F358415C2C99CE1A0067AC0E /* TinyDexUITestsLaunchTests.swift */,
 			);
 			path = TinyDexUITests;
+			sourceTree = "<group>";
+		};
+		F35841692C99CE270067AC0E /* App */ = {
+			isa = PBXGroup;
+			children = (
+				F358413F2C99CE190067AC0E /* TinyDexApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		F358416A2C99CE2C0067AC0E /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				F358416B2C99CE320067AC0E /* Onboarding */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		F358416B2C99CE320067AC0E /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				F358416C2C99CE4D0067AC0E /* OnboardingView.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		F358416E2C99CE6C0067AC0E /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				F358416F2C99CE810067AC0E /* Helper+PretendardFont.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		F35841712C99CE8D0067AC0E /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				F358417A2C99D08A0067AC0E /* Fonts */,
+				F35841732C99CEA00067AC0E /* SystemImage */,
+				F35841722C99CE940067AC0E /* Assets */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		F35841722C99CE940067AC0E /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				F35841432C99CE1A0067AC0E /* Assets.xcassets */,
+				F35841762C99CECB0067AC0E /* Icons.xcassets */,
+				F35841782C99CED30067AC0E /* Colors.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		F35841732C99CEA00067AC0E /* SystemImage */ = {
+			isa = PBXGroup;
+			children = (
+				F35841742C99CEAB0067AC0E /* SystemImage.swift */,
+			);
+			path = SystemImage;
+			sourceTree = "<group>";
+		};
+		F358417A2C99D08A0067AC0E /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				F358417B2C99D0930067AC0E /* HakgyoansimDunggeunmiso */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		F358417B2C99D0930067AC0E /* HakgyoansimDunggeunmiso */ = {
+			isa = PBXGroup;
+			children = (
+				F358417E2C99D0BE0067AC0E /* Hakgyoansim Dunggeunmiso OTF B.otf */,
+				F358417C2C99D0BD0067AC0E /* Hakgyoansim Dunggeunmiso OTF R.otf */,
+				F358417F2C99D0BE0067AC0E /* Hakgyoansim Dunggeunmiso TTF B.ttf */,
+				F358417D2C99D0BD0067AC0E /* Hakgyoansim Dunggeunmiso TTF R.ttf */,
+			);
+			path = HakgyoansimDunggeunmiso;
+			sourceTree = "<group>";
+		};
+		F35841842C99D56E0067AC0E /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				F35841912C99D60B0067AC0E /* Constant */,
+				F358418E2C99D5E40067AC0E /* Interface */,
+				F358418B2C99D5D60067AC0E /* UseCase */,
+				F35841882C99D5C30067AC0E /* Entity */,
+				F35841852C99D5710067AC0E /* Path */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		F35841852C99D5710067AC0E /* Path */ = {
+			isa = PBXGroup;
+			children = (
+				F35841862C99D5830067AC0E /* Path.swift */,
+			);
+			path = Path;
+			sourceTree = "<group>";
+		};
+		F35841882C99D5C30067AC0E /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				F35841892C99D5CE0067AC0E /* DummyEntity.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		F358418B2C99D5D60067AC0E /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+				F358418C2C99D5E00067AC0E /* DummyUseCase.swift */,
+			);
+			path = UseCase;
+			sourceTree = "<group>";
+		};
+		F358418E2C99D5E40067AC0E /* Interface */ = {
+			isa = PBXGroup;
+			children = (
+				F358418F2C99D5F40067AC0E /* DummyInterface.swift */,
+			);
+			path = Interface;
+			sourceTree = "<group>";
+		};
+		F35841912C99D60B0067AC0E /* Constant */ = {
+			isa = PBXGroup;
+			children = (
+				F35841922C99D6100067AC0E /* Data */,
+			);
+			path = Constant;
+			sourceTree = "<group>";
+		};
+		F35841922C99D6100067AC0E /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				F358419C2C99D6620067AC0E /* DTO */,
+				F35841962C99D6250067AC0E /* Stub */,
+				F35841932C99D6120067AC0E /* Service */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		F35841932C99D6120067AC0E /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				F35841942C99D6200067AC0E /* DummyService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		F35841962C99D6250067AC0E /* Stub */ = {
+			isa = PBXGroup;
+			children = (
+				F35841972C99D63D0067AC0E /* DummyStubService.swift */,
+				F358419A2C99D6560067AC0E /* MockDataBuilder.swift */,
+			);
+			path = Stub;
+			sourceTree = "<group>";
+		};
+		F358419C2C99D6620067AC0E /* DTO */ = {
+			isa = PBXGroup;
+			children = (
+				F358419D2C99D6690067AC0E /* DummyDTO.swift */,
+			);
+			path = DTO;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,8 +433,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F35841812C99D0BE0067AC0E /* Hakgyoansim Dunggeunmiso TTF R.ttf in Resources */,
 				F35841472C99CE1A0067AC0E /* Preview Assets.xcassets in Resources */,
+				F35841822C99D0BE0067AC0E /* Hakgyoansim Dunggeunmiso OTF B.otf in Resources */,
+				F35841792C99CED30067AC0E /* Colors.xcassets in Resources */,
+				F35841772C99CECB0067AC0E /* Icons.xcassets in Resources */,
 				F35841442C99CE1A0067AC0E /* Assets.xcassets in Resources */,
+				F35841832C99D0BE0067AC0E /* Hakgyoansim Dunggeunmiso TTF B.ttf in Resources */,
+				F35841802C99D0BE0067AC0E /* Hakgyoansim Dunggeunmiso OTF R.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,8 +465,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F35841422C99CE190067AC0E /* ContentView.swift in Sources */,
+				F358419E2C99D6690067AC0E /* DummyDTO.swift in Sources */,
+				F35841982C99D63D0067AC0E /* DummyStubService.swift in Sources */,
+				F358418D2C99D5E00067AC0E /* DummyUseCase.swift in Sources */,
+				F35841752C99CEAB0067AC0E /* SystemImage.swift in Sources */,
+				F358416D2C99CE4D0067AC0E /* OnboardingView.swift in Sources */,
 				F35841402C99CE190067AC0E /* TinyDexApp.swift in Sources */,
+				F35841902C99D5F40067AC0E /* DummyInterface.swift in Sources */,
+				F35841872C99D5830067AC0E /* Path.swift in Sources */,
+				F35841702C99CE810067AC0E /* Helper+PretendardFont.swift in Sources */,
+				F358419B2C99D6560067AC0E /* MockDataBuilder.swift in Sources */,
+				F35841952C99D6200067AC0E /* DummyService.swift in Sources */,
+				F358418A2C99D5CE0067AC0E /* DummyEntity.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -425,6 +643,7 @@
 				DEVELOPMENT_TEAM = U5F437QJA7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TinyDex/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -454,6 +673,7 @@
 				DEVELOPMENT_TEAM = U5F437QJA7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TinyDex/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
