@@ -8,7 +8,7 @@
 import Foundation
 
 enum MainPath: Hashable {
-    
+    case detailView
 }
 
 @Observable

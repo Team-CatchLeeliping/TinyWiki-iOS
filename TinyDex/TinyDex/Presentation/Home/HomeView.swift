@@ -8,16 +8,45 @@
 import SwiftUI
 
 struct HomeView: View {
+    @Environment(PathModel.self) private var pathModel
     @State private var selectedTab: Tab = .menu
+    // TODO: 임시 데이터 추후 수정하기
+    @State var selectedTinyPing: TinyPing = MockDataBuilder.tinyping
+    
+    init() {
+        // 네비게이션 바의 appearance 설정
+        let appearance = UINavigationBarAppearance()
+        appearance.configureWithOpaqueBackground()
+        
+        // 타이틀 텍스트의 폰트 및 색상 설정
+        appearance.titleTextAttributes = [
+            .font: UIFont.Head.head1,  // UIFont 사용
+            .foregroundColor: UIColor.white  // UIColor 사용
+        ]
+        
+        // 네비게이션 바에 appearance 적용
+        UINavigationBar.appearance().standardAppearance = appearance
+    }
+    
     var body: some View {
-        ZStack(alignment: .bottom) {
-            switch selectedTab {
-            case .menu: MenuView()
-            case .heart: HeartView()
+        @Bindable var pathModel = pathModel
+        NavigationStack(path: $pathModel.paths) {
+            ZStack(alignment: .bottom) {
+                switch selectedTab {
+                case .menu: MenuView()
+                case .heart: HeartView()
+                }
+                TabBar(selection: $selectedTab)
             }
-            TabBar(selection: $selectedTab)
+            .edgesIgnoringSafeArea(.bottom)
+            .navigationDestination(for: MainPath.self) { path in
+                switch path {
+                case .detailView: DetailView(tinyPing: selectedTinyPing)
+                        .navigationTitle("♡\(selectedTinyPing.name)♡")
+                }
+            }
         }
-        .edgesIgnoringSafeArea(.bottom)
+        .environment(pathModel)
     }
 }
 
@@ -55,6 +84,7 @@ private struct TabBar: View {
 // MARK: - Preview
 #Preview {
     HomeView()
+        .environment(PathModel())
 }
 
 #Preview {

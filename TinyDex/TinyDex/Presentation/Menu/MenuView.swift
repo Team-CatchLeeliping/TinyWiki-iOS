@@ -81,40 +81,47 @@ private struct TinypingList: View {
 
 // MARK: - 티니핑 리스트 셀
 private struct TinypingCell: View {
+    @Environment(PathModel.self) private var pathModel
     let name: String = "플로라 하츄핑"
     let image: ImageResource = .imgHeartyouping
     var body: some View {
-        ZStack {
-            VStack(spacing: 0) {
-                Text("♡\(name)♡")
-                    .font(.Body.body1)
-                    .foregroundStyle(.tinyPink)
-                Spacer()
-                    .frame(height: 10)
-                Image(image)
+        Button {
+            pathModel.paths.append(.detailView)
+        } label: {
+            ZStack {
+                VStack(spacing: 0) {
+                    Text("♡\(name)♡")
+                        .font(.Body.body1)
+                        .foregroundStyle(.tinyPink)
+                    Spacer()
+                        .frame(height: 10)
+                    Image(image)
+                        .resizable()
+                        .scaledToFit()
+                        .frame(height: 130)
+                }
+                .frame(width: 180, height: 180)
+                .background(.tinyWhite)
+                .cornerRadius(20)
+                .contentShape(Rectangle())
+                .shadow(color: Color.black.opacity(0.1), radius: 5, x: 0, y: 0)
+                Image(systemName: SystemImage.heart)
                     .resizable()
                     .scaledToFit()
-                    .frame(height: 130)
+                    .frame(width: 36)
+                    .foregroundStyle(.gray5)
+                    .shadow(color: Color.black.opacity(0.1), radius: 5, x: 0, y: 0)
+                    .offset(x: 60 ,y: 60)
             }
-            .frame(width: 180, height: 180)
-            .background(.tinyWhite)
-            .cornerRadius(20)
-            .contentShape(Rectangle())
-            .shadow(color: Color.black.opacity(0.1), radius: 5, x: 0, y: 0)
-            Image(systemName: SystemImage.heart)
-                .resizable()
-                .scaledToFit()
-                .frame(width: 36)
-                .foregroundStyle(.gray5)
-                .shadow(color: Color.black.opacity(0.1), radius: 5, x: 0, y: 0)
-                .offset(x: 60 ,y: 60)
         }
+        .environment(pathModel)
     }
 }
 
 // MARK: - Preview
 #Preview {
     MenuView()
+        .environment(PathModel())
 }
 
 #Preview {
