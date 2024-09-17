@@ -1,0 +1,593 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F35841402C99CE190067AC0E /* TinyDexApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F358413F2C99CE190067AC0E /* TinyDexApp.swift */; };
+		F35841422C99CE190067AC0E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35841412C99CE190067AC0E /* ContentView.swift */; };
+		F35841442C99CE1A0067AC0E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F35841432C99CE1A0067AC0E /* Assets.xcassets */; };
+		F35841472C99CE1A0067AC0E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F35841462C99CE1A0067AC0E /* Preview Assets.xcassets */; };
+		F35841512C99CE1A0067AC0E /* TinyDexTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35841502C99CE1A0067AC0E /* TinyDexTests.swift */; };
+		F358415B2C99CE1A0067AC0E /* TinyDexUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F358415A2C99CE1A0067AC0E /* TinyDexUITests.swift */; };
+		F358415D2C99CE1A0067AC0E /* TinyDexUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F358415C2C99CE1A0067AC0E /* TinyDexUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F358414D2C99CE1A0067AC0E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F35841342C99CE190067AC0E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F358413B2C99CE190067AC0E;
+			remoteInfo = TinyDex;
+		};
+		F35841572C99CE1A0067AC0E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F35841342C99CE190067AC0E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F358413B2C99CE190067AC0E;
+			remoteInfo = TinyDex;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F358413C2C99CE190067AC0E /* TinyDex.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TinyDex.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F358413F2C99CE190067AC0E /* TinyDexApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TinyDexApp.swift; sourceTree = "<group>"; };
+		F35841412C99CE190067AC0E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		F35841432C99CE1A0067AC0E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F35841462C99CE1A0067AC0E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		F358414C2C99CE1A0067AC0E /* TinyDexTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TinyDexTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F35841502C99CE1A0067AC0E /* TinyDexTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TinyDexTests.swift; sourceTree = "<group>"; };
+		F35841562C99CE1A0067AC0E /* TinyDexUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TinyDexUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F358415A2C99CE1A0067AC0E /* TinyDexUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TinyDexUITests.swift; sourceTree = "<group>"; };
+		F358415C2C99CE1A0067AC0E /* TinyDexUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TinyDexUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F35841392C99CE190067AC0E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F35841492C99CE1A0067AC0E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F35841532C99CE1A0067AC0E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F35841332C99CE190067AC0E = {
+			isa = PBXGroup;
+			children = (
+				F358413E2C99CE190067AC0E /* TinyDex */,
+				F358414F2C99CE1A0067AC0E /* TinyDexTests */,
+				F35841592C99CE1A0067AC0E /* TinyDexUITests */,
+				F358413D2C99CE190067AC0E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F358413D2C99CE190067AC0E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F358413C2C99CE190067AC0E /* TinyDex.app */,
+				F358414C2C99CE1A0067AC0E /* TinyDexTests.xctest */,
+				F35841562C99CE1A0067AC0E /* TinyDexUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F358413E2C99CE190067AC0E /* TinyDex */ = {
+			isa = PBXGroup;
+			children = (
+				F358413F2C99CE190067AC0E /* TinyDexApp.swift */,
+				F35841412C99CE190067AC0E /* ContentView.swift */,
+				F35841432C99CE1A0067AC0E /* Assets.xcassets */,
+				F35841452C99CE1A0067AC0E /* Preview Content */,
+			);
+			path = TinyDex;
+			sourceTree = "<group>";
+		};
+		F35841452C99CE1A0067AC0E /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				F35841462C99CE1A0067AC0E /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		F358414F2C99CE1A0067AC0E /* TinyDexTests */ = {
+			isa = PBXGroup;
+			children = (
+				F35841502C99CE1A0067AC0E /* TinyDexTests.swift */,
+			);
+			path = TinyDexTests;
+			sourceTree = "<group>";
+		};
+		F35841592C99CE1A0067AC0E /* TinyDexUITests */ = {
+			isa = PBXGroup;
+			children = (
+				F358415A2C99CE1A0067AC0E /* TinyDexUITests.swift */,
+				F358415C2C99CE1A0067AC0E /* TinyDexUITestsLaunchTests.swift */,
+			);
+			path = TinyDexUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F358413B2C99CE190067AC0E /* TinyDex */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F35841602C99CE1A0067AC0E /* Build configuration list for PBXNativeTarget "TinyDex" */;
+			buildPhases = (
+				F35841382C99CE190067AC0E /* Sources */,
+				F35841392C99CE190067AC0E /* Frameworks */,
+				F358413A2C99CE190067AC0E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TinyDex;
+			productName = TinyDex;
+			productReference = F358413C2C99CE190067AC0E /* TinyDex.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F358414B2C99CE1A0067AC0E /* TinyDexTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F35841632C99CE1A0067AC0E /* Build configuration list for PBXNativeTarget "TinyDexTests" */;
+			buildPhases = (
+				F35841482C99CE1A0067AC0E /* Sources */,
+				F35841492C99CE1A0067AC0E /* Frameworks */,
+				F358414A2C99CE1A0067AC0E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F358414E2C99CE1A0067AC0E /* PBXTargetDependency */,
+			);
+			name = TinyDexTests;
+			productName = TinyDexTests;
+			productReference = F358414C2C99CE1A0067AC0E /* TinyDexTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F35841552C99CE1A0067AC0E /* TinyDexUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F35841662C99CE1A0067AC0E /* Build configuration list for PBXNativeTarget "TinyDexUITests" */;
+			buildPhases = (
+				F35841522C99CE1A0067AC0E /* Sources */,
+				F35841532C99CE1A0067AC0E /* Frameworks */,
+				F35841542C99CE1A0067AC0E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F35841582C99CE1A0067AC0E /* PBXTargetDependency */,
+			);
+			name = TinyDexUITests;
+			productName = TinyDexUITests;
+			productReference = F35841562C99CE1A0067AC0E /* TinyDexUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F35841342C99CE190067AC0E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1520;
+				LastUpgradeCheck = 1520;
+				TargetAttributes = {
+					F358413B2C99CE190067AC0E = {
+						CreatedOnToolsVersion = 15.2;
+					};
+					F358414B2C99CE1A0067AC0E = {
+						CreatedOnToolsVersion = 15.2;
+						TestTargetID = F358413B2C99CE190067AC0E;
+					};
+					F35841552C99CE1A0067AC0E = {
+						CreatedOnToolsVersion = 15.2;
+						TestTargetID = F358413B2C99CE190067AC0E;
+					};
+				};
+			};
+			buildConfigurationList = F35841372C99CE190067AC0E /* Build configuration list for PBXProject "TinyDex" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F35841332C99CE190067AC0E;
+			productRefGroup = F358413D2C99CE190067AC0E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F358413B2C99CE190067AC0E /* TinyDex */,
+				F358414B2C99CE1A0067AC0E /* TinyDexTests */,
+				F35841552C99CE1A0067AC0E /* TinyDexUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F358413A2C99CE190067AC0E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F35841472C99CE1A0067AC0E /* Preview Assets.xcassets in Resources */,
+				F35841442C99CE1A0067AC0E /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F358414A2C99CE1A0067AC0E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F35841542C99CE1A0067AC0E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F35841382C99CE190067AC0E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F35841422C99CE190067AC0E /* ContentView.swift in Sources */,
+				F35841402C99CE190067AC0E /* TinyDexApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F35841482C99CE1A0067AC0E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F35841512C99CE1A0067AC0E /* TinyDexTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F35841522C99CE1A0067AC0E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F358415D2C99CE1A0067AC0E /* TinyDexUITestsLaunchTests.swift in Sources */,
+				F358415B2C99CE1A0067AC0E /* TinyDexUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F358414E2C99CE1A0067AC0E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F358413B2C99CE190067AC0E /* TinyDex */;
+			targetProxy = F358414D2C99CE1A0067AC0E /* PBXContainerItemProxy */;
+		};
+		F35841582C99CE1A0067AC0E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F358413B2C99CE190067AC0E /* TinyDex */;
+			targetProxy = F35841572C99CE1A0067AC0E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		F358415E2C99CE1A0067AC0E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F358415F2C99CE1A0067AC0E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F35841612C99CE1A0067AC0E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"TinyDex/Preview Content\"";
+				DEVELOPMENT_TEAM = U5F437QJA7;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.LeeliPing.TinyDex;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F35841622C99CE1A0067AC0E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"TinyDex/Preview Content\"";
+				DEVELOPMENT_TEAM = U5F437QJA7;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.LeeliPing.TinyDex;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		F35841642C99CE1A0067AC0E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = U5F437QJA7;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.LeeliPing.TinyDexTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TinyDex.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/TinyDex";
+			};
+			name = Debug;
+		};
+		F35841652C99CE1A0067AC0E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = U5F437QJA7;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.LeeliPing.TinyDexTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TinyDex.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/TinyDex";
+			};
+			name = Release;
+		};
+		F35841672C99CE1A0067AC0E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = U5F437QJA7;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.LeeliPing.TinyDexUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TinyDex;
+			};
+			name = Debug;
+		};
+		F35841682C99CE1A0067AC0E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = U5F437QJA7;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.LeeliPing.TinyDexUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TinyDex;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F35841372C99CE190067AC0E /* Build configuration list for PBXProject "TinyDex" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F358415E2C99CE1A0067AC0E /* Debug */,
+				F358415F2C99CE1A0067AC0E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F35841602C99CE1A0067AC0E /* Build configuration list for PBXNativeTarget "TinyDex" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F35841612C99CE1A0067AC0E /* Debug */,
+				F35841622C99CE1A0067AC0E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F35841632C99CE1A0067AC0E /* Build configuration list for PBXNativeTarget "TinyDexTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F35841642C99CE1A0067AC0E /* Debug */,
+				F35841652C99CE1A0067AC0E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F35841662C99CE1A0067AC0E /* Build configuration list for PBXNativeTarget "TinyDexUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F35841672C99CE1A0067AC0E /* Debug */,
+				F35841682C99CE1A0067AC0E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F35841342C99CE190067AC0E /* Project object */;
+}
