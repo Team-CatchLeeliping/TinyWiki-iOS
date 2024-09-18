@@ -11,7 +11,7 @@ import SwiftUI
 struct TinyDexApp: App {
     var body: some Scene {
         WindowGroup {
-            OnboardingView()
+            HomeView()
         }
     }
 }

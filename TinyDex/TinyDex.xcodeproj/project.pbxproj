@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F31ED79B2C9B0EA600FD6142 /* BackgroundColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F31ED79A2C9B0EA600FD6142 /* BackgroundColor.swift */; };
 		F35841402C99CE190067AC0E /* TinyDexApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F358413F2C99CE190067AC0E /* TinyDexApp.swift */; };
 		F35841442C99CE1A0067AC0E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F35841432C99CE1A0067AC0E /* Assets.xcassets */; };
 		F35841472C99CE1A0067AC0E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F35841462C99CE1A0067AC0E /* Preview Assets.xcassets */; };
@@ -30,6 +31,14 @@
 		F35841982C99D63D0067AC0E /* DummyStubService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35841972C99D63D0067AC0E /* DummyStubService.swift */; };
 		F358419B2C99D6560067AC0E /* MockDataBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F358419A2C99D6560067AC0E /* MockDataBuilder.swift */; };
 		F358419E2C99D6690067AC0E /* DummyDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = F358419D2C99D6690067AC0E /* DummyDTO.swift */; };
+		F35841A22C99D8590067AC0E /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35841A12C99D8590067AC0E /* HomeView.swift */; };
+		F35841A42C99D9830067AC0E /* Helper+HakgyoansimDunggeunmiso.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35841A32C99D9830067AC0E /* Helper+HakgyoansimDunggeunmiso.swift */; };
+		F35841A62C99E57A0067AC0E /* Tab.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35841A52C99E57A0067AC0E /* Tab.swift */; };
+		F35841A92C99E69B0067AC0E /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35841A82C99E69B0067AC0E /* MenuView.swift */; };
+		F35841AC2C99E70B0067AC0E /* HeartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35841AB2C99E70B0067AC0E /* HeartView.swift */; };
+		F35960942C99FAF000951F88 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35960932C99FAF000951F88 /* DetailView.swift */; };
+		F35960962C9A047200951F88 /* TinyPing.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35960952C9A047200951F88 /* TinyPing.swift */; };
+		F35960982C9A04A500951F88 /* Sex.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35960972C9A04A500951F88 /* Sex.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +59,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F31ED79A2C9B0EA600FD6142 /* BackgroundColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundColor.swift; sourceTree = "<group>"; };
 		F358413C2C99CE190067AC0E /* TinyDex.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TinyDex.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F358413F2C99CE190067AC0E /* TinyDexApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TinyDexApp.swift; sourceTree = "<group>"; };
 		F35841432C99CE1A0067AC0E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -77,6 +87,14 @@
 		F358419A2C99D6560067AC0E /* MockDataBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDataBuilder.swift; sourceTree = "<group>"; };
 		F358419D2C99D6690067AC0E /* DummyDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyDTO.swift; sourceTree = "<group>"; };
 		F358419F2C99D6BB0067AC0E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		F35841A12C99D8590067AC0E /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		F35841A32C99D9830067AC0E /* Helper+HakgyoansimDunggeunmiso.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Helper+HakgyoansimDunggeunmiso.swift"; sourceTree = "<group>"; };
+		F35841A52C99E57A0067AC0E /* Tab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tab.swift; sourceTree = "<group>"; };
+		F35841A82C99E69B0067AC0E /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
+		F35841AB2C99E70B0067AC0E /* HeartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartView.swift; sourceTree = "<group>"; };
+		F35960932C99FAF000951F88 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		F35960952C9A047200951F88 /* TinyPing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TinyPing.swift; sourceTree = "<group>"; };
+		F35960972C9A04A500951F88 /* Sex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sex.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,6 +192,10 @@
 		F358416A2C99CE2C0067AC0E /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				F35960922C99FAE400951F88 /* Detail */,
+				F35841AA2C99E6FF0067AC0E /* Heart */,
+				F35841A72C99E68A0067AC0E /* Menu */,
+				F35841A02C99D8500067AC0E /* Home */,
 				F358416B2C99CE320067AC0E /* Onboarding */,
 			);
 			path = Presentation;
@@ -191,6 +213,7 @@
 			isa = PBXGroup;
 			children = (
 				F358416F2C99CE810067AC0E /* Helper+PretendardFont.swift */,
+				F35841A32C99D9830067AC0E /* Helper+HakgyoansimDunggeunmiso.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -266,6 +289,10 @@
 			isa = PBXGroup;
 			children = (
 				F35841892C99D5CE0067AC0E /* DummyEntity.swift */,
+				F35841A52C99E57A0067AC0E /* Tab.swift */,
+				F35960952C9A047200951F88 /* TinyPing.swift */,
+				F31ED79A2C9B0EA600FD6142 /* BackgroundColor.swift */,
+				F35960972C9A04A500951F88 /* Sex.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -327,6 +354,38 @@
 				F358419D2C99D6690067AC0E /* DummyDTO.swift */,
 			);
 			path = DTO;
+			sourceTree = "<group>";
+		};
+		F35841A02C99D8500067AC0E /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				F35841A12C99D8590067AC0E /* HomeView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		F35841A72C99E68A0067AC0E /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				F35841A82C99E69B0067AC0E /* MenuView.swift */,
+			);
+			path = Menu;
+			sourceTree = "<group>";
+		};
+		F35841AA2C99E6FF0067AC0E /* Heart */ = {
+			isa = PBXGroup;
+			children = (
+				F35841AB2C99E70B0067AC0E /* HeartView.swift */,
+			);
+			path = Heart;
+			sourceTree = "<group>";
+		};
+		F35960922C99FAE400951F88 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				F35960932C99FAF000951F88 /* DetailView.swift */,
+			);
+			path = Detail;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -465,16 +524,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F35960982C9A04A500951F88 /* Sex.swift in Sources */,
 				F358419E2C99D6690067AC0E /* DummyDTO.swift in Sources */,
+				F35960942C99FAF000951F88 /* DetailView.swift in Sources */,
 				F35841982C99D63D0067AC0E /* DummyStubService.swift in Sources */,
+				F35841A22C99D8590067AC0E /* HomeView.swift in Sources */,
 				F358418D2C99D5E00067AC0E /* DummyUseCase.swift in Sources */,
 				F35841752C99CEAB0067AC0E /* SystemImage.swift in Sources */,
 				F358416D2C99CE4D0067AC0E /* OnboardingView.swift in Sources */,
+				F35841AC2C99E70B0067AC0E /* HeartView.swift in Sources */,
 				F35841402C99CE190067AC0E /* TinyDexApp.swift in Sources */,
 				F35841902C99D5F40067AC0E /* DummyInterface.swift in Sources */,
 				F35841872C99D5830067AC0E /* Path.swift in Sources */,
+				F35841A92C99E69B0067AC0E /* MenuView.swift in Sources */,
+				F31ED79B2C9B0EA600FD6142 /* BackgroundColor.swift in Sources */,
 				F35841702C99CE810067AC0E /* Helper+PretendardFont.swift in Sources */,
+				F35841A42C99D9830067AC0E /* Helper+HakgyoansimDunggeunmiso.swift in Sources */,
 				F358419B2C99D6560067AC0E /* MockDataBuilder.swift in Sources */,
+				F35841A62C99E57A0067AC0E /* Tab.swift in Sources */,
+				F35960962C9A047200951F88 /* TinyPing.swift in Sources */,
 				F35841952C99D6200067AC0E /* DummyService.swift in Sources */,
 				F358418A2C99D5CE0067AC0E /* DummyEntity.swift in Sources */,
 			);
