@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F31ED79B2C9B0EA600FD6142 /* BackgroundColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F31ED79A2C9B0EA600FD6142 /* BackgroundColor.swift */; };
 		F35841402C99CE190067AC0E /* TinyDexApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F358413F2C99CE190067AC0E /* TinyDexApp.swift */; };
 		F35841442C99CE1A0067AC0E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F35841432C99CE1A0067AC0E /* Assets.xcassets */; };
 		F35841472C99CE1A0067AC0E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F35841462C99CE1A0067AC0E /* Preview Assets.xcassets */; };
@@ -58,6 +59,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F31ED79A2C9B0EA600FD6142 /* BackgroundColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundColor.swift; sourceTree = "<group>"; };
 		F358413C2C99CE190067AC0E /* TinyDex.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TinyDex.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F358413F2C99CE190067AC0E /* TinyDexApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TinyDexApp.swift; sourceTree = "<group>"; };
 		F35841432C99CE1A0067AC0E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -289,6 +291,7 @@
 				F35841892C99D5CE0067AC0E /* DummyEntity.swift */,
 				F35841A52C99E57A0067AC0E /* Tab.swift */,
 				F35960952C9A047200951F88 /* TinyPing.swift */,
+				F31ED79A2C9B0EA600FD6142 /* BackgroundColor.swift */,
 				F35960972C9A04A500951F88 /* Sex.swift */,
 			);
 			path = Entity;
@@ -534,6 +537,7 @@
 				F35841902C99D5F40067AC0E /* DummyInterface.swift in Sources */,
 				F35841872C99D5830067AC0E /* Path.swift in Sources */,
 				F35841A92C99E69B0067AC0E /* MenuView.swift in Sources */,
+				F31ED79B2C9B0EA600FD6142 /* BackgroundColor.swift in Sources */,
 				F35841702C99CE810067AC0E /* Helper+PretendardFont.swift in Sources */,
 				F35841A42C99D9830067AC0E /* Helper+HakgyoansimDunggeunmiso.swift in Sources */,
 				F358419B2C99D6560067AC0E /* MockDataBuilder.swift in Sources */,

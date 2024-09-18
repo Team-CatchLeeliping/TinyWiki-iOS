@@ -11,7 +11,7 @@ struct HomeView: View {
     @Environment(PathModel.self) private var pathModel
     @State private var selectedTab: Tab = .menu
     // TODO: 임시 데이터 추후 수정하기
-    @State var selectedTinyPing: TinyPing = MockDataBuilder.tinyping
+    @State var selectedTinyPing: TinyPing = MockDataBuilder.tinyPing
     
     init() {
         // 네비게이션 바의 appearance 설정
@@ -33,7 +33,7 @@ struct HomeView: View {
         NavigationStack(path: $pathModel.paths) {
             ZStack(alignment: .bottom) {
                 switch selectedTab {
-                case .menu: MenuView()
+                case .menu: MenuView(selectedTinyping: $selectedTinyPing)
                 case .heart: HeartView()
                 }
                 TabBar(selection: $selectedTab)
@@ -87,6 +87,6 @@ private struct TabBar: View {
         .environment(PathModel())
 }
 
-#Preview {
-    TabBar(selection: .constant(Tab.menu))
-}
+//#Preview {
+//    TabBar(selection: .constant(Tab.menu))
+//}

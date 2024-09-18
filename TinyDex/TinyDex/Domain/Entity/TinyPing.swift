@@ -22,6 +22,7 @@ struct TinyPing: Identifiable {
     var dislikeThing: String
     var favoriteFood: String
     var dislikeFood: String
+    var backgroundColor: BackgroundColor
     
     init(
         name: String,
@@ -36,7 +37,8 @@ struct TinyPing: Identifiable {
         favoriteThing: String,
         dislikeThing: String,
         favoriteFood: String,
-        dislikeFood: String
+        dislikeFood: String,
+        backgroundColor: BackgroundColor
     ) {
         self.id = UUID()
         self.name = name
@@ -52,5 +54,6 @@ struct TinyPing: Identifiable {
         self.dislikeThing = dislikeThing
         self.favoriteFood = favoriteFood
         self.dislikeFood = dislikeFood
+        self.backgroundColor = backgroundColor
     }
 }

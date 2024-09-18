@@ -8,14 +8,15 @@
 import SwiftUI
 
 struct MenuView: View {
+    @Binding var selectedTinyping: TinyPing
     var body: some View {
         VStack(spacing: 0) {
             Header()
             Spacer()
-                .frame(height: 28)
+                .frame(height: 12)
             ScrollView {
                 VStack(spacing: 0) {
-                    TinypingList()
+                    TinypingList(selectedTinyPing: $selectedTinyping)
                 }
             }
         }
@@ -69,11 +70,13 @@ private struct SearchView: View {
 
 // MARK: - 티니핑 리스트
 private struct TinypingList: View {
+    @Binding var selectedTinyPing: TinyPing
+    let tinyPings: [TinyPing] = MockDataBuilder.tinyPings
     private let columns: [GridItem] = Array(repeating: .init(.fixed(180), spacing: nil), count: 2)
     var body: some View {
         LazyVGrid(columns: columns , spacing: 8) {
-            ForEach(0..<100, id: \.self) { index in
-                TinypingCell()
+            ForEach(tinyPings) { tinyPing in
+                TinypingCell(selectedTinyPing: $selectedTinyPing, tinyPing: tinyPing)
             }
         }
     }
@@ -82,20 +85,21 @@ private struct TinypingList: View {
 // MARK: - 티니핑 리스트 셀
 private struct TinypingCell: View {
     @Environment(PathModel.self) private var pathModel
-    let name: String = "플로라 하츄핑"
-    let image: ImageResource = .imgHeartyouping
+    @Binding private(set) var selectedTinyPing: TinyPing
+    let tinyPing: TinyPing
     var body: some View {
         Button {
+            selectedTinyPing = tinyPing
             pathModel.paths.append(.detailView)
         } label: {
             ZStack {
                 VStack(spacing: 0) {
-                    Text("♡\(name)♡")
+                    Text("♡\(tinyPing.name)♡")
                         .font(.Body.body1)
                         .foregroundStyle(.tinyPink)
                     Spacer()
                         .frame(height: 10)
-                    Image(image)
+                    Image(tinyPing.avatar)
                         .resizable()
                         .scaledToFit()
                         .frame(height: 130)
@@ -120,7 +124,7 @@ private struct TinypingCell: View {
 
 // MARK: - Preview
 #Preview {
-    MenuView()
+    MenuView(selectedTinyping: .constant(MockDataBuilder.tinyPing))
         .environment(PathModel())
 }
 
