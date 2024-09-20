@@ -9,33 +9,11 @@ import SwiftUI
 
 struct HomeView: View {
     @Environment(PathModel.self) private var pathModel
+    @Environment(\.colorScheme) var colorScheme
     @State private var selectedTab: Tab = .wiki
     // TODO: 임시 데이터 추후 수정하기
     @State var selectedTinyPing: TinyPing = MockDataBuilder.tinyPing
     @State private var searchKeyword: String = ""
-    
-    init() {
-        // 네비게이션 바의 appearance 설정
-        let appearance = UINavigationBarAppearance()
-        appearance.configureWithOpaqueBackground()
-        
-        // 타이틀 텍스트의 폰트 및 색상 설정
-        appearance.titleTextAttributes = [
-            .font: UIFont.Head.head1,  // UIFont 사용
-            .foregroundColor: UIColor.tinyPink
-        ]
-        
-        // 네비게이션 바에 appearance 적용
-        UINavigationBar.appearance().standardAppearance = appearance
-    }
-    // 타이틀 고정 X
-    //    init() {
-    //        // 기본 네비게이션 바 설정
-    //        let appearance = UINavigationBarAppearance()
-    //        appearance.configureWithTransparentBackground()
-    //        UINavigationBar.appearance().standardAppearance = appearance
-    //        UINavigationBar.appearance().scrollEdgeAppearance = appearance
-    //    }
     
     var body: some View {
         @Bindable var pathModel = pathModel

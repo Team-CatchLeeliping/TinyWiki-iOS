@@ -21,7 +21,9 @@ struct WikiView: View {
             }
         }
         .padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 20))
-
+        .onTapGesture {
+            UIApplication.shared.endEditing()  // 빈 공간 클릭 시 키보드 내리기
+        }
     }
 }
 

@@ -9,6 +9,22 @@ import SwiftUI
 
 struct WikiDetailView: View {
     var tinyPing: TinyPing
+    @State private var scrollOffset: CGFloat = 0  // 스크롤 오프셋을 저장할 상태 변수
+    @State private var isScroll: Bool = false
+    let navigationTitleColor: UIColor
+    init(tinyPing: TinyPing) {
+        self.tinyPing = tinyPing
+        self.navigationTitleColor = {
+            switch tinyPing.backgroundColor {
+            case .clear: return UIColor.clear
+            case .pink: return .tinyLightpink
+            case .yellow: return .tinyLightyellow
+            case .green: return .tinyLightgreen
+            case .blue: return .tinyBlue
+            case .purple: return .tinyLightpurple
+            }
+        }()
+    }
     var body: some View {
         ScrollView {
             ZStack(alignment: .top) {
@@ -16,19 +32,89 @@ struct WikiDetailView: View {
                     .resizable()
                     .scaledToFill()
                 VStack(spacing: 0) {
-                    // 타이틀 고정 X
-//                    Header(tinyPing: tinyPing)
-                    Spacer()
-                        .frame(height: 100)
-                    Image(tinyPing.avatar)
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 220)
-                    Description(tinyPing: tinyPing)
+                    GeometryReader { geometry in
+                        Color.clear
+                            .preference(key: ScrollOffsetKey.self, value: geometry.frame(in: .global).minY)
+                    }
+                    .frame(height: 0) // 오프셋 감지용 프레임
+                    VStack(spacing: 0) {
+                        Spacer()
+                            .frame(height: 100)
+                        Image(tinyPing.avatar)
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 220)
+                        Description(tinyPing: tinyPing)
+                    }
                 }
             }
         }
+        .onPreferenceChange(ScrollOffsetKey.self) { value in
+            scrollOffset = value  // 스크롤 오프셋을 상태 변수에 저장
+            //            alpha =  (-1) * max(0, 0.5) * scrollOffset * 2 / 1000
+//            if value < 0 {
+//                isScroll = true
+//                updateNavigationBarAppearance(scrollOffset: value, navigationTitleColor: navigationTitleColor)
+//            } else {
+//                isScroll = false
+//            }
+        }
+//        .onAppear {
+//            setupNavigationAppearance(scrollOffset: scrollOffset, navigationTitleColor: navigationTitleColor)
+//        }
+        .background(NavigationBarAppearanceModifier(scrollOffset: scrollOffset, navigationTitleColor: navigationTitleColor))
         .ignoresSafeArea()
+    }
+}
+
+//// TODO: 추후 빼기
+//func setupNavigationAppearance(scrollOffset: CGFloat, navigationTitleColor: UIColor) {
+//    let appearance = UINavigationBarAppearance()
+//    appearance.configureWithOpaqueBackground()
+//    
+//    // 타이틀 텍스트 색상 및 폰트 설정
+//    appearance.titleTextAttributes = [
+//        .font: UIFont.Head.head1,  // UIFont 사용
+//        .foregroundColor: navigationTitleColor  // 다크 모드에 따라 색상 설정
+//    ]
+//    appearance.backgroundColor = UIColor.white.withAlphaComponent(0)  // 투명도 조정 (0.0 ~ 1.0)
+//    
+//    appearance.shadowColor = nil  // 이 부분이 선을 없앰
+//    
+//    // 네비게이션 바에 appearance 적용
+//    UINavigationBar.appearance().standardAppearance = appearance
+//    UINavigationBar.appearance().scrollEdgeAppearance = appearance
+//    
+//}
+//
+//func updateNavigationBarAppearance(scrollOffset: CGFloat, navigationTitleColor: UIColor) {
+//    let maxAlpha = 0.5
+//    let alpha =  (-1) * max(0, maxAlpha) * scrollOffset * 2 / 1000 
+//    print(alpha)
+//    
+//    let appearance = UINavigationBarAppearance()
+//    appearance.configureWithOpaqueBackground()
+//    
+//    // 타이틀 텍스트 색상 및 폰트 설정
+//    appearance.titleTextAttributes = [
+//        .font: UIFont.Head.head1,  // UIFont 사용
+//        .foregroundColor: navigationTitleColor  // 다크 모드에 따라 색상 설정
+//    ]
+//    appearance.backgroundColor = UIColor.white.withAlphaComponent(alpha)  // 투명도 조정 (0.0 ~ 1.0)
+//    
+//    appearance.shadowColor = nil  // 이 부분이 선을 없앰
+//        
+//    // 네비게이션 바에 appearance 적용
+//    UINavigationBar.appearance().standardAppearance = appearance
+//    UINavigationBar.appearance().scrollEdgeAppearance = appearance
+//}
+
+
+// MARK: - 스크롤 오프셋 추적을 위한 PreferenceKey
+struct ScrollOffsetKey: PreferenceKey {
+    static var defaultValue: CGFloat = 0
+    static func reduce(value: inout CGFloat, nextValue: () -> CGFloat) {
+        value += nextValue()
     }
 }
 
