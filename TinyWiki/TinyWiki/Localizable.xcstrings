@@ -1,0 +1,74 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "♡%@♡" : {
+
+    },
+    "Hello, World!" : {
+
+    },
+    "국가 번호: +%lld" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "National Number: +%lld"
+          }
+        }
+      }
+    },
+    "어떤 내용 넣을지 고민하기..." : {
+
+    },
+    "즐겨찾기" : {
+
+    },
+    "티니위키" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "TinyWiki"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "티니위키"
+          }
+        }
+      }
+    },
+    "티니핑 도감" : {
+
+    },
+    "티니핑을 찾아봐요♥" : {
+
+    },
+    "한국어" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "English"
+          }
+        }
+      }
+    },
+    "현재 언어" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Current Language"
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}
