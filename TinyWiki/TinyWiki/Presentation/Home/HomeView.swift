@@ -9,7 +9,7 @@ import SwiftUI
 
 struct HomeView: View {
     @Environment(PathModel.self) private var pathModel
-    @State private var selectedTab: Tab = .menu
+    @State private var selectedTab: Tab = .wiki
     // TODO: 임시 데이터 추후 수정하기
     @State var selectedTinyPing: TinyPing = MockDataBuilder.tinyPing
     
@@ -33,15 +33,15 @@ struct HomeView: View {
         NavigationStack(path: $pathModel.paths) {
             ZStack(alignment: .bottom) {
                 switch selectedTab {
-                case .menu: WikiView(selectedTinyping: $selectedTinyPing)
-                case .heart: HeartView()
+                case .wiki: WikiView(selectedTinyping: $selectedTinyPing)
+                case .quiz: QuizView()
                 }
                 TabBar(selection: $selectedTab)
             }
             .edgesIgnoringSafeArea(.bottom)
             .navigationDestination(for: MainPath.self) { path in
                 switch path {
-                case .detailView: DetailView(tinyPing: selectedTinyPing)
+                case .detailView: WikiDetailView(tinyPing: selectedTinyPing)
                         .navigationTitle("♡\(selectedTinyPing.name)♡")
                 }
             }

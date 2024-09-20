@@ -14,6 +14,7 @@ struct MockDataBuilder {
         return TinyPing(
             name: "플로라 하츄핑",
             avatar: "img_heartyouping",
+            generation: 1,
             sex: Sex.female,
             nameDescription: "하트 + 츄",
             item: "향수(3기)",
@@ -32,6 +33,7 @@ struct MockDataBuilder {
             TinyPing(
                 name: "플로라 하츄핑",
                 avatar: "img_heartyouping",
+                generation: 1,
                 sex: Sex.female,
                 nameDescription: "하트 + 츄",
                 item: "향수(3기)",
@@ -45,6 +47,7 @@ struct MockDataBuilder {
             TinyPing(
                 name: "꾸래핑",
                 avatar: "img_gguraeping",
+                generation: 1,
                 sex: Sex.female,
                 nameDescription: "그래 -> 꾸래",
                 item: "눈사람(3기)",

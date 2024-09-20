@@ -14,6 +14,7 @@ struct TinyPing: Identifiable {
     // 프로필 사진
     var avatar: String
     // 기수
+    var generation: Int
     // 성별
     var sex: Sex
     // 이름 유래
@@ -38,6 +39,7 @@ struct TinyPing: Identifiable {
     init(
         name: String,
         avatar: String,
+        generation: Int,
         sex: Sex,
         nameDescription: String,
         item: String,
@@ -52,6 +54,7 @@ struct TinyPing: Identifiable {
         self.id = UUID()
         self.name = name
         self.avatar = avatar
+        self.generation = generation
         self.sex = sex
         self.nameDescription = nameDescription
         self.item = item

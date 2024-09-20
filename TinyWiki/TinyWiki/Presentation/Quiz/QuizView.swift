@@ -1,5 +1,5 @@
 //
-//  HeartView.swift
+//  QuizView.swift
 //  TinyWiki
 //
 //  Created by kyungsoolee on 9/18/24.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct HeartView: View {
+struct QuizView: View {
     var body: some View {
         VStack(spacing: 0) {
             Header()
@@ -120,5 +120,5 @@ private struct TinypingCell: View {
 }
 
 #Preview {
-    HeartView()
+    QuizView()
 }
