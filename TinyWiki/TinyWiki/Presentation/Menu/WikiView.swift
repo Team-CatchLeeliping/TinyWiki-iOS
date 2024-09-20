@@ -86,7 +86,6 @@ private struct TinypingList: View {
 private struct TinypingCell: View {
     @Environment(PathModel.self) private var pathModel
     @Binding private(set) var selectedTinyPing: TinyPing
-    @State var isLiked: Bool = false
     let tinyPing: TinyPing
     var body: some View {
         Button {
@@ -110,7 +109,7 @@ private struct TinypingCell: View {
                 .cornerRadius(20)
                 .contentShape(Rectangle())
                 .shadow(color: Color.black.opacity(0.1), radius: 5, x: 0, y: 0)
-                HeartButton(isLiked: $isLiked)
+                HeartButton(tinyPing: tinyPing)
             }
         }
         .environment(pathModel)
@@ -119,11 +118,13 @@ private struct TinypingCell: View {
 
 // MARK: - HeartButton
 private struct HeartButton: View {
-    @Binding var isLiked: Bool
+    // TODO: 임시 코드
+    var tinyPing: TinyPing
+    @State private var isLiked: Bool = false
     var body: some View {
         Button {
             isLiked.toggle()
-            print(isLiked)
+            print(tinyPing.isLiked)
             // TODO: UserDefault에 좋아요 한 티니핑 저장해두기
         } label: {
             Image(isLiked ? .imgHeartfill: .imgHeartempty)

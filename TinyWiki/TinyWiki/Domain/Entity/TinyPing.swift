@@ -9,20 +9,30 @@ import Foundation
 
 struct TinyPing: Identifiable {
     var id: UUID
+    // 이름
     var name: String
+    // 프로필 사진
     var avatar: String
+    // 기수
+    // 성별
     var sex: Sex
+    // 이름 유래
     var nameDescription: String
+    // 소품
     var item: String
-    var symbol: String
-    var partner: String
-    var transformation: String
+    // 마법
     var magic: String
-    var favoriteThing: String
-    var dislikeThing: String
-    var favoriteFood: String
-    var dislikeFood: String
+    // 좋아하는 것
+    var favoriteThings: String
+    // 싫어하는 것
+    var dislikeThings: String
+    // 보석(Optional)
+    var jewelry: String?
+    // 열쇠(Optional)
+    var key: String?
+    // 상세 뷰 배경색
     var backgroundColor: BackgroundColor
+    // 즐겨찾기 여부
     var isLiked: Bool
     
     init(
@@ -31,14 +41,11 @@ struct TinyPing: Identifiable {
         sex: Sex,
         nameDescription: String,
         item: String,
-        symbol: String,
-        partner: String,
-        transformation: String, 
         magic: String,
-        favoriteThing: String,
-        dislikeThing: String,
-        favoriteFood: String,
-        dislikeFood: String,
+        favoriteThings: String,
+        dislikeThings: String,
+        jewelry: String?,
+        key: String?,
         backgroundColor: BackgroundColor,
         isLiked: Bool
     ) {
@@ -48,15 +55,13 @@ struct TinyPing: Identifiable {
         self.sex = sex
         self.nameDescription = nameDescription
         self.item = item
-        self.symbol = symbol
-        self.partner = partner
-        self.transformation = transformation
         self.magic = magic
-        self.favoriteThing = favoriteThing
-        self.dislikeThing = dislikeThing
-        self.favoriteFood = favoriteFood
-        self.dislikeFood = dislikeFood
+        self.favoriteThings = favoriteThings
+        self.dislikeThings = dislikeThings
+        self.jewelry = jewelry
+        self.key = key
         self.backgroundColor = backgroundColor
         self.isLiked = isLiked
     }
+    
 }
