@@ -13,19 +13,26 @@ struct HomeView: View {
     // TODO: 임시 데이터 추후 수정하기
     @State var selectedTinyPing: TinyPing = MockDataBuilder.tinyPing
     
+//    init() {
+//        // 네비게이션 바의 appearance 설정
+//        let appearance = UINavigationBarAppearance()
+//        appearance.configureWithOpaqueBackground()
+//        
+//        // 타이틀 텍스트의 폰트 및 색상 설정
+//        appearance.titleTextAttributes = [
+//            .font: UIFont.Head.head1,  // UIFont 사용
+//            .foregroundColor: UIColor.white  // UIColor 사용
+//        ]
+//        
+//        // 네비게이션 바에 appearance 적용
+//        UINavigationBar.appearance().standardAppearance = appearance
+//    }
     init() {
-        // 네비게이션 바의 appearance 설정
+        // 기본 네비게이션 바 설정
         let appearance = UINavigationBarAppearance()
-        appearance.configureWithOpaqueBackground()
-        
-        // 타이틀 텍스트의 폰트 및 색상 설정
-        appearance.titleTextAttributes = [
-            .font: UIFont.Head.head1,  // UIFont 사용
-            .foregroundColor: UIColor.white  // UIColor 사용
-        ]
-        
-        // 네비게이션 바에 appearance 적용
+        appearance.configureWithTransparentBackground()
         UINavigationBar.appearance().standardAppearance = appearance
+        UINavigationBar.appearance().scrollEdgeAppearance = appearance
     }
     
     var body: some View {
@@ -42,7 +49,7 @@ struct HomeView: View {
             .navigationDestination(for: MainPath.self) { path in
                 switch path {
                 case .detailView: WikiDetailView(tinyPing: selectedTinyPing)
-                        .navigationTitle("♡\(selectedTinyPing.name)♡")
+                        .navigationBarTitleDisplayMode(.inline)
                 }
             }
         }

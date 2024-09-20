@@ -58,6 +58,36 @@ struct MockDataBuilder {
                 key: nil,
                 backgroundColor: .blue,
                 isLiked: true
+            ),
+            TinyPing(
+                name: "바로핑",
+                avatar: "img_baroping",
+                generation: 1,
+                sex: Sex.male,
+                nameDescription: "(올)바르다 → 바로",
+                item: "마법책",
+                magic: "<올바른 문법>\n① 기호/이모티콘을 만들어 날릴 수 있다.\n② 상대가 '바른 생활'을 하도록 만들 수 있다.",
+                favoriteThings: "깔끔하게 정돈된 환경, 독서, 공부, 뭔가를 가르치기",
+                dislikeThings: "늦잠, 게으름, 무질서한 상태, 더러운 환경",
+                jewelry: nil,
+                key: nil,
+                backgroundColor: .blue,
+                isLiked: false
+            ),
+            TinyPing(
+                name: "아자핑",
+                avatar: "img_azaping",
+                generation: 1,
+                sex: Sex.male,
+                nameDescription: "아자(기합 소리)",
+                item: "카메라",
+                magic: "<용기의 플래시>\n① 상대를 잠시동안 움직이지 못하게 만든다.\n② 대상에게 잠시동안 '용기'를 북돋아줄 수 있다.",
+                favoriteThings: "체력단련, 격투기 및 액션 영화 보기",
+                dislikeThings: "두려움, 도망치기, 포기하기",
+                jewelry: nil,
+                key: nil,
+                backgroundColor: .yellow,
+                isLiked: true
             )
         ]
     }

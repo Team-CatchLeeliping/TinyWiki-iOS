@@ -16,16 +16,27 @@ struct WikiDetailView: View {
                     .resizable()
                     .scaledToFill()
                 VStack(spacing: 0) {
+                    Header(tinyPing: tinyPing)
                     Image(tinyPing.avatar)
                         .resizable()
                         .scaledToFit()
                         .frame(width: 220)
-                        .padding(.top, 150)
                     Description(tinyPing: tinyPing)
                 }
             }
         }
         .ignoresSafeArea()
+    }
+}
+
+// MARK: - 헤더
+private struct Header: View {
+    var tinyPing: TinyPing
+    var body: some View {
+        Text("♡\(tinyPing.name)♡")
+            .font(.Head.head1)
+            .padding(EdgeInsets(top: 64, leading: 0, bottom: 50, trailing: 0))
+            .foregroundStyle(.tinyWhite)
     }
 }
 
