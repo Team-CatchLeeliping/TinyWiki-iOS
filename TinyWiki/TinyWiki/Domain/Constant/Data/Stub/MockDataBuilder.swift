@@ -25,7 +25,8 @@ struct MockDataBuilder {
             dislikeThing: "억지로 잠을 깨우는 것\n갑자기 깜짝 놀라게 하는 것",
             favoriteFood: "생크림 딸기 케이크, 딸기",
             dislikeFood: "신 맛이 나는 모든 것",
-            backgroundColor: .pink
+            backgroundColor: .pink,
+            isLiked: true
         )
     }
     
@@ -46,7 +47,8 @@ struct MockDataBuilder {
                 dislikeThing: "억지로 잠을 깨우는 것\n갑자기 깜짝 놀라게 하는 것",
                 favoriteFood: "생크림 딸기 케이크, 딸기",
                 dislikeFood: "신 맛이 나는 모든 것",
-                backgroundColor: .pink
+                backgroundColor: .pink,
+                isLiked: true
             ),
             TinyPing(
                 name: "꾸래핑",
@@ -62,7 +64,8 @@ struct MockDataBuilder {
                 dislikeThing: "다툼, 혼란한 상황",
                 favoriteFood: "-",
                 dislikeFood: "-",
-                backgroundColor: .blue
+                backgroundColor: .blue,
+                isLiked: true
             )
         ]
     }
