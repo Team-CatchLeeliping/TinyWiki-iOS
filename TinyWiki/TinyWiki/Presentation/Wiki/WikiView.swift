@@ -8,74 +8,43 @@
 import SwiftUI
 
 struct WikiView: View {
+    @Binding var searchKeyword: String
     @Binding var selectedTinyping: TinyPing
     var body: some View {
         VStack(spacing: 0) {
-            Header()
             Spacer()
                 .frame(height: 12)
             ScrollView {
                 VStack(spacing: 0) {
-                    TinypingList(selectedTinyPing: $selectedTinyping)
+                    TinypingList(selectedTinyPing: $selectedTinyping, searchKeyword: $searchKeyword)
                 }
             }
         }
         .padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 20))
-        .background {
-            Image(.imgHomebackground)
-                .resizable()
-                .scaledToFill()
-                .ignoresSafeArea()
-        }
 
     }
 }
 
-// MARK: - 헤더
-private struct Header: View {
-    var body: some View {
-        HStack(spacing: 0) {
-            Text("티니핑 도감")
-                .font(.Head.head5)
-                .foregroundStyle(.tinyPink)
-            Spacer()
-            SearchView()
-        }
-    }
-}
 
-// MARK: - 검색창
-private struct SearchView: View {
-    @State private var searchKeyword: String = ""
-    var body: some View {
-        HStack(spacing: 0) {
-            TextField("티니핑을 찾아봐요♥", text: $searchKeyword)
-                .font(.Body.body4)
-            Image(systemName: SystemImage.search)
-                .resizable()
-                .scaledToFit()
-                .frame(width: 24, height: 24)
-                .foregroundStyle(.tinyLightpink)
-        }
-        .padding(12)
-        .overlay {
-            RoundedRectangle(cornerRadius: 40)
-                .stroke(.tinyPink, lineWidth: 4)
-        }
-        .background(.tinyWhite)
-        .cornerRadius(40)
-        .contentShape(Rectangle())
-    }
-}
 
 // MARK: - 티니핑 리스트
 private struct TinypingList: View {
     @Binding var selectedTinyPing: TinyPing
+    @Binding var searchKeyword: String
+    // filteredTinypings 들어오면서 필요 없어짐.
     let tinyPings: [TinyPing] = MockDataBuilder.tinyPings
+    
+    var filteredTinyPings: [TinyPing] {
+        if searchKeyword.isEmpty {
+            return tinyPings
+        } else {
+            return tinyPings.filter { $0.name.contains(searchKeyword) }
+        }
+    }
     private let columns: [GridItem] = Array(repeating: .init(.fixed(180), spacing: nil), count: 2)
     var body: some View {
         LazyVGrid(columns: columns , spacing: 8) {
-            ForEach(tinyPings) { tinyPing in
+            ForEach(filteredTinyPings) { tinyPing in
                 TinypingCell(selectedTinyPing: $selectedTinyPing, tinyPing: tinyPing)
             }
         }
@@ -139,10 +108,6 @@ private struct HeartButton: View {
 
 // MARK: - Preview
 #Preview {
-    WikiView(selectedTinyping: .constant(MockDataBuilder.tinyPing))
+    WikiView(searchKeyword: .constant(""), selectedTinyping: .constant(MockDataBuilder.tinyPing))
         .environment(PathModel())
-}
-
-#Preview {
-    SearchView()
 }

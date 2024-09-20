@@ -16,7 +16,10 @@ struct WikiDetailView: View {
                     .resizable()
                     .scaledToFill()
                 VStack(spacing: 0) {
-                    Header(tinyPing: tinyPing)
+                    // 타이틀 고정 X
+//                    Header(tinyPing: tinyPing)
+                    Spacer()
+                        .frame(height: 100)
                     Image(tinyPing.avatar)
                         .resizable()
                         .scaledToFit()
@@ -108,6 +111,7 @@ private struct Description: View {
                     }
                     .foregroundStyle(bodyColor)
                     .font(.Head.head6)
+                    .lineSpacing(10)
                     
                     Spacer()
                 }
@@ -134,6 +138,7 @@ private struct Description: View {
                         Text(jewelry)
                             .foregroundStyle(bodyColor)
                             .font(.Head.head6)
+                            .lineSpacing(10)
                     }
                 }
                 
@@ -147,6 +152,7 @@ private struct Description: View {
                         Text(jewelry)
                             .foregroundStyle(bodyColor)
                             .font(.Head.head6)
+                            .lineSpacing(10)
                     }
                 }
                 
@@ -159,6 +165,7 @@ private struct Description: View {
                     Text(tinyPing.favoriteThings)
                         .foregroundStyle(bodyColor)
                         .font(.Head.head6)
+                        .lineSpacing(10)
                 }
                 
                 // 싫어하는 것
