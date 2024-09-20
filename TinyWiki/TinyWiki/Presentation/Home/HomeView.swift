@@ -33,7 +33,7 @@ struct HomeView: View {
         NavigationStack(path: $pathModel.paths) {
             ZStack(alignment: .bottom) {
                 switch selectedTab {
-                case .menu: MenuView(selectedTinyping: $selectedTinyPing)
+                case .menu: WikiView(selectedTinyping: $selectedTinyPing)
                 case .heart: HeartView()
                 }
                 TabBar(selection: $selectedTab)

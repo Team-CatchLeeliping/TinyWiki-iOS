@@ -35,7 +35,7 @@
 		F35841A22C99D8590067AC0E /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35841A12C99D8590067AC0E /* HomeView.swift */; };
 		F35841A42C99D9830067AC0E /* Helper+HakgyoansimDunggeunmiso.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35841A32C99D9830067AC0E /* Helper+HakgyoansimDunggeunmiso.swift */; };
 		F35841A62C99E57A0067AC0E /* Tab.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35841A52C99E57A0067AC0E /* Tab.swift */; };
-		F35841A92C99E69B0067AC0E /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35841A82C99E69B0067AC0E /* MenuView.swift */; };
+		F35841A92C99E69B0067AC0E /* WikiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35841A82C99E69B0067AC0E /* WikiView.swift */; };
 		F35841AC2C99E70B0067AC0E /* HeartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35841AB2C99E70B0067AC0E /* HeartView.swift */; };
 		F35960942C99FAF000951F88 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35960932C99FAF000951F88 /* DetailView.swift */; };
 		F35960962C9A047200951F88 /* TinyPing.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35960952C9A047200951F88 /* TinyPing.swift */; };
@@ -92,7 +92,7 @@
 		F35841A12C99D8590067AC0E /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		F35841A32C99D9830067AC0E /* Helper+HakgyoansimDunggeunmiso.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Helper+HakgyoansimDunggeunmiso.swift"; sourceTree = "<group>"; };
 		F35841A52C99E57A0067AC0E /* Tab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tab.swift; sourceTree = "<group>"; };
-		F35841A82C99E69B0067AC0E /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
+		F35841A82C99E69B0067AC0E /* WikiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WikiView.swift; sourceTree = "<group>"; };
 		F35841AB2C99E70B0067AC0E /* HeartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartView.swift; sourceTree = "<group>"; };
 		F35960932C99FAF000951F88 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		F35960952C9A047200951F88 /* TinyPing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TinyPing.swift; sourceTree = "<group>"; };
@@ -370,7 +370,7 @@
 		F35841A72C99E68A0067AC0E /* Menu */ = {
 			isa = PBXGroup;
 			children = (
-				F35841A82C99E69B0067AC0E /* MenuView.swift */,
+				F35841A82C99E69B0067AC0E /* WikiView.swift */,
 			);
 			path = Menu;
 			sourceTree = "<group>";
@@ -541,7 +541,7 @@
 				F35841402C99CE190067AC0E /* TinyWikiApp.swift in Sources */,
 				F35841902C99D5F40067AC0E /* DummyInterface.swift in Sources */,
 				F35841872C99D5830067AC0E /* Path.swift in Sources */,
-				F35841A92C99E69B0067AC0E /* MenuView.swift in Sources */,
+				F35841A92C99E69B0067AC0E /* WikiView.swift in Sources */,
 				F31ED79B2C9B0EA600FD6142 /* BackgroundColor.swift in Sources */,
 				F35841702C99CE810067AC0E /* Helper+PretendardFont.swift in Sources */,
 				F35841A42C99D9830067AC0E /* Helper+HakgyoansimDunggeunmiso.swift in Sources */,

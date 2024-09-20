@@ -1,5 +1,5 @@
 //
-//  MenuView.swift
+//  WikiView.swift
 //  TinyWiki
 //
 //  Created by kyungsoolee on 9/18/24.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct MenuView: View {
+struct WikiView: View {
     @Binding var selectedTinyping: TinyPing
     var body: some View {
         VStack(spacing: 0) {
@@ -124,7 +124,7 @@ private struct TinypingCell: View {
 
 // MARK: - Preview
 #Preview {
-    MenuView(selectedTinyping: .constant(MockDataBuilder.tinyPing))
+    WikiView(selectedTinyping: .constant(MockDataBuilder.tinyPing))
         .environment(PathModel())
 }
 
