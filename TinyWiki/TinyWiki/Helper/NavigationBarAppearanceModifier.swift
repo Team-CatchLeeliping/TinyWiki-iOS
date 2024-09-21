@@ -26,16 +26,16 @@ struct NavigationBarAppearanceModifier: UIViewControllerRepresentable {
     private func updateNavigationBarAppearance(scrollOffset: CGFloat, navigationTitleColor: UIColor, uiViewController: UIViewController) {
         let maxAlpha: CGFloat = 0.5
         let alpha =  (-1) * max(0, maxAlpha) * scrollOffset * 3 / 1000
-        let userInterfaceStyle = uiViewController.traitCollection.userInterfaceStyle  // 라이트모드/다크모드 감지
+//        let userInterfaceStyle = uiViewController.traitCollection.userInterfaceStyle  // 라이트모드/다크모드 감지
         
         // 다크모드와 라이트모드에 따른 텍스트 및 배경 색상 설정
-        let foregroundColor: UIColor = (userInterfaceStyle == .light) ? .white : .black
+//        let foregroundColor: UIColor = (userInterfaceStyle == .light) ? .white : .black
 
         let appearance = UINavigationBarAppearance()
         appearance.configureWithOpaqueBackground()
         appearance.titleTextAttributes = [
             .font: UIFont.Head.head1,  // UIFont 사용
-            .foregroundColor: foregroundColor  // 다크 모드에 따라 색상 설정
+            .foregroundColor: UIColor.white  // 다크 모드에 따라 색상 설정
         ]
         appearance.backgroundColor = navigationTitleColor.withAlphaComponent(alpha)
         appearance.shadowColor = nil

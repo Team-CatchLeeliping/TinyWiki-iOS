@@ -24,7 +24,7 @@ struct MockDataBuilder {
             jewelry: nil,
             key: nil,
             backgroundColor: .pink,
-            isLiked: true)
+            isLiked: false)
     }
     
     // tinypings 데이터를 반환합니다.
@@ -43,7 +43,7 @@ struct MockDataBuilder {
                 jewelry: nil,
                 key: nil,
                 backgroundColor: .pink,
-                isLiked: true),
+                isLiked: false),
             TinyPing(
                 name: "꾸래핑",
                 avatar: "img_gguraeping",
@@ -57,7 +57,7 @@ struct MockDataBuilder {
                 jewelry: nil,
                 key: nil,
                 backgroundColor: .blue,
-                isLiked: true
+                isLiked: false
             ),
             TinyPing(
                 name: "바로핑",
@@ -87,7 +87,7 @@ struct MockDataBuilder {
                 jewelry: nil,
                 key: nil,
                 backgroundColor: .yellow,
-                isLiked: true
+                isLiked: false
             ),
             TinyPing(
                 name: "차차핑",
@@ -102,7 +102,7 @@ struct MockDataBuilder {
                 jewelry: nil,
                 key: nil,
                 backgroundColor: .green,
-                isLiked: true
+                isLiked: false
             ),
             TinyPing(
                 name: "라라핑",
@@ -117,7 +117,7 @@ struct MockDataBuilder {
                 jewelry: nil,
                 key: nil,
                 backgroundColor: .purple,
-                isLiked: true
+                isLiked: false
             ),
             TinyPing(
                 name: "해핑",
@@ -132,7 +132,7 @@ struct MockDataBuilder {
                 jewelry: nil,
                 key: nil,
                 backgroundColor: .pink,
-                isLiked: true
+                isLiked: false
             ),
             TinyPing(
                 name: "키키핑",
@@ -147,7 +147,7 @@ struct MockDataBuilder {
                 jewelry: nil,
                 key: nil,
                 backgroundColor: .yellow,
-                isLiked: true
+                isLiked: false
             ),
             TinyPing(
                 name: "아잉핑",
@@ -162,7 +162,7 @@ struct MockDataBuilder {
                 jewelry: nil,
                 key: nil,
                 backgroundColor: .yellow,
-                isLiked: true
+                isLiked: false
             ),
             TinyPing(
                 name: "부끄핑",
@@ -177,7 +177,7 @@ struct MockDataBuilder {
                 jewelry: nil,
                 key: nil,
                 backgroundColor: .purple,
-                isLiked: true
+                isLiked: false
             ),
             TinyPing(
                 name: "부투핑",
@@ -192,7 +192,7 @@ struct MockDataBuilder {
                 jewelry: nil,
                 key: nil,
                 backgroundColor: .pink,
-                isLiked: true
+                isLiked: false
             ),
             TinyPing(
                 name: "깜빡핑",
@@ -207,7 +207,7 @@ struct MockDataBuilder {
                 jewelry: nil,
                 key: nil,
                 backgroundColor: .yellow,
-                isLiked: true
+                isLiked: false
             ),
             TinyPing(
                 name: "드림핑",
@@ -222,7 +222,7 @@ struct MockDataBuilder {
                 jewelry: nil,
                 key: nil,
                 backgroundColor: .blue,
-                isLiked: true
+                isLiked: false
             )
         ]
     }

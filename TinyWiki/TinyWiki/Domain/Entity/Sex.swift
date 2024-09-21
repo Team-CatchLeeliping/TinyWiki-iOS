@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-enum Sex: Identifiable, CaseIterable {
+enum Sex: Codable, Identifiable, CaseIterable {
     case male
     case female
     
