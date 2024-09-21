@@ -9,7 +9,7 @@ import Foundation
 
 enum Tab: Identifiable, CaseIterable {
     case wiki
-    case quiz
+//    case quiz
     
     /// ID를 생성합니다.
     var id: UUID {
@@ -20,7 +20,7 @@ enum Tab: Identifiable, CaseIterable {
     var title: String {
         switch self {
         case .wiki: return "티니위키"
-        case .quiz: return "티니퀴즈"
+//        case .quiz: return "티니퀴즈"
         }
     }
     
@@ -28,14 +28,14 @@ enum Tab: Identifiable, CaseIterable {
     var icon: String {
         switch self {
         case .wiki: return SystemImage.menu
-        case .quiz: return SystemImage.heart
+//        case .quiz: return SystemImage.heart
         }
     }
     
     var emptyIcon: String {
         switch self {
         case .wiki: return SystemImage.emptyMenu
-        case .quiz: return SystemImage.emptyHeart
+//        case .quiz: return SystemImage.emptyHeart
         }
     }
 }

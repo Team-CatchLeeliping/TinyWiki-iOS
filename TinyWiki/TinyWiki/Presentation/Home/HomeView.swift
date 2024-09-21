@@ -24,7 +24,7 @@ struct HomeView: View {
                 Header(searchKeyword: $searchKeyword, selectedTab: $selectedTab)
                 switch selectedTab {
                 case .wiki: WikiView(searchKeyword: $searchKeyword, selectedTinyping: $selectedTinyPing)
-                case .quiz: QuizView()
+//                case .quiz: QuizView()
                 }
                 TabBar(selection: $selectedTab)
             }
@@ -108,29 +108,31 @@ private struct TabBar: View {
     @Binding private(set) var selection: Tab
     var body: some View {
         HStack {
+            // TODO: 티니퀴즈 구현되면 아래 코드 주석 복원하기
             Spacer()
-            ForEach(Tab.allCases) { tab in
+//            ForEach(Tab.allCases) { tab in
                 Button {
-                    print(tab)
-                    selection = tab
+                    print(selection)
+//                    selection = tab
+                    selection = .wiki
                 } label: {
                     VStack {
-                        Image(systemName: selection == tab ? tab.icon : tab.emptyIcon)
+                        Image(systemName: /*selection == tab ? tab.icon : tab.emptyIcon*/ selection.icon)
                             .resizable()
                             .scaledToFit()
                             .frame(height: 24)
-                        Text(tab.title)
+                        Text(selection.title)
                             .font(.Body.body5)
                     }
                 }
                 .contentShape(Rectangle())
                 .foregroundStyle(.tinyWhite)
                 .frame(width: 60)
-                if tab != .quiz {
-                    Spacer()
-                        .frame(width: 128)
-                }
-            }
+//                if tab != .quiz {
+//                    Spacer()
+//                        .frame(width: 128)
+//                }
+//            }
             Spacer()
         }
         .frame(height: 88)
