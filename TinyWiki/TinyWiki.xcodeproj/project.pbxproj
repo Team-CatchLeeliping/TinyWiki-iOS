@@ -18,7 +18,7 @@
 		F35841512C99CE1A0067AC0E /* TinyWikiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35841502C99CE1A0067AC0E /* TinyWikiTests.swift */; };
 		F358415B2C99CE1A0067AC0E /* TinyWikiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F358415A2C99CE1A0067AC0E /* TinyWikiUITests.swift */; };
 		F358415D2C99CE1A0067AC0E /* TinyWikiUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F358415C2C99CE1A0067AC0E /* TinyWikiUITestsLaunchTests.swift */; };
-		F358416D2C99CE4D0067AC0E /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F358416C2C99CE4D0067AC0E /* OnboardingView.swift */; };
+		F358416D2C99CE4D0067AC0E /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F358416C2C99CE4D0067AC0E /* SplashView.swift */; };
 		F35841702C99CE810067AC0E /* Helper+PretendardFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = F358416F2C99CE810067AC0E /* Helper+PretendardFont.swift */; };
 		F35841752C99CEAB0067AC0E /* SystemImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35841742C99CEAB0067AC0E /* SystemImage.swift */; };
 		F35841772C99CECB0067AC0E /* Icons.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F35841762C99CECB0067AC0E /* Icons.xcassets */; };
@@ -76,7 +76,7 @@
 		F35841562C99CE1A0067AC0E /* TinyWikiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TinyWikiUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F358415A2C99CE1A0067AC0E /* TinyWikiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TinyWikiUITests.swift; sourceTree = "<group>"; };
 		F358415C2C99CE1A0067AC0E /* TinyWikiUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TinyWikiUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		F358416C2C99CE4D0067AC0E /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		F358416C2C99CE4D0067AC0E /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		F358416F2C99CE810067AC0E /* Helper+PretendardFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Helper+PretendardFont.swift"; sourceTree = "<group>"; };
 		F35841742C99CEAB0067AC0E /* SystemImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemImage.swift; sourceTree = "<group>"; };
 		F35841762C99CECB0067AC0E /* Icons.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Icons.xcassets; sourceTree = "<group>"; };
@@ -203,17 +203,17 @@
 				F35841AA2C99E6FF0067AC0E /* Quiz */,
 				F35841A72C99E68A0067AC0E /* Wiki */,
 				F35841A02C99D8500067AC0E /* Home */,
-				F358416B2C99CE320067AC0E /* Onboarding */,
+				F358416B2C99CE320067AC0E /* Splash */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
 		};
-		F358416B2C99CE320067AC0E /* Onboarding */ = {
+		F358416B2C99CE320067AC0E /* Splash */ = {
 			isa = PBXGroup;
 			children = (
-				F358416C2C99CE4D0067AC0E /* OnboardingView.swift */,
+				F358416C2C99CE4D0067AC0E /* SplashView.swift */,
 			);
-			path = Onboarding;
+			path = Splash;
 			sourceTree = "<group>";
 		};
 		F358416E2C99CE6C0067AC0E /* Helper */ = {
@@ -545,7 +545,7 @@
 				F358418D2C99D5E00067AC0E /* DummyUseCase.swift in Sources */,
 				F35841752C99CEAB0067AC0E /* SystemImage.swift in Sources */,
 				F328E4642C9E16A200C7E4BF /* NavigationBarAppearanceModifier.swift in Sources */,
-				F358416D2C99CE4D0067AC0E /* OnboardingView.swift in Sources */,
+				F358416D2C99CE4D0067AC0E /* SplashView.swift in Sources */,
 				F35841AC2C99E70B0067AC0E /* QuizView.swift in Sources */,
 				F35841402C99CE190067AC0E /* TinyWikiApp.swift in Sources */,
 				F35841902C99D5F40067AC0E /* DummyInterface.swift in Sources */,
