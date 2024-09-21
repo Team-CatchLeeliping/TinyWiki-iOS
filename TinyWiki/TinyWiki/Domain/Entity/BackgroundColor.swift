@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum BackgroundColor: String {
+enum BackgroundColor: String, Codable {
     case clear
     case pink
     case yellow

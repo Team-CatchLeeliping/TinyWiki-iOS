@@ -10,7 +10,7 @@ import SwiftUI
 struct WikiView: View {
     @Binding var searchKeyword: String
     @Binding var selectedTinyping: TinyPing
-    @State private var favoriteTinypings: [TinyPing] = []
+    @StateObject private var tinyPingManager = TinyPingManager()
     @State private var scrollOffset: CGFloat = 0  // 스크롤 오프셋을 저장할 상태 변수
     @State private var isScroll: Bool = false
     var body: some View {
@@ -24,20 +24,16 @@ struct WikiView: View {
                 }
                 .frame(height: 0) // 오프셋 감지용 프레임
                 VStack(spacing: 0) {
-                    TinypingList(selectedTinyPing: $selectedTinyping, searchKeyword: $searchKeyword)
+                    TinypingList(
+                        selectedTinyPing: $selectedTinyping,
+                        searchKeyword: $searchKeyword,
+                        tinyPings: $tinyPingManager.tinyPings
+                    )
                 }
             }
             .onPreferenceChange(ScrollOffsetKey.self) { value in
-                print("scrollOffset: \(scrollOffset)")
-                print("value: \(value)")
                 UIApplication.shared.endEditing()
                 scrollOffset = value  // 스크롤 오프셋을 상태 변수에 저장
-//                if value < 0 {
-//                    isScroll = true
-//                    UIApplication.shared.endEditing()
-//                } else {
-//                    isScroll = false
-//                }
             }
         }
         .padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 20))
@@ -50,22 +46,35 @@ struct WikiView: View {
 private struct TinypingList: View {
     @Binding var selectedTinyPing: TinyPing
     @Binding var searchKeyword: String
+    @Binding private(set) var tinyPings: [TinyPing]
     // filteredTinypings 들어오면서 필요 없어짐.
-    let tinyPings: [TinyPing] = MockDataBuilder.tinyPings
+    //    let tinyPings: [TinyPing] = MockDataBuilder.tinyPings
+    
     
     var filteredTinyPings: [TinyPing] {
         if searchKeyword.isEmpty {
-            return tinyPings
+            // isLiked가 true인 항목을 먼저 정렬하여 반환
+            return tinyPings.sorted { $0.isLiked && !$1.isLiked }
         } else {
+            // 검색어에 맞는 항목을 필터링하고, 그 중에서 isLiked가 true인 항목을 먼저 정렬
             return tinyPings.filter { $0.name.contains(searchKeyword) }
+                .sorted { $0.isLiked && !$1.isLiked }
         }
     }
     private let columns: [GridItem] = Array(repeating: .init(.fixed(180), spacing: nil), count: 2)
     var body: some View {
         LazyVGrid(columns: columns , spacing: 8) {
-            ForEach(filteredTinyPings) { tinyPing in
-                TinypingCell(selectedTinyPing: $selectedTinyPing, tinyPing: tinyPing)
+            ForEach(filteredTinyPings.indices, id: \.self) { index in
+                TinypingCell(
+                    selectedTinyPing: $selectedTinyPing,
+                    tinyPings: $tinyPings,
+                    tinyPing: $tinyPings[index]
+                )
+                    .transition(.move(edge: .top))  // 애니메이션 적용
             }
+        }
+        .onAppear {
+            tinyPings.sort { $0.isLiked && !$1.isLiked }
         }
         .padding(8)
     }
@@ -75,7 +84,8 @@ private struct TinypingList: View {
 private struct TinypingCell: View {
     @Environment(PathModel.self) private var pathModel
     @Binding private(set) var selectedTinyPing: TinyPing
-    let tinyPing: TinyPing
+    @Binding private(set) var tinyPings: [TinyPing]
+    @Binding var tinyPing: TinyPing
     var body: some View {
         Button {
             selectedTinyPing = tinyPing
@@ -98,7 +108,7 @@ private struct TinypingCell: View {
                 .cornerRadius(20)
                 .contentShape(Rectangle())
                 .shadow(color: Color.black.opacity(0.15), radius: 5, x: 0, y: 1)
-                HeartButton(tinyPing: tinyPing)
+                HeartButton(tinyPing: $tinyPing, tinyPings: $tinyPings)
             }
         }
         .environment(pathModel)
@@ -108,15 +118,22 @@ private struct TinypingCell: View {
 // MARK: - HeartButton
 private struct HeartButton: View {
     // TODO: 임시 코드
-    var tinyPing: TinyPing
-    @State private var isLiked: Bool = false
+    @Binding var tinyPing: TinyPing
+    @Binding private(set) var tinyPings: [TinyPing]
+//    @ObservedObject var tinyPingManager = TinyPingManager()
     var body: some View {
         Button {
-            isLiked.toggle()
-            print(tinyPing.isLiked)
-            // TODO: UserDefault에 좋아요 한 티니핑 저장해두기
+            withAnimation {
+                if let index = tinyPings.firstIndex(where: { $0.id == tinyPing.id }) {
+                    tinyPings[index].isLiked.toggle()  // 좋아요 상태 변경
+                    TinyPingManager().saveTinyPings(tinyPings)  // 상태 저장
+                    
+                    // 리스트를 다시 정렬하여 좋아요가 상단으로 이동되도록 처리
+                    tinyPings.sort { $0.isLiked && !$1.isLiked }
+                }
+            }
         } label: {
-            Image(isLiked ? .imgHeartfill: .imgHeartempty)
+            Image(tinyPing.isLiked ? .imgHeartfill: .imgHeartempty)
                 .resizable()
                 .scaledToFit()
                 .frame(width: 36)
