@@ -272,21 +272,6 @@ struct MockDataBuilder {
                 isLiked: false
             ),
             TinyPing(
-                name: "나르핑",
-                avatar: "img_narping",
-                generation: 1,
-                sex: Sex.female,
-                nameDescription: "나르시즘",
-                item: "립스틱",
-                magic: "마법손거울을 대상에게 줘서, 손거울 속 자신에게 빠지게 만든다.",
-                favoriteThings: "뷰티(외모관리), 아름다운 것",
-                dislikeThings: "자신이 보기에 아름답지 않은 것",
-                jewelry: nil,
-                key: nil,
-                backgroundColor: .yellow,
-                isLiked: false
-            ),
-            TinyPing(
                 name: "무셔핑",
                 avatar: "img_scareping",
                 generation: 1,
@@ -378,7 +363,7 @@ struct MockDataBuilder {
             ),
             TinyPing(
                 name: "시러핑",
-                avatar: "img_noping",
+                avatar: "img_nonoping",
                 generation: 1,
                 sex: Sex.male,
                 nameDescription: "싫어",
@@ -558,7 +543,7 @@ struct MockDataBuilder {
             ),
             TinyPing(
                 name: "또까핑",
-                avatar: "img_toyping",
+                avatar: "img_wannabeping",
                 generation: 1,
                 sex: Sex.female,
                 nameDescription: "똑같다",
@@ -678,10 +663,10 @@ struct MockDataBuilder {
             ),
             TinyPing(
                 name: "앙대핑",
-                avatar: "img_noping",
+                avatar: "img_egoping",
                 generation: 1,
                 sex: Sex.female,
-                nameDescription: "안돼",
+                nameDescription: "안 돼 -> 앙대",
                 item: "삼지창",
                 magic: "꽃가루를 뿌려, 꽃가루에 맞은 대상들이 서로 다투게 만들 수 있다.",
                 favoriteThings:"엉망진창, 자유, 강한 것",
@@ -920,7 +905,7 @@ struct MockDataBuilder {
             ),
             TinyPing(
                 name: "짝짝핑",
-                avatar: "img_sparkleping",
+                avatar: "img_buddyping",
                 generation: 2,
                 sex: Sex.male,
                 nameDescription: "짝꿍",
@@ -934,8 +919,8 @@ struct MockDataBuilder {
                 isLiked: false
             ),
             TinyPing(
-                name: "짝짝핑",
-                avatar: "img_giveping",
+                name: "주네핑",
+                avatar: "img_giftping",
                 generation: 2,
                 sex: Sex.female,
                 nameDescription: "선물을 주다",
