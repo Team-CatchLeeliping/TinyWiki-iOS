@@ -61,6 +61,9 @@ private struct Header: View {
         }
         .frame(height: 44)
         .padding(EdgeInsets(top: 4, leading: 16, bottom: 4, trailing: 16))
+        .onTapGesture {
+            UIApplication.shared.endEditing()  // 빈 공간 클릭 시 키보드 내리기
+        }
     }
 }
 

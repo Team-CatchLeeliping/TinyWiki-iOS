@@ -10,20 +10,37 @@ import SwiftUI
 struct WikiView: View {
     @Binding var searchKeyword: String
     @Binding var selectedTinyping: TinyPing
+    @State private var favoriteTinypings: [TinyPing] = []
+    @State private var scrollOffset: CGFloat = 0  // 스크롤 오프셋을 저장할 상태 변수
+    @State private var isScroll: Bool = false
     var body: some View {
         VStack(spacing: 0) {
             Spacer()
                 .frame(height: 12)
             ScrollView {
+                GeometryReader { geometry in
+                    Color.clear
+                        .preference(key: ScrollOffsetKey.self, value: geometry.frame(in: .global).minY)
+                }
+                .frame(height: 0) // 오프셋 감지용 프레임
                 VStack(spacing: 0) {
                     TinypingList(selectedTinyPing: $selectedTinyping, searchKeyword: $searchKeyword)
                 }
             }
+            .onPreferenceChange(ScrollOffsetKey.self) { value in
+                print("scrollOffset: \(scrollOffset)")
+                print("value: \(value)")
+                UIApplication.shared.endEditing()
+                scrollOffset = value  // 스크롤 오프셋을 상태 변수에 저장
+//                if value < 0 {
+//                    isScroll = true
+//                    UIApplication.shared.endEditing()
+//                } else {
+//                    isScroll = false
+//                }
+            }
         }
         .padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 20))
-        .onTapGesture {
-            UIApplication.shared.endEditing()  // 빈 공간 클릭 시 키보드 내리기
-        }
     }
 }
 
