@@ -31,6 +31,7 @@ struct WikiDetailView: View {
                 Image(tinyPing.backgroundColor.baseBackground)
                     .resizable()
                     .scaledToFill()
+                    .frame(maxWidth: 0)
                 VStack(spacing: 0) {
                     GeometryReader { geometry in
                         Color.clear
@@ -170,11 +171,10 @@ private struct Description: View {
                 .resizable()
                 .scaledToFill()
             // TODO: 왜 이거를 붙이면 화면이 안깨질까?..
-                .frame(maxWidth: 0)
-                .offset(y: 36)
+                .frame(maxWidth: .infinity)  // 화면 너비에 맞추기
             VStack(alignment: .leading, spacing: 24) {
                 Spacer()
-                    .frame(height: 80)
+                    .frame(height: 16)
                 
                 // 기본 정보
                 HStack(spacing: 0) {

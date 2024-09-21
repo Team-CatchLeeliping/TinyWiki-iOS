@@ -134,7 +134,7 @@ private struct TabBar: View {
         .frame(height: 88)
 //        .padding(30)
         .background(Color.tinyLightpink)
-        .cornerRadius(20)
+//        .cornerRadius(20)
     }
 }
 
