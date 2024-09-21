@@ -171,10 +171,10 @@ private struct Description: View {
                 .scaledToFill()
             // TODO: 왜 이거를 붙이면 화면이 안깨질까?..
                 .frame(maxWidth: 0)
-            
+                .offset(y: 36)
             VStack(alignment: .leading, spacing: 24) {
                 Spacer()
-                    .frame(height: 40)
+                    .frame(height: 80)
                 
                 // 기본 정보
                 HStack(spacing: 0) {
