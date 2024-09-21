@@ -50,6 +50,7 @@ private struct TinypingList: View {
                 TinypingCell(selectedTinyPing: $selectedTinyPing, tinyPing: tinyPing)
             }
         }
+        .padding(8)
     }
 }
 
@@ -79,7 +80,7 @@ private struct TinypingCell: View {
                 .background(.tinyWhite)
                 .cornerRadius(20)
                 .contentShape(Rectangle())
-                .shadow(color: Color.black.opacity(0.1), radius: 5, x: 0, y: 0)
+                .shadow(color: Color.black.opacity(0.15), radius: 5, x: 0, y: 1)
                 HeartButton(tinyPing: tinyPing)
             }
         }

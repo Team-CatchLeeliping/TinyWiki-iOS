@@ -103,8 +103,8 @@ private struct TabBar: View {
     @Binding private(set) var selection: Tab
     var body: some View {
         HStack {
+            Spacer()
             ForEach(Tab.allCases) { tab in
-                Spacer()
                 Button {
                     print(tab)
                     selection = tab
@@ -113,19 +113,25 @@ private struct TabBar: View {
                         Image(systemName: selection == tab ? tab.icon : tab.emptyIcon)
                             .resizable()
                             .scaledToFit()
-                            .frame(height: 36)
+                            .frame(height: 24)
                         Text(tab.title)
                             .font(.Body.body5)
                     }
                 }
                 .contentShape(Rectangle())
                 .foregroundStyle(.tinyWhite)
-                Spacer()
+                .frame(width: 60)
+                if tab != .quiz {
+                    Spacer()
+                        .frame(width: 128)
+                }
             }
+            Spacer()
         }
-        .padding(30)
+        .frame(height: 88)
+//        .padding(30)
         .background(Color.tinyLightpink)
-        .cornerRadius(30)
+        .cornerRadius(20)
     }
 }
 
