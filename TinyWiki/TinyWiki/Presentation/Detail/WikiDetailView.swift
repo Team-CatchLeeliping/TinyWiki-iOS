@@ -188,7 +188,6 @@ private struct Description: View {
                             .frame(width: 68)
                         Text(tinyPing.sex.title)
                             .foregroundStyle(sexColor)
-                            .foregroundStyle(bodyColor)
                             .font(.Head.head6)
                             .lineSpacing(10)
                     }
@@ -201,7 +200,6 @@ private struct Description: View {
                         Spacer()
                             .frame(width: 68)
                         Text(tinyPing.nameDescription)
-                            .foregroundStyle(sexColor)
                             .foregroundStyle(bodyColor)
                             .font(.Head.head6)
                             .lineSpacing(10)
@@ -215,7 +213,6 @@ private struct Description: View {
                         Spacer()
                             .frame(width: 68)
                         Text(tinyPing.item)
-                            .foregroundStyle(sexColor)
                             .foregroundStyle(bodyColor)
                             .font(.Head.head6)
                             .lineSpacing(10)
