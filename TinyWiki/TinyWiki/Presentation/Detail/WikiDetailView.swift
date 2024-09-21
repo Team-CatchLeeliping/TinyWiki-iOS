@@ -257,7 +257,7 @@ private struct Description: View {
                 // 싫어하는 것
                 VStack(alignment: .leading, spacing: 10) {
                     Text("싫어하는 것")
-                        .foregroundStyle(.tinyBlack)
+                        .foregroundStyle(titleColor)
                         .font(.Body.body1)
                     
                     Text(tinyPing.dislikeThings)

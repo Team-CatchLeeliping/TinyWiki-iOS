@@ -51,7 +51,7 @@ private struct Header: View {
     @Binding var selectedTab: Tab
     var body: some View {
         HStack(spacing: 0) {
-            Text("티니핑 도감")
+            Text("티니위키")
                 .font(.Head.head5)
                 .foregroundStyle(.tinyPink)
             Spacer()
