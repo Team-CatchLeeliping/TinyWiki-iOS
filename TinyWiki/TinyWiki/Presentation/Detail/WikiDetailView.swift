@@ -177,29 +177,49 @@ private struct Description: View {
                     .frame(height: 16)
                 
                 // 기본 정보
-                HStack(spacing: 0) {
+                VStack(alignment: .leading, spacing: 10) {
                     
-                    VStack(alignment: .leading, spacing: 10) {
+                    HStack(spacing: 0) {
                         Text("성별")
-                        Text("이름 유래")
-                        Text("소품")
-                    }
-                    .foregroundStyle(titleColor)
-                    .font(.Body.body1)
-                    
-                    Spacer()
-                        .frame(width: 74)
-                    VStack(alignment: .leading, spacing: 10) {
+                            .foregroundStyle(titleColor)
+                            .font(.Body.body1)
+                            .frame(width: 64, alignment: .leading)
+                        Spacer()
+                            .frame(width: 68)
                         Text(tinyPing.sex.title)
                             .foregroundStyle(sexColor)
-                        Text(tinyPing.nameDescription)
-                        Text(tinyPing.item)
+                            .foregroundStyle(bodyColor)
+                            .font(.Head.head6)
+                            .lineSpacing(10)
                     }
-                    .foregroundStyle(bodyColor)
-                    .font(.Head.head6)
-                    .lineSpacing(10)
                     
-                    Spacer()
+                    HStack(spacing: 0) {
+                        Text("이름 유래")
+                            .foregroundStyle(titleColor)
+                            .font(.Body.body1)
+                            .frame(width: 64, alignment: .leading)
+                        Spacer()
+                            .frame(width: 68)
+                        Text(tinyPing.nameDescription)
+                            .foregroundStyle(sexColor)
+                            .foregroundStyle(bodyColor)
+                            .font(.Head.head6)
+                            .lineSpacing(10)
+                    }
+                    
+                    HStack(spacing: 0) {
+                        Text("소품")
+                            .foregroundStyle(titleColor)
+                            .font(.Body.body1)
+                            .frame(width: 64, alignment: .leading)
+                        Spacer()
+                            .frame(width: 68)
+                        Text(tinyPing.item)
+                            .foregroundStyle(sexColor)
+                            .foregroundStyle(bodyColor)
+                            .font(.Head.head6)
+                            .lineSpacing(10)
+                    }
                 }
                 
                 // 마법
@@ -229,13 +249,13 @@ private struct Description: View {
                 }
                 
                 // 열쇠
-                if let jewelry = tinyPing.jewelry {
+                if let key = tinyPing.key {
                     VStack(alignment: .leading, spacing: 10) {
                         Text("키")
                             .foregroundStyle(titleColor)
                             .font(.Body.body1)
                         
-                        Text(jewelry)
+                        Text(key)
                             .foregroundStyle(bodyColor)
                             .font(.Head.head6)
                             .lineSpacing(10)
@@ -257,7 +277,7 @@ private struct Description: View {
                 // 싫어하는 것
                 VStack(alignment: .leading, spacing: 10) {
                     Text("싫어하는 것")
-                        .foregroundStyle(.tinyBlack)
+                        .foregroundStyle(titleColor)
                         .font(.Body.body1)
                     
                     Text(tinyPing.dislikeThings)

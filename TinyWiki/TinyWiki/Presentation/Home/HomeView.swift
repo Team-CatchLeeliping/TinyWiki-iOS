@@ -19,6 +19,8 @@ struct HomeView: View {
         @Bindable var pathModel = pathModel
         NavigationStack(path: $pathModel.paths) {
             VStack(alignment: .center, spacing: 0) {
+                Spacer()
+                    .frame(height: 10)
                 Header(searchKeyword: $searchKeyword, selectedTab: $selectedTab)
                 switch selectedTab {
                 case .wiki: WikiView(searchKeyword: $searchKeyword, selectedTinyping: $selectedTinyPing)
@@ -51,7 +53,7 @@ private struct Header: View {
     @Binding var selectedTab: Tab
     var body: some View {
         HStack(spacing: 0) {
-            Text("티니핑 도감")
+            Text(selectedTab.title)
                 .font(.Head.head5)
                 .foregroundStyle(.tinyPink)
             Spacer()

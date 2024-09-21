@@ -10,10 +10,24 @@ import SwiftUI
 @main
 struct TinyWiki: App {
     @State private var pathModel: PathModel = .init()
+    @State private var showSplash = true  // 스플래시 화면을 보여줄지 여부를 관리하는 변수
+    
     var body: some Scene {
         WindowGroup {
-            HomeView()
+            if showSplash {
+                SplashView()
+                    .onAppear {
+                        // 1초 후에 스플래시 화면을 숨기고 HomeView로 전환
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                            withAnimation {
+                                showSplash = false
+                            }
+                        }
+                    }
+            } else {
+                HomeView()  // 스플래시 화면이 사라진 후에 HomeView를 띄움
+                    .environment(pathModel)
+            }
         }
-        .environment(pathModel)
     }
 }

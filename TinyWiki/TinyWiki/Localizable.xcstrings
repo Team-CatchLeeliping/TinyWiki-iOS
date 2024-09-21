@@ -7,22 +7,8 @@
     "♡%@♡" : {
 
     },
-    "Hello, World!" : {
-
-    },
     "곧 업데이트 됩니다!" : {
 
-    },
-    "국가 번호: +%lld" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "National Number: +%lld"
-          }
-        }
-      }
     },
     "마법" : {
 
@@ -64,9 +50,6 @@
           }
         }
       }
-    },
-    "티니핑 도감" : {
-
     },
     "티니핑을 찾아봐요♥" : {
 

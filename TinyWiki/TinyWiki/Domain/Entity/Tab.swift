@@ -19,8 +19,8 @@ enum Tab: Identifiable, CaseIterable {
     /// 탭바의 타이틀을 반환합니다.
     var title: String {
         switch self {
-        case .wiki: return "도감"
-        case .quiz: return "티니핑 퀴즈"
+        case .wiki: return "티니위키"
+        case .quiz: return "티니퀴즈"
         }
     }
     
