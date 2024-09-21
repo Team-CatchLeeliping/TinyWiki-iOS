@@ -10,8 +10,6 @@ struct WikiView: View {
     
     var body: some View {
         VStack(spacing: 0) {
-            Spacer()
-                .frame(height: 12)
             ScrollView {
                 GeometryReader { geometry in
                     Color.clear
