@@ -16,6 +16,7 @@ struct QuizView: View {
             }
             Spacer()
             QuizText()
+            QuizList()
             Spacer()
             
         }
@@ -31,6 +32,35 @@ private struct QuizText: View {
             .foregroundStyle(.tinyWhite)
             .multilineTextAlignment(.center)
             .customStroke(strokeSize: 4, strokeColor: .tinyPink)
+    }
+}
+
+// MARK: - 퀴즈 선택 리스트
+private struct QuizList: View {
+    var body: some View {
+        VStack {
+            QuizCell()
+        }
+    }
+}
+
+// MARK: - 퀴즈 셀
+private struct QuizCell: View {
+    var body: some View {
+        HStack {
+            Image(.imgHeartyouping)
+                .resizable()
+                .scaledToFit()
+                .frame(width: 64)
+            Text("이름을 보고 나를 맞춰줘 츄")
+                .font(.Body.body1)
+                .foregroundStyle(.tinyPink)
+        }
+        .frame(width: 340, height: 96)
+        .background(.tinyWhite)
+        .cornerRadius(20)
+        .contentShape(Rectangle())
+        .shadow(color: Color.black.opacity(0.15), radius: 5, x: 0, y: 1)
     }
 }
 
