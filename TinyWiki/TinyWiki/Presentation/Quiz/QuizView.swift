@@ -15,14 +15,22 @@ struct QuizView: View {
                 Spacer()
             }
             Spacer()
-            Text("곧 업데이트 됩니다!")
-                .font(.Head.head1)
-                .foregroundStyle(.tinyPink)
+            QuizText()
             Spacer()
             
         }
         .padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 20))
 
+    }
+}
+
+private struct QuizText: View {
+    var body: some View {
+        Text("20초 안에\n티니핑을\n몇 마리 맞출 수 있을까요?")
+            .font(.Head.head3)
+            .foregroundStyle(.tinyWhite)
+            .multilineTextAlignment(.center)
+            .customStroke(strokeSize: 4, strokeColor: .tinyPink)
     }
 }
 
