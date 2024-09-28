@@ -48,6 +48,7 @@
 		F3B06A982CA848BA004961D2 /* NameQuizResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B06A972CA848BA004961D2 /* NameQuizResultView.swift */; };
 		F3B06A9C2CA8590D004961D2 /* NameQuizUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B06A9B2CA8590D004961D2 /* NameQuizUseCase.swift */; };
 		F3B06A9E2CA85951004961D2 /* NameQuizServiceInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B06A9D2CA85951004961D2 /* NameQuizServiceInterface.swift */; };
+		F3B06AA02CA86302004961D2 /* NameQuizService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B06A9F2CA86302004961D2 /* NameQuizService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -113,6 +114,7 @@
 		F3B06A972CA848BA004961D2 /* NameQuizResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameQuizResultView.swift; sourceTree = "<group>"; };
 		F3B06A9B2CA8590D004961D2 /* NameQuizUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameQuizUseCase.swift; sourceTree = "<group>"; };
 		F3B06A9D2CA85951004961D2 /* NameQuizServiceInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameQuizServiceInterface.swift; sourceTree = "<group>"; };
+		F3B06A9F2CA86302004961D2 /* NameQuizService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameQuizService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -362,6 +364,7 @@
 			isa = PBXGroup;
 			children = (
 				F35841942C99D6200067AC0E /* DummyService.swift */,
+				F3B06A9F2CA86302004961D2 /* NameQuizService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -600,6 +603,7 @@
 				F3B06A9C2CA8590D004961D2 /* NameQuizUseCase.swift in Sources */,
 				F358416D2C99CE4D0067AC0E /* SplashView.swift in Sources */,
 				F35841AC2C99E70B0067AC0E /* QuizView.swift in Sources */,
+				F3B06AA02CA86302004961D2 /* NameQuizService.swift in Sources */,
 				F35841402C99CE190067AC0E /* TinyWikiApp.swift in Sources */,
 				F35841902C99D5F40067AC0E /* DummyInterface.swift in Sources */,
 				F35841872C99D5830067AC0E /* Path.swift in Sources */,

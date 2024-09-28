@@ -8,54 +8,32 @@
 import SwiftUI
 
 struct NameQuizView: View {
-    @State private var exmapleTinyPings: [TinyPing] = Array(MockDataBuilder.tinyPings.prefix(4))
+//    @State private var exmapleTinyPings: [TinyPing] = Array(MockDataBuilder.tinyPings.prefix(4))
     @State var selectedTinyPing: TinyPing?
-    @State var answerTinyPing: TinyPing = MockDataBuilder.tinyPing
-    @State var usedTinyPings: [TinyPing] = []
-    @State var correctTinyPings: [TinyPing] = [] // 정답으로 맞춘 티니핑 리스트
+//    @State var answerTinyPing: TinyPing = MockDataBuilder.tinyPing
+//    @State var usedTinyPings: [TinyPing] = []
+//    @State var correctTinyPings: [TinyPing] = [] // 정답으로 맞춘 티니핑 리스트
     @Environment(PathModel.self) private var pathModel
     
+    @State private var nameQuizUseCase: NameQuizUseCase = .init(nameQuizService: NameQuizService())
+    
     var body: some View {
+        @Bindable var nameQuizUseCase = nameQuizUseCase
         VStack(spacing: 0) {
             TimerView {
                 pathModel.paths.append(.nameQuisResultView)  // 타이머 종료 후 결과 화면으로 이동
             }
             Spacer()
                 .frame(height: 84)
-            TinyPingNameText(name: answerTinyPing.name)
+            TinyPingNameText()
             Spacer()
                 .frame(height: 36)
             TinyPingGrid(
-                selectedTinyPing: $selectedTinyPing,
-                exmapleTinyPings: $exmapleTinyPings,
-                answerTinyPing: $answerTinyPing,
-                correctTinyPings: $correctTinyPings, // 맞춘 리스트 전달
-                onSelectAnswer: generateNewQuiz
+                selectedTinyPing: $selectedTinyPing
             )
         }
         .onAppear {
-            generateNewQuiz()
-        }
-    }
-    
-    // TODO: UI와 분리하기
-    // 새로운 퀴즈를 생성하는 함수
-    private func generateNewQuiz() {
-        // 이전에 사용된 티니핑을 제외하고 새로운 티니핑 목록을 필터링
-        let availableTinyPings = MockDataBuilder.tinyPings.filter { !usedTinyPings.contains($0) }
-        
-        // 4개의 티니핑을 랜덤으로 선택
-        exmapleTinyPings = Array(availableTinyPings.shuffled().prefix(4))
-        
-        // 정답은 exampleTinyPings 중 하나로 선택
-        answerTinyPing = exmapleTinyPings.randomElement() ?? MockDataBuilder.tinyPing
-        
-        // 사용된 티니핑에 정답 추가
-        usedTinyPings.append(answerTinyPing)
-        
-        // 만약 사용된 티니핑이 전체보다 많아지면 초기화 (전부 다 사용된 경우를 대비)
-        if usedTinyPings.count >= MockDataBuilder.tinyPings.count {
-            usedTinyPings.removeAll()
+            nameQuizUseCase.generateNewQuiz()
         }
     }
 }
@@ -84,7 +62,7 @@ private struct TimerView: View {
                 RoundedRectangle(cornerRadius: 24)
                     .foregroundStyle(.tinyWhite)
                     .frame(width: maxWidth, height: 20)
-
+                
                 RoundedRectangle(cornerRadius: 24)
                     .foregroundStyle(.tinyPink)
                     .frame(width: width, height: 20)
@@ -93,7 +71,7 @@ private struct TimerView: View {
                 startTimer()
             }
         }
-
+        
     }
     
     // 타이머 시작
@@ -119,10 +97,11 @@ private struct TimerView: View {
 
 // MARK: - 티니핑 이름 텍스트
 private struct TinyPingNameText: View {
-    var name: String
+    @Environment(NameQuizUseCase.self) private var nameQuizUseCase: NameQuizUseCase
     
     var body: some View {
-        Text("♡\(name)♡")
+        @Bindable var nameQuizUseCase = nameQuizUseCase
+        Text("♡\(nameQuizUseCase.state.answerTinyPing.name)♡")
             .font(.CustomTitle.customTitle1)
             .foregroundStyle(.tinyPink)
             .padding(EdgeInsets(top: 24, leading: 36, bottom: 24, trailing: 36))
@@ -137,25 +116,18 @@ private struct TinyPingNameText: View {
 // MARK: - 티니핑 그리드
 private struct TinyPingGrid: View {
     @Binding var selectedTinyPing: TinyPing?
-    @Binding private(set) var exmapleTinyPings: [TinyPing]
-    @Binding var answerTinyPing: TinyPing
-    @Binding var correctTinyPings: [TinyPing]  // 맞춘 티니핑 리스트
-    let onSelectAnswer: () -> Void  // 정답 맞췄을 때 호출하는 클로저
+    @Environment(NameQuizUseCase.self) private var nameQuizUseCase: NameQuizUseCase
     
     private let columns: [GridItem] = Array(repeating: .init(.fixed(180), spacing: nil), count: 2)
     
     var body: some View {
+        @Bindable var nameQuizUseCase = nameQuizUseCase
         LazyVGrid(columns: columns , spacing: 8) {
-            ForEach(exmapleTinyPings, id: \.id) { tinyPing in
-                if let index = exmapleTinyPings.firstIndex(where: { $0.id == tinyPing.id }) {
-                    TinypingCell(
-                        selectedTinyPing: $selectedTinyPing,
-                        tinyPing: $exmapleTinyPings[index],
-                        answerTinyPing: $answerTinyPing,
-                        correctTinyPings: $correctTinyPings,
-                        onSelectAnswer: onSelectAnswer
-                    )
-                }
+            ForEach(nameQuizUseCase.state.exmapleTinyPings) { tinyPing in
+                TinyPingCell(
+                    selectedTinyPing: $selectedTinyPing,
+                    tinyPing: tinyPing
+                )
             }
         }
         .padding(8)
@@ -163,23 +135,24 @@ private struct TinyPingGrid: View {
 }
 
 // MARK: - 티니핑 리스트 셀
-private struct TinypingCell: View {
+private struct TinyPingCell: View {
     @Environment(PathModel.self) private var pathModel
     @Binding private(set) var selectedTinyPing: TinyPing?
-    @Binding var tinyPing: TinyPing
-    @Binding var answerTinyPing: TinyPing
-    @Binding var correctTinyPings: [TinyPing]  // 맞춘 티니핑 리스트
-    let onSelectAnswer: () -> Void  // 정답 맞췄을 때 호출하는 클로저
+    var tinyPing: TinyPing
+    
+    @Environment(NameQuizUseCase.self) private var nameQuizUseCase: NameQuizUseCase
     
     var body: some View {
+        @Bindable var nameQuizUseCase = nameQuizUseCase
         Button {
             selectedTinyPing = tinyPing
             if let selectedTinyPing = selectedTinyPing {
-                if selectedTinyPing.name == answerTinyPing.name {
-                    correctTinyPings.append(answerTinyPing)
-                    print(correctTinyPings.count)
+                if selectedTinyPing.name == nameQuizUseCase.state.answerTinyPing.name {
+                    nameQuizUseCase.addCorrectTinyPing(nameQuizUseCase.state.answerTinyPing)
+                    print(nameQuizUseCase.state.correctTinyPings)
+                    print(nameQuizUseCase.state.correctTinyPings.count)
                 }
-                onSelectAnswer()  // 정답 맞췄을 때 호출
+                nameQuizUseCase.generateNewQuiz()  // 정답 맞췄을 때 새로운 퀴즈 생성
             }
         } label: {
             ZStack {
@@ -203,4 +176,5 @@ private struct TinypingCell: View {
 #Preview {
     NameQuizView()
         .environment(PathModel())
+        .environment(NameQuizUseCase(nameQuizService: NameQuizService()))
 }

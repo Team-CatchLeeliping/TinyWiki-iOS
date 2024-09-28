@@ -8,5 +8,5 @@
 import Foundation
 
 protocol NameQuizServiceInterface {
-    
+    func generateNewQuiz(state: inout NameQuizUseCase.State)
 }
