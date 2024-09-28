@@ -10,6 +10,7 @@ import Foundation
 enum MainPath: Hashable {
     case detailView
     case nameQuizView
+    case nameQuisResultView
     case imageQuizView
 }
 

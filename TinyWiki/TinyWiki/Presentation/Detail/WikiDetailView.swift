@@ -293,4 +293,5 @@ private struct Description: View {
 
 #Preview {
     WikiDetailView(tinyPing: MockDataBuilder.tinyPing)
+        .environment(PathModel())
 }

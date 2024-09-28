@@ -1,5 +1,5 @@
 //
-//  NameQuiz.swift
+//  NameQuizView.swift
 //  TinyWiki
 //
 //  Created by kyungsoolee on 9/27/24.
@@ -7,23 +7,31 @@
 
 import SwiftUI
 
-struct NameQuiz: View {
-    // TODO: 랜덤으로 티니핑 뽑아오기 구현. 이 때, 이전에 나온 티니핑들은 따로 리스트를 관리하여 다시 선택할 수 없게 해야함.
+struct NameQuizView: View {
     @State private var exmapleTinyPings: [TinyPing] = Array(MockDataBuilder.tinyPings.prefix(4))
     @State var selectedTinyPing: TinyPing?
     @State var answerTinyPing: TinyPing = MockDataBuilder.tinyPing
     @State var usedTinyPings: [TinyPing] = []
-    @State var answerCount: Int = 0
+    @State var correctTinyPings: [TinyPing] = [] // 정답으로 맞춘 티니핑 리스트
+    @Environment(PathModel.self) private var pathModel
     
     var body: some View {
         VStack(spacing: 0) {
-            TimerView()
+            TimerView {
+                pathModel.paths.append(.nameQuisResultView)  // 타이머 종료 후 결과 화면으로 이동
+            }
             Spacer()
                 .frame(height: 84)
             TinyPingNameText(name: answerTinyPing.name)
             Spacer()
                 .frame(height: 36)
-            TinyPingGrid(selectedTinyPing: $selectedTinyPing, exmapleTinyPings: $exmapleTinyPings, answerTinyPing: $answerTinyPing, answerCount: $answerCount, onCorrectAnswer: generateNewQuiz)
+            TinyPingGrid(
+                selectedTinyPing: $selectedTinyPing,
+                exmapleTinyPings: $exmapleTinyPings,
+                answerTinyPing: $answerTinyPing,
+                correctTinyPings: $correctTinyPings, // 맞춘 리스트 전달
+                onSelectAnswer: generateNewQuiz
+            )
         }
         .onAppear {
             generateNewQuiz()
@@ -58,6 +66,7 @@ private struct TimerView: View {
     @State private var width: CGFloat = 0
     let maxTime = 30
     let maxWidth: CGFloat = 340
+    let onTimerEnd: () -> Void
     
     var body: some View {
         VStack(alignment: .center) {
@@ -102,6 +111,7 @@ private struct TimerView: View {
                     width = maxWidth
                 }
                 timer.invalidate()
+                onTimerEnd()
             }
         }
     }
@@ -129,8 +139,8 @@ private struct TinyPingGrid: View {
     @Binding var selectedTinyPing: TinyPing?
     @Binding private(set) var exmapleTinyPings: [TinyPing]
     @Binding var answerTinyPing: TinyPing
-    @Binding var answerCount: Int
-    let onCorrectAnswer: () -> Void  // 정답 맞췄을 때 호출하는 클로저
+    @Binding var correctTinyPings: [TinyPing]  // 맞춘 티니핑 리스트
+    let onSelectAnswer: () -> Void  // 정답 맞췄을 때 호출하는 클로저
     
     private let columns: [GridItem] = Array(repeating: .init(.fixed(180), spacing: nil), count: 2)
     
@@ -142,8 +152,8 @@ private struct TinyPingGrid: View {
                         selectedTinyPing: $selectedTinyPing,
                         tinyPing: $exmapleTinyPings[index],
                         answerTinyPing: $answerTinyPing,
-                        answerCount: $answerCount,
-                        onCorrectAnswer: onCorrectAnswer
+                        correctTinyPings: $correctTinyPings,
+                        onSelectAnswer: onSelectAnswer
                     )
                 }
             }
@@ -158,17 +168,18 @@ private struct TinypingCell: View {
     @Binding private(set) var selectedTinyPing: TinyPing?
     @Binding var tinyPing: TinyPing
     @Binding var answerTinyPing: TinyPing
-    @Binding private(set) var answerCount: Int
-    let onCorrectAnswer: () -> Void  // 정답 맞췄을 때 호출하는 클로저
+    @Binding var correctTinyPings: [TinyPing]  // 맞춘 티니핑 리스트
+    let onSelectAnswer: () -> Void  // 정답 맞췄을 때 호출하는 클로저
     
     var body: some View {
         Button {
             selectedTinyPing = tinyPing
             if let selectedTinyPing = selectedTinyPing {
                 if selectedTinyPing.name == answerTinyPing.name {
-                    answerCount += 1
-                    onCorrectAnswer()  // 정답 맞췄을 때 호출
+                    correctTinyPings.append(answerTinyPing)
+                    print(correctTinyPings.count)
                 }
+                onSelectAnswer()  // 정답 맞췄을 때 호출
             }
         } label: {
             ZStack {
@@ -190,6 +201,6 @@ private struct TinypingCell: View {
 }
 
 #Preview {
-    NameQuiz()
+    NameQuizView()
         .environment(PathModel())
 }
