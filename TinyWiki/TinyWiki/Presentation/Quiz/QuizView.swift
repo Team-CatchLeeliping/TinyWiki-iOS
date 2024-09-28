@@ -27,7 +27,7 @@ struct QuizView: View {
 
 private struct QuizText: View {
     var body: some View {
-        Text("20초 안에\n티니핑을\n몇 마리 맞출 수 있을까요?")
+        Text("30초 안에\n티니핑을\n몇 마리 맞출 수 있을까요?")
             .font(.Head.head3)
             .foregroundStyle(.tinyWhite)
             .multilineTextAlignment(.center)
@@ -39,31 +39,66 @@ private struct QuizText: View {
 private struct QuizList: View {
     var body: some View {
         VStack {
-            QuizCell()
+            ForEach(QuizKind.allCases) { quizKind in
+                QuizCell(quizKind: quizKind)
+            }
         }
     }
 }
 
 // MARK: - 퀴즈 셀
 private struct QuizCell: View {
+    @Environment(PathModel.self) private var pathModel
+    var quizKind: QuizKind
     var body: some View {
-        HStack {
-            Image(.imgHeartyouping)
-                .resizable()
-                .scaledToFit()
-                .frame(width: 64)
-            Text("이름을 보고 나를 맞춰줘 츄")
-                .font(.Body.body1)
-                .foregroundStyle(.tinyPink)
+        Button {
+            switch quizKind {
+                case .name:
+                pathModel.paths.append(.nameQuizView)
+            case .image:
+                pathModel.paths.append(.nameQuizView)
+            }
+        } label: {
+            HStack {
+                Image(.imgHeartyouping)
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 64)
+                Text("\(quizKind.title)을 보고 나를 맞춰줘 츄~")
+                    .font(.Body.body1)
+                    .foregroundStyle(.tinyPink)
+            }
+            .frame(width: 340, height: 96)
+            .background(.tinyWhite)
+            .cornerRadius(20)
+            .contentShape(Rectangle())
+            .shadow(color: Color.black.opacity(0.15), radius: 5, x: 0, y: 1)
         }
-        .frame(width: 340, height: 96)
-        .background(.tinyWhite)
-        .cornerRadius(20)
-        .contentShape(Rectangle())
-        .shadow(color: Color.black.opacity(0.15), radius: 5, x: 0, y: 1)
+        .environment(pathModel)
+    }
+
+}
+
+// TODO: UI와 분리하기
+enum QuizKind: Identifiable, CaseIterable {
+    case name
+    case image
+    
+    /// ID를 생성합니다.
+    var id: UUID {
+        return .init()
+    }
+    
+    /// 탭바의 타이틀을 반환합니다.
+    var title: String {
+        switch self {
+        case .name: return "이름"
+        case .image: return "사진"
+        }
     }
 }
 
 #Preview {
     QuizView()
+        .environment(PathModel())
 }

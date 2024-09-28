@@ -34,6 +34,10 @@ struct HomeView: View {
                 case .detailView: WikiDetailView(tinyPing: selectedTinyPing)
                         .navigationTitle("♡\(selectedTinyPing.name)♡")
                         .navigationBarTitleDisplayMode(.inline)
+                case .nameQuizView: NameQuiz()
+                        .navigationBarTitleDisplayMode(.inline)
+                case .imageQuizView: ImageQuiz()
+                        .navigationBarTitleDisplayMode(.inline)
                 }
             }
             .background {

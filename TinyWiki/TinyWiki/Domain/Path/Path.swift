@@ -9,6 +9,8 @@ import Foundation
 
 enum MainPath: Hashable {
     case detailView
+    case nameQuizView
+    case imageQuizView
 }
 
 @Observable

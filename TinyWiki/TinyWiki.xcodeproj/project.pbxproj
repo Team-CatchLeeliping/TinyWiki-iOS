@@ -43,6 +43,8 @@
 		F35960962C9A047200951F88 /* TinyPing.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35960952C9A047200951F88 /* TinyPing.swift */; };
 		F35960982C9A04A500951F88 /* Sex.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35960972C9A04A500951F88 /* Sex.swift */; };
 		F3B06A8B2CA6D09C004961D2 /* StrokeText.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B06A8A2CA6D09C004961D2 /* StrokeText.swift */; };
+		F3B06A932CA6DCD3004961D2 /* NameQuiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B06A922CA6DCD3004961D2 /* NameQuiz.swift */; };
+		F3B06A952CA6DCDD004961D2 /* ImageQuiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B06A942CA6DCDD004961D2 /* ImageQuiz.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,6 +105,8 @@
 		F35960952C9A047200951F88 /* TinyPing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TinyPing.swift; sourceTree = "<group>"; };
 		F35960972C9A04A500951F88 /* Sex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sex.swift; sourceTree = "<group>"; };
 		F3B06A8A2CA6D09C004961D2 /* StrokeText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrokeText.swift; sourceTree = "<group>"; };
+		F3B06A922CA6DCD3004961D2 /* NameQuiz.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameQuiz.swift; sourceTree = "<group>"; };
+		F3B06A942CA6DCDD004961D2 /* ImageQuiz.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageQuiz.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -201,6 +205,8 @@
 		F358416A2C99CE2C0067AC0E /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				F3B06A8F2CA6DCB7004961D2 /* NameQuiz */,
+				F3B06A8E2CA6DC5B004961D2 /* ImageQuiz */,
 				F3B06A892CA6D062004961D2 /* Component */,
 				F35960922C99FAE400951F88 /* Detail */,
 				F35841AA2C99E6FF0067AC0E /* Quiz */,
@@ -408,6 +414,22 @@
 			path = Component;
 			sourceTree = "<group>";
 		};
+		F3B06A8E2CA6DC5B004961D2 /* ImageQuiz */ = {
+			isa = PBXGroup;
+			children = (
+				F3B06A942CA6DCDD004961D2 /* ImageQuiz.swift */,
+			);
+			path = ImageQuiz;
+			sourceTree = "<group>";
+		};
+		F3B06A8F2CA6DCB7004961D2 /* NameQuiz */ = {
+			isa = PBXGroup;
+			children = (
+				F3B06A922CA6DCD3004961D2 /* NameQuiz.swift */,
+			);
+			path = NameQuiz;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -549,6 +571,7 @@
 				F35960982C9A04A500951F88 /* Sex.swift in Sources */,
 				F358419E2C99D6690067AC0E /* DummyDTO.swift in Sources */,
 				F35960942C99FAF000951F88 /* WikiDetailView.swift in Sources */,
+				F3B06A932CA6DCD3004961D2 /* NameQuiz.swift in Sources */,
 				F35841982C99D63D0067AC0E /* DummyStubService.swift in Sources */,
 				F35841A22C99D8590067AC0E /* HomeView.swift in Sources */,
 				F328E4602C9DF51C00C7E4BF /* WikiView.swift in Sources */,
@@ -563,6 +586,7 @@
 				F35841872C99D5830067AC0E /* Path.swift in Sources */,
 				F31ED79B2C9B0EA600FD6142 /* BackgroundColor.swift in Sources */,
 				F3B06A8B2CA6D09C004961D2 /* StrokeText.swift in Sources */,
+				F3B06A952CA6DCDD004961D2 /* ImageQuiz.swift in Sources */,
 				F35841702C99CE810067AC0E /* Helper+PretendardFont.swift in Sources */,
 				F35841A42C99D9830067AC0E /* Helper+HakgyoansimDunggeunmiso.swift in Sources */,
 				F358419B2C99D6560067AC0E /* MockDataBuilder.swift in Sources */,

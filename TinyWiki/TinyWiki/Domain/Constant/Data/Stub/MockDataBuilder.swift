@@ -12,14 +12,14 @@ struct MockDataBuilder {
     // tinyping 데이터를 반환합니다.
     static var tinyPing: TinyPing {
         return TinyPing(
-            name: "플로라 하츄핑",
-            avatar: "img_heartyouping",
+            name: "하츄핑",
+            avatar: "img_heartchuping",
             generation: 1,
             sex: Sex.female,
             nameDescription: "하트 + 츄",
-            item: "향수(3기)",
-            magic: "<사랑의 향기>(3기 향수)\n향수를 뿌려서 상대 공격을 막을 수 있으며\n대상을 향기에 취하게 만들 수 있다.",
-            favoriteThings: "로미와 함께 있는 모든 순간",
+            item: "손거울(1기)",
+            magic: "<사랑의 빛>(1기 손거울)밝은 빛으로 적들을 방해할 수 있다.",
+            favoriteThings: "손거울을 보며 사랑스러운 표정 연습하기",
             dislikeThings: "억지로 잠을 깨우는 것\n갑자기 깜짝 놀라게 하는 것",
             jewelry: nil,
             key: nil,

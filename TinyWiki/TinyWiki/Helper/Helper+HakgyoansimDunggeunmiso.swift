@@ -9,7 +9,9 @@ import SwiftUI
 
 extension Font {
     enum CustomTitle {
-        static let customTitle1: Font = .custom("Hakgyoansim Dunggeunmiso TTF B", size: 34)
+        static let customTitle1: Font = .custom("Hakgyoansim Dunggeunmiso TTF B", size: 36)
+        static let customTitle2: Font = .custom("Hakgyoansim Dunggeunmiso TTF B", size: 34)
+        static let customTitle3: Font = .custom("Hakgyoansim Dunggeunmiso TTF B", size: 32)
     }
     
     enum Head {
@@ -39,7 +41,9 @@ extension Font {
 
 extension UIFont {
     enum CustomTitle {
-        static let customTitle1: UIFont = UIFont(name: "Hakgyoansim Dunggeunmiso TTF B", size: 34) ?? UIFont.systemFont(ofSize: 34)
+        static let customTitle1: UIFont = UIFont(name: "Hakgyoansim Dunggeunmiso TTF B", size: 36) ?? UIFont.systemFont(ofSize: 36)
+        static let customTitle2: UIFont = UIFont(name: "Hakgyoansim Dunggeunmiso TTF B", size: 34) ?? UIFont.systemFont(ofSize: 34)
+        static let customTitle3: UIFont = UIFont(name: "Hakgyoansim Dunggeunmiso TTF B", size: 32) ?? UIFont.systemFont(ofSize: 32)
     }
     
     enum Head {
