@@ -8,33 +8,34 @@
 import SwiftUI
 
 struct NameQuizView: View {
-//    @State private var exmapleTinyPings: [TinyPing] = Array(MockDataBuilder.tinyPings.prefix(4))
     @State var selectedTinyPing: TinyPing?
-//    @State var answerTinyPing: TinyPing = MockDataBuilder.tinyPing
-//    @State var usedTinyPings: [TinyPing] = []
-//    @State var correctTinyPings: [TinyPing] = [] // 정답으로 맞춘 티니핑 리스트
     @Environment(PathModel.self) private var pathModel
     
-    @State private var nameQuizUseCase: NameQuizUseCase = .init(nameQuizService: NameQuizService())
+    @Environment(NameQuizUseCase.self) private var nameQuizUseCase
     
     var body: some View {
         @Bindable var nameQuizUseCase = nameQuizUseCase
-        VStack(spacing: 0) {
-            TimerView {
-                pathModel.paths.append(.nameQuisResultView)  // 타이머 종료 후 결과 화면으로 이동
+        ZStack {
+            Image(.imgHomebackground)
+                .resizable()
+            VStack(spacing: 0) {
+                TimerView {
+                    pathModel.paths.append(.nameQuisResultView)  // 타이머 종료 후 결과 화면으로 이동
+                }
+                Spacer()
+                    .frame(height: 84)
+                TinyPingNameText()
+                Spacer()
+                    .frame(height: 36)
+                TinyPingGrid(
+                    selectedTinyPing: $selectedTinyPing
+                )
             }
-            Spacer()
-                .frame(height: 84)
-            TinyPingNameText()
-            Spacer()
-                .frame(height: 36)
-            TinyPingGrid(
-                selectedTinyPing: $selectedTinyPing
-            )
+            .onAppear {
+                nameQuizUseCase.generateNewQuiz()
+            }
         }
-        .onAppear {
-            nameQuizUseCase.generateNewQuiz()
-        }
+        .ignoresSafeArea()
     }
 }
 
@@ -148,7 +149,7 @@ private struct TinyPingCell: View {
             selectedTinyPing = tinyPing
             if let selectedTinyPing = selectedTinyPing {
                 if selectedTinyPing.name == nameQuizUseCase.state.answerTinyPing.name {
-                    nameQuizUseCase.addCorrectTinyPing(nameQuizUseCase.state.answerTinyPing)
+                    nameQuizUseCase.addCorrectTinyPing(tinyPing: nameQuizUseCase.state.answerTinyPing)
                     print(nameQuizUseCase.state.correctTinyPings)
                     print(nameQuizUseCase.state.correctTinyPings.count)
                 }

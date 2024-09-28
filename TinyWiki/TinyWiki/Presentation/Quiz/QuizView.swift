@@ -16,6 +16,8 @@ struct QuizView: View {
             }
             Spacer()
             QuizText()
+            Spacer()
+                .frame(height: 44)
             QuizList()
             Spacer()
             

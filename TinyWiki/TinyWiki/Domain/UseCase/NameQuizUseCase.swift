@@ -53,7 +53,12 @@ extension NameQuizUseCase {
     }
     
     // MARK: - Method to add correctTinyPing safely
-    func addCorrectTinyPing(_ tinyPing: TinyPing) {
-        state.correctTinyPings.append(tinyPing)
+    func addCorrectTinyPing(tinyPing: TinyPing) {
+        nameQuizService.addCorrectTinyPing(state: &state, tinyPing: tinyPing)
+    }
+    
+    
+    func resetQuiz() {
+        nameQuizService.resetQuiz(state: &state)
     }
 }

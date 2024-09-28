@@ -8,6 +8,10 @@
 import Foundation
 
 struct NameQuizService: NameQuizServiceInterface {
+    func addCorrectTinyPing(state: inout NameQuizUseCase.State, tinyPing: TinyPing) {
+        state.correctTinyPings.append(tinyPing)
+    }
+    
     func generateNewQuiz(state: inout NameQuizUseCase.State) {
         // 이전에 사용된 티니핑을 제외하고 새로운 티니핑 목록을 필터링
         let availableTinyPings = MockDataBuilder.tinyPings.filter { !state.usedTinyPings.contains($0) }
@@ -30,5 +34,12 @@ struct NameQuizService: NameQuizServiceInterface {
         if state.usedTinyPings.count >= MockDataBuilder.tinyPings.count {
             state.usedTinyPings.removeAll()
         }
+    }
+    
+    func resetQuiz(state: inout NameQuizUseCase.State) {
+        state.usedTinyPings.removeAll()
+        state.exmapleTinyPings.removeAll()
+        state.answerTinyPing = state.exmapleTinyPings.randomElement() ?? MockDataBuilder.tinyPings.first!
+        state.correctTinyPings.removeAll()
     }
 }

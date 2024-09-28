@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct HomeView: View {
-    @Environment(PathModel.self) private var pathModel
+    @State private var pathModel: PathModel = .init()
+    @State private var nameQuizUseCase: NameQuizUseCase = .init(nameQuizService: NameQuizService())
     @Environment(\.colorScheme) var colorScheme
     @State private var selectedTab: Tab = .wiki
     // TODO: 임시 데이터 추후 수정하기
@@ -51,6 +52,7 @@ struct HomeView: View {
             }
         }
         .environment(pathModel)
+        .environment(nameQuizUseCase)
     }
 }
 
@@ -151,6 +153,7 @@ private struct TabBar: View {
 #Preview {
     HomeView()
         .environment(PathModel())
+        .environment(NameQuizUseCase(nameQuizService: NameQuizService()))
 }
 
 //#Preview {
