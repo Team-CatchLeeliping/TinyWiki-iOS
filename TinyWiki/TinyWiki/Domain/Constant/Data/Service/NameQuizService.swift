@@ -14,7 +14,9 @@ struct NameQuizService: NameQuizServiceInterface {
     
     func generateNewQuiz(state: inout NameQuizUseCase.State) {
         // 이전에 사용된 티니핑을 제외하고 새로운 티니핑 목록을 필터링
-        let availableTinyPings = MockDataBuilder.tinyPings.filter { !state.usedTinyPings.contains($0) }
+        let availableTinyPings = MockDataBuilder.tinyPings.filter { tinyPing in
+            !state.usedTinyPings.contains { $0.name == tinyPing.name }
+            }
         
         // 4개의 티니핑을 랜덤으로 선택 (TinyPing이 있는 경우에만)
         if !availableTinyPings.isEmpty {
@@ -22,11 +24,6 @@ struct NameQuizService: NameQuizServiceInterface {
             
             // 정답은 availableTinyPings 중에서 선택, 빈 배열일 경우 nil 유지
             state.answerTinyPing = state.exmapleTinyPings.randomElement() ?? MockDataBuilder.tinyPings.first!
-            
-            // 사용된 티니핑에 정답 추가 (정답이 있을 때만 추가)
-//            if let answer = state.answerTinyPing {
-//                state.usedTinyPings.append(answer)
-//            }
             state.usedTinyPings.append(state.answerTinyPing)
         }
         
