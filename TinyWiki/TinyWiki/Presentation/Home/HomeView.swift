@@ -10,6 +10,7 @@ import SwiftUI
 struct HomeView: View {
     @State private var pathModel: PathModel = .init()
     @State private var nameQuizUseCase: NameQuizUseCase = .init(nameQuizService: NameQuizService())
+    @State private var imageQuizUseCase: ImageQuizUseCase = .init(imageQuizService: ImageQuizService())
     @Environment(\.colorScheme) var colorScheme
     @State private var selectedTab: Tab = .wiki
     // TODO: 임시 데이터 추후 수정하기
@@ -37,11 +38,14 @@ struct HomeView: View {
                         .navigationBarTitleDisplayMode(.inline)
                 case .nameQuizView: NameQuizView()
                         .navigationBarTitleDisplayMode(.inline)
-                case .nameQuisResultView: NameQuizResultView()
+                case .nameQuizResultView: NameQuizResultView()
                         .navigationBarTitleDisplayMode(.inline)
                         .navigationBarBackButtonHidden()
                 case .imageQuizView: ImageQuizView()
                         .navigationBarTitleDisplayMode(.inline)
+                case .imageQuizResultView: ImageQuizResultView()
+                        .navigationBarTitleDisplayMode(.inline)
+                        .navigationBarBackButtonHidden()
                 }
             }
             .background {
@@ -53,6 +57,7 @@ struct HomeView: View {
         }
         .environment(pathModel)
         .environment(nameQuizUseCase)
+        .environment(imageQuizUseCase)
     }
 }
 

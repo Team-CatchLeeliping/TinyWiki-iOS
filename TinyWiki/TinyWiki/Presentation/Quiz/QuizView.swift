@@ -58,7 +58,7 @@ private struct QuizCell: View {
                 case .name:
                 pathModel.paths.append(.nameQuizView)
             case .image:
-                pathModel.paths.append(.nameQuizView)
+                pathModel.paths.append(.imageQuizView)
             }
         } label: {
             HStack {

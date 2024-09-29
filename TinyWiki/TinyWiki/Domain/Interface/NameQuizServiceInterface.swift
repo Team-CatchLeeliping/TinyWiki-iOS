@@ -9,6 +9,6 @@ import Foundation
 
 protocol NameQuizServiceInterface {
     func generateNewQuiz(state: inout NameQuizUseCase.State)
-    func addCorrectTinyPing(state: inout NameQuizUseCase.State, tinyPing tinyPing: TinyPing)
+    func addCorrectTinyPing(state: inout NameQuizUseCase.State, tinyPing: TinyPing)
     func resetQuiz(state: inout NameQuizUseCase.State)
 }

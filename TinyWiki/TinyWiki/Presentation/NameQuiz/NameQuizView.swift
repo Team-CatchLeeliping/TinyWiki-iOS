@@ -20,7 +20,7 @@ struct NameQuizView: View {
                 .resizable()
             VStack(spacing: 0) {
                 TimerView {
-                    pathModel.paths.append(.nameQuisResultView)  // 타이머 종료 후 결과 화면으로 이동
+                    pathModel.paths.append(.nameQuizResultView)  // 타이머 종료 후 결과 화면으로 이동
                 }
                 Spacer()
                     .frame(height: 84)

@@ -49,6 +49,10 @@
 		F3B06A9C2CA8590D004961D2 /* NameQuizUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B06A9B2CA8590D004961D2 /* NameQuizUseCase.swift */; };
 		F3B06A9E2CA85951004961D2 /* NameQuizServiceInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B06A9D2CA85951004961D2 /* NameQuizServiceInterface.swift */; };
 		F3B06AA02CA86302004961D2 /* NameQuizService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B06A9F2CA86302004961D2 /* NameQuizService.swift */; };
+		F3B06AA32CA9C307004961D2 /* ImageQuizResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B06AA22CA9C307004961D2 /* ImageQuizResultView.swift */; };
+		F3B06AA52CA9C39C004961D2 /* ImageQuizServiceInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B06AA42CA9C39C004961D2 /* ImageQuizServiceInterface.swift */; };
+		F3B06AA72CA9C3AA004961D2 /* ImageQuizService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B06AA62CA9C3AA004961D2 /* ImageQuizService.swift */; };
+		F3B06AA92CA9C3C6004961D2 /* ImageQuizUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B06AA82CA9C3C6004961D2 /* ImageQuizUseCase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -115,6 +119,10 @@
 		F3B06A9B2CA8590D004961D2 /* NameQuizUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameQuizUseCase.swift; sourceTree = "<group>"; };
 		F3B06A9D2CA85951004961D2 /* NameQuizServiceInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameQuizServiceInterface.swift; sourceTree = "<group>"; };
 		F3B06A9F2CA86302004961D2 /* NameQuizService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameQuizService.swift; sourceTree = "<group>"; };
+		F3B06AA22CA9C307004961D2 /* ImageQuizResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageQuizResultView.swift; sourceTree = "<group>"; };
+		F3B06AA42CA9C39C004961D2 /* ImageQuizServiceInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageQuizServiceInterface.swift; sourceTree = "<group>"; };
+		F3B06AA62CA9C3AA004961D2 /* ImageQuizService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageQuizService.swift; sourceTree = "<group>"; };
+		F3B06AA82CA9C3C6004961D2 /* ImageQuizUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageQuizUseCase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -213,6 +221,7 @@
 		F358416A2C99CE2C0067AC0E /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				F3B06AA12CA9C2F5004961D2 /* ImageQuizResult */,
 				F3B06A962CA84893004961D2 /* NameQuizResult */,
 				F3B06A8F2CA6DCB7004961D2 /* NameQuiz */,
 				F3B06A8E2CA6DC5B004961D2 /* ImageQuiz */,
@@ -329,6 +338,7 @@
 			children = (
 				F358418C2C99D5E00067AC0E /* DummyUseCase.swift */,
 				F3B06A9B2CA8590D004961D2 /* NameQuizUseCase.swift */,
+				F3B06AA82CA9C3C6004961D2 /* ImageQuizUseCase.swift */,
 			);
 			path = UseCase;
 			sourceTree = "<group>";
@@ -338,6 +348,7 @@
 			children = (
 				F358418F2C99D5F40067AC0E /* DummyInterface.swift */,
 				F3B06A9D2CA85951004961D2 /* NameQuizServiceInterface.swift */,
+				F3B06AA42CA9C39C004961D2 /* ImageQuizServiceInterface.swift */,
 			);
 			path = Interface;
 			sourceTree = "<group>";
@@ -365,6 +376,7 @@
 			children = (
 				F35841942C99D6200067AC0E /* DummyService.swift */,
 				F3B06A9F2CA86302004961D2 /* NameQuizService.swift */,
+				F3B06AA62CA9C3AA004961D2 /* ImageQuizService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -448,6 +460,14 @@
 				F3B06A972CA848BA004961D2 /* NameQuizResultView.swift */,
 			);
 			path = NameQuizResult;
+			sourceTree = "<group>";
+		};
+		F3B06AA12CA9C2F5004961D2 /* ImageQuizResult */ = {
+			isa = PBXGroup;
+			children = (
+				F3B06AA22CA9C307004961D2 /* ImageQuizResultView.swift */,
+			);
+			path = ImageQuizResult;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -590,12 +610,14 @@
 			files = (
 				F35960982C9A04A500951F88 /* Sex.swift in Sources */,
 				F3B06A9E2CA85951004961D2 /* NameQuizServiceInterface.swift in Sources */,
+				F3B06AA92CA9C3C6004961D2 /* ImageQuizUseCase.swift in Sources */,
 				F358419E2C99D6690067AC0E /* DummyDTO.swift in Sources */,
 				F35960942C99FAF000951F88 /* WikiDetailView.swift in Sources */,
 				F3B06A932CA6DCD3004961D2 /* NameQuizView.swift in Sources */,
 				F35841982C99D63D0067AC0E /* DummyStubService.swift in Sources */,
 				F35841A22C99D8590067AC0E /* HomeView.swift in Sources */,
 				F328E4602C9DF51C00C7E4BF /* WikiView.swift in Sources */,
+				F3B06AA52CA9C39C004961D2 /* ImageQuizServiceInterface.swift in Sources */,
 				F328E4622C9E061700C7E4BF /* Helper+UIApplication.swift in Sources */,
 				F358418D2C99D5E00067AC0E /* DummyUseCase.swift in Sources */,
 				F35841752C99CEAB0067AC0E /* SystemImage.swift in Sources */,
@@ -616,6 +638,8 @@
 				F358419B2C99D6560067AC0E /* MockDataBuilder.swift in Sources */,
 				F35841A62C99E57A0067AC0E /* Tab.swift in Sources */,
 				F35960962C9A047200951F88 /* TinyPing.swift in Sources */,
+				F3B06AA72CA9C3AA004961D2 /* ImageQuizService.swift in Sources */,
+				F3B06AA32CA9C307004961D2 /* ImageQuizResultView.swift in Sources */,
 				F35841952C99D6200067AC0E /* DummyService.swift in Sources */,
 				F358418A2C99D5CE0067AC0E /* DummyEntity.swift in Sources */,
 			);
