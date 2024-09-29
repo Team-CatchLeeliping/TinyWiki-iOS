@@ -43,7 +43,8 @@ struct NameQuizView: View {
 private struct TimerView: View {
     @State private var time: Int = 0
     @State private var width: CGFloat = 0
-    let maxTime = 30
+    @State private var timer: Timer?  // 타이머 상태 관리
+    let maxTime = 3
     let maxWidth: CGFloat = 340
     let onTimerEnd: () -> Void
     
@@ -71,21 +72,22 @@ private struct TimerView: View {
             .onAppear {
                 startTimer()
             }
+            .onDisappear {
+                stopTimer()  // 뷰가 사라질 때 타이머 중지
+            }
         }
         
     }
     
     // 타이머 시작
-    // TODO: func 뷰와 분리하기
     private func startTimer() {
-        Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { timer in
+        timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { timer in
             if time < maxTime {
                 time += 1
                 withAnimation(.linear(duration: 1.0)) { // 애니메이션을 시간 증가마다 적용
                     width = (CGFloat(time) / CGFloat(maxTime)) * maxWidth
                 }
             } else {
-                // 마지막에 애니메이션이 끝났을 때, 최대 값까지 확실히 늘려준다.
                 withAnimation(.linear(duration: 0.2)) {
                     width = maxWidth
                 }
@@ -93,6 +95,14 @@ private struct TimerView: View {
                 onTimerEnd()
             }
         }
+    }
+    
+    // 타이머 중지
+    private func stopTimer() {
+        timer?.invalidate()
+        timer = nil
+        time = 0  // 타이머 값 초기화
+        width = 0  // 타이머 바 초기화
     }
 }
 
