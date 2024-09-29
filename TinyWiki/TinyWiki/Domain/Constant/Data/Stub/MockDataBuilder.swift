@@ -572,7 +572,7 @@ struct MockDataBuilder {
                 isLiked: false
             ),
             TinyPing(
-                name: "노라핑& 노리핑",
+                name: "노라핑 & 노리핑",
                 avatar: "img_norapingnoriping",
                 generation: 1,
                 sex: Sex.male,
@@ -650,7 +650,7 @@ struct MockDataBuilder {
                 name: "홀로핑",
                 avatar: "img_holoping",
                 generation: 1,
-                sex: Sex.female,
+                sex: Sex.male,
                 nameDescription: "홀로",
                 item: "낚싯대",
                 magic: "낚싯대를 휘둘러 방어막을 만들 수 있다.",
@@ -780,7 +780,7 @@ struct MockDataBuilder {
                 dislikeThings: "아픈 것, 병원, 보석숲을 떠나는 것",
                 jewelry: "가넷",
                 key: nil,
-                backgroundColor: .green,
+                backgroundColor: .pink,
                 isLiked: false
             ),
             TinyPing(

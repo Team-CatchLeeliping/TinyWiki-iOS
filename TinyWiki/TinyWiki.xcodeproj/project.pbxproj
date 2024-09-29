@@ -226,7 +226,7 @@
 				F3B06A8F2CA6DCB7004961D2 /* NameQuiz */,
 				F3B06A8E2CA6DC5B004961D2 /* ImageQuiz */,
 				F3B06A892CA6D062004961D2 /* Component */,
-				F35960922C99FAE400951F88 /* Detail */,
+				F35960922C99FAE400951F88 /* WikiDetail */,
 				F35841AA2C99E6FF0067AC0E /* Quiz */,
 				F35841A72C99E68A0067AC0E /* Wiki */,
 				F35841A02C99D8500067AC0E /* Home */,
@@ -422,12 +422,12 @@
 			path = Quiz;
 			sourceTree = "<group>";
 		};
-		F35960922C99FAE400951F88 /* Detail */ = {
+		F35960922C99FAE400951F88 /* WikiDetail */ = {
 			isa = PBXGroup;
 			children = (
 				F35960932C99FAF000951F88 /* WikiDetailView.swift */,
 			);
-			path = Detail;
+			path = WikiDetail;
 			sourceTree = "<group>";
 		};
 		F3B06A892CA6D062004961D2 /* Component */ = {

@@ -44,7 +44,8 @@ struct WikiDetailView: View {
                         Image(tinyPing.avatar)
                             .resizable()
                             .scaledToFit()
-                            .frame(width: 220)
+                            .frame(height: 232)
+                            .padding(EdgeInsets(top: 32, leading: 0, bottom: 32, trailing: 0))
                         Description(tinyPing: tinyPing)
                     }
                 }
@@ -52,63 +53,12 @@ struct WikiDetailView: View {
         }
         .onPreferenceChange(ScrollOffsetKey.self) { value in
             scrollOffset = value  // 스크롤 오프셋을 상태 변수에 저장
-            //            alpha =  (-1) * max(0, 0.5) * scrollOffset * 2 / 1000
-//            if value < 0 {
-//                isScroll = true
-//                updateNavigationBarAppearance(scrollOffset: value, navigationTitleColor: navigationTitleColor)
-//            } else {
-//                isScroll = false
-//            }
         }
-//        .onAppear {
-//            setupNavigationAppearance(scrollOffset: scrollOffset, navigationTitleColor: navigationTitleColor)
-//        }
         .background(NavigationBarAppearanceModifier(scrollOffset: scrollOffset, navigationTitleColor: navigationTitleColor))
         .ignoresSafeArea()
     }
 }
 
-//// TODO: 추후 빼기
-//func setupNavigationAppearance(scrollOffset: CGFloat, navigationTitleColor: UIColor) {
-//    let appearance = UINavigationBarAppearance()
-//    appearance.configureWithOpaqueBackground()
-//    
-//    // 타이틀 텍스트 색상 및 폰트 설정
-//    appearance.titleTextAttributes = [
-//        .font: UIFont.Head.head1,  // UIFont 사용
-//        .foregroundColor: navigationTitleColor  // 다크 모드에 따라 색상 설정
-//    ]
-//    appearance.backgroundColor = UIColor.white.withAlphaComponent(0)  // 투명도 조정 (0.0 ~ 1.0)
-//    
-//    appearance.shadowColor = nil  // 이 부분이 선을 없앰
-//    
-//    // 네비게이션 바에 appearance 적용
-//    UINavigationBar.appearance().standardAppearance = appearance
-//    UINavigationBar.appearance().scrollEdgeAppearance = appearance
-//    
-//}
-//
-//func updateNavigationBarAppearance(scrollOffset: CGFloat, navigationTitleColor: UIColor) {
-//    let maxAlpha = 0.5
-//    let alpha =  (-1) * max(0, maxAlpha) * scrollOffset * 2 / 1000 
-//    print(alpha)
-//    
-//    let appearance = UINavigationBarAppearance()
-//    appearance.configureWithOpaqueBackground()
-//    
-//    // 타이틀 텍스트 색상 및 폰트 설정
-//    appearance.titleTextAttributes = [
-//        .font: UIFont.Head.head1,  // UIFont 사용
-//        .foregroundColor: navigationTitleColor  // 다크 모드에 따라 색상 설정
-//    ]
-//    appearance.backgroundColor = UIColor.white.withAlphaComponent(alpha)  // 투명도 조정 (0.0 ~ 1.0)
-//    
-//    appearance.shadowColor = nil  // 이 부분이 선을 없앰
-//        
-//    // 네비게이션 바에 appearance 적용
-//    UINavigationBar.appearance().standardAppearance = appearance
-//    UINavigationBar.appearance().scrollEdgeAppearance = appearance
-//}
 
 
 // MARK: - 스크롤 오프셋 추적을 위한 PreferenceKey
@@ -166,7 +116,7 @@ private struct Description: View {
         }()
     }
     var body: some View {
-        ZStack(alignment: .top) {
+        ZStack(alignment: .topLeading) {
             Image(tinyPing.backgroundColor.descriptionBackground)
                 .resizable()
                 .scaledToFill()
@@ -282,8 +232,6 @@ private struct Description: View {
                         .font(.Head.head6)
                         .lineSpacing(10)
                 }
-                
-                
             }
             .padding(44)
         }
