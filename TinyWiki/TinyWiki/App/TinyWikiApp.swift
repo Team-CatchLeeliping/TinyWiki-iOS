@@ -21,20 +21,21 @@ struct TinyWiki: App {
     
     var body: some Scene {
         WindowGroup {
-            if showSplash {
-                SplashView()
-                    .onAppear {
-                        // 1초 후에 스플래시 화면을 숨기고 HomeView로 전환
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-                            withAnimation {
-                                showSplash = false
-                            }
-                        }
-                    }
-            } else {
-                HomeView()  // 스플래시 화면이 사라진 후에 HomeView를 띄움
-                    .environment(pathModel)
-            }
+            TestView()
+//            if showSplash {
+//                SplashView()
+//                    .onAppear {
+//                        // 1초 후에 스플래시 화면을 숨기고 HomeView로 전환
+//                        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+//                            withAnimation {
+//                                showSplash = false
+//                            }
+//                        }
+//                    }
+//            } else {
+//                HomeView()  // 스플래시 화면이 사라진 후에 HomeView를 띄움
+//                    .environment(pathModel)
+//            }
         }
     }
 }
