@@ -571,6 +571,7 @@ struct MockDataBuilder {
                 backgroundColor: .green,
                 isLiked: false
             ),
+            // TODO: 노라핑 노리핑 나누기
             TinyPing(
                 name: "노라핑 & 노리핑",
                 avatar: "img_norapingnoriping",

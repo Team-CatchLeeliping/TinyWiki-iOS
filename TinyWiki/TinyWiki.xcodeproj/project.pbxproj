@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F303219A2CB6F5A800CFEF63 /* FeedTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30321992CB6F5A800CFEF63 /* FeedTemplate.swift */; };
+		F303219D2CB6FA4C00CFEF63 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = F303219B2CB6FA4C00CFEF63 /* README.md */; };
+		F303219F2CB6FA9500CFEF63 /* Secrets.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = F303219E2CB6FA9500CFEF63 /* Secrets.xcconfig */; };
 		F31ED79B2C9B0EA600FD6142 /* BackgroundColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F31ED79A2C9B0EA600FD6142 /* BackgroundColor.swift */; };
 		F31ED79D2C9C1D0E00FD6142 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = F31ED79C2C9C1D0E00FD6142 /* Localizable.xcstrings */; };
 		F328E4602C9DF51C00C7E4BF /* WikiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F328E45F2C9DF51C00C7E4BF /* WikiView.swift */; };
@@ -73,6 +76,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F30321992CB6F5A800CFEF63 /* FeedTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTemplate.swift; sourceTree = "<group>"; };
+		F303219B2CB6FA4C00CFEF63 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		F303219E2CB6FA9500CFEF63 /* Secrets.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Secrets.xcconfig; sourceTree = "<group>"; };
 		F31ED79A2C9B0EA600FD6142 /* BackgroundColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundColor.swift; sourceTree = "<group>"; };
 		F31ED79C2C9C1D0E00FD6142 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		F328E45F2C9DF51C00C7E4BF /* WikiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WikiView.swift; sourceTree = "<group>"; };
@@ -150,6 +156,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F30321962CB6F53300CFEF63 /* Json */ = {
+			isa = PBXGroup;
+			children = (
+				F30321992CB6F5A800CFEF63 /* FeedTemplate.swift */,
+			);
+			path = Json;
+			sourceTree = "<group>";
+		};
+		F303219C2CB6FA4C00CFEF63 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				F303219B2CB6FA4C00CFEF63 /* README.md */,
+				F303219E2CB6FA9500CFEF63 /* Secrets.xcconfig */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
 		F35841332C99CE190067AC0E = {
 			isa = PBXGroup;
 			children = (
@@ -173,6 +196,7 @@
 		F358413E2C99CE190067AC0E /* TinyWiki */ = {
 			isa = PBXGroup;
 			children = (
+				F303219C2CB6FA4C00CFEF63 /* Config */,
 				F31ED79C2C9C1D0E00FD6142 /* Localizable.xcstrings */,
 				F358419F2C99D6BB0067AC0E /* Info.plist */,
 				F35841842C99D56E0067AC0E /* Domain */,
@@ -257,6 +281,7 @@
 		F35841712C99CE8D0067AC0E /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				F30321962CB6F53300CFEF63 /* Json */,
 				F358417A2C99D08A0067AC0E /* Fonts */,
 				F35841732C99CEA00067AC0E /* SystemImage */,
 				F35841722C99CE940067AC0E /* Assets */,
@@ -577,6 +602,7 @@
 			files = (
 				F35841812C99D0BE0067AC0E /* Hakgyoansim Dunggeunmiso TTF R.ttf in Resources */,
 				F35841472C99CE1A0067AC0E /* Preview Assets.xcassets in Resources */,
+				F303219D2CB6FA4C00CFEF63 /* README.md in Resources */,
 				F35841822C99D0BE0067AC0E /* Hakgyoansim Dunggeunmiso OTF B.otf in Resources */,
 				F35841792C99CED30067AC0E /* Colors.xcassets in Resources */,
 				F35841772C99CECB0067AC0E /* Icons.xcassets in Resources */,
@@ -584,6 +610,7 @@
 				F35841832C99D0BE0067AC0E /* Hakgyoansim Dunggeunmiso TTF B.ttf in Resources */,
 				F35841802C99D0BE0067AC0E /* Hakgyoansim Dunggeunmiso OTF R.otf in Resources */,
 				F31ED79D2C9C1D0E00FD6142 /* Localizable.xcstrings in Resources */,
+				F303219F2CB6FA9500CFEF63 /* Secrets.xcconfig in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -637,6 +664,7 @@
 				F3B06A982CA848BA004961D2 /* NameQuizResultView.swift in Sources */,
 				F358419B2C99D6560067AC0E /* MockDataBuilder.swift in Sources */,
 				F35841A62C99E57A0067AC0E /* Tab.swift in Sources */,
+				F303219A2CB6F5A800CFEF63 /* FeedTemplate.swift in Sources */,
 				F35960962C9A047200951F88 /* TinyPing.swift in Sources */,
 				F3B06AA72CA9C3AA004961D2 /* ImageQuizService.swift in Sources */,
 				F3B06AA32CA9C307004961D2 /* ImageQuizResultView.swift in Sources */,
