@@ -10,6 +10,7 @@
 		F303219A2CB6F5A800CFEF63 /* FeedTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30321992CB6F5A800CFEF63 /* FeedTemplate.swift */; };
 		F303219D2CB6FA4C00CFEF63 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = F303219B2CB6FA4C00CFEF63 /* README.md */; };
 		F303219F2CB6FA9500CFEF63 /* Secrets.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = F303219E2CB6FA9500CFEF63 /* Secrets.xcconfig */; };
+		F30321A22CB7020500CFEF63 /* KakaoSDKCommon in Frameworks */ = {isa = PBXBuildFile; productRef = F30321A12CB7020500CFEF63 /* KakaoSDKCommon */; };
 		F31ED79B2C9B0EA600FD6142 /* BackgroundColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F31ED79A2C9B0EA600FD6142 /* BackgroundColor.swift */; };
 		F31ED79D2C9C1D0E00FD6142 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = F31ED79C2C9C1D0E00FD6142 /* Localizable.xcstrings */; };
 		F328E4602C9DF51C00C7E4BF /* WikiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F328E45F2C9DF51C00C7E4BF /* WikiView.swift */; };
@@ -136,6 +137,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F30321A22CB7020500CFEF63 /* KakaoSDKCommon in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -584,6 +586,9 @@
 				ko,
 			);
 			mainGroup = F35841332C99CE190067AC0E;
+			packageReferences = (
+				F30321A02CB7020500CFEF63 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */,
+			);
 			productRefGroup = F358413D2C99CE190067AC0E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -708,6 +713,7 @@
 /* Begin XCBuildConfiguration section */
 		F358415E2C99CE1A0067AC0E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F303219E2CB6FA9500CFEF63 /* Secrets.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -771,6 +777,7 @@
 		};
 		F358415F2C99CE1A0067AC0E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F303219E2CB6FA9500CFEF63 /* Secrets.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -827,6 +834,7 @@
 		};
 		F35841612C99CE1A0067AC0E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F303219E2CB6FA9500CFEF63 /* Secrets.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -863,6 +871,7 @@
 		};
 		F35841622C99CE1A0067AC0E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F303219E2CB6FA9500CFEF63 /* Secrets.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -899,6 +908,7 @@
 		};
 		F35841642C99CE1A0067AC0E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F303219E2CB6FA9500CFEF63 /* Secrets.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -919,6 +929,7 @@
 		};
 		F35841652C99CE1A0067AC0E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F303219E2CB6FA9500CFEF63 /* Secrets.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -939,6 +950,7 @@
 		};
 		F35841672C99CE1A0067AC0E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F303219E2CB6FA9500CFEF63 /* Secrets.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -957,6 +969,7 @@
 		};
 		F35841682C99CE1A0067AC0E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F303219E2CB6FA9500CFEF63 /* Secrets.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -1013,6 +1026,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F30321A02CB7020500CFEF63 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kakao/kakao-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.22.7;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F30321A12CB7020500CFEF63 /* KakaoSDKCommon */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F30321A02CB7020500CFEF63 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */;
+			productName = KakaoSDKCommon;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F35841342C99CE190067AC0E /* Project object */;
 }

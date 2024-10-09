@@ -6,11 +6,18 @@
 //
 
 import SwiftUI
+import KakaoSDKCommon
 
 @main
 struct TinyWiki: App {
     @State private var pathModel: PathModel = .init()
     @State private var showSplash = true  // 스플래시 화면을 보여줄지 여부를 관리하는 변수
+    
+    init() {
+        let kakaoAppKey = Bundle.main.infoDictionary?["KAKAO_NATIVE_APP_KEY"] ?? ""
+        print("KakaoAppKey: \(kakaoAppKey)")
+        KakaoSDK.initSDK(appKey: kakaoAppKey as! String)
+    }
     
     var body: some Scene {
         WindowGroup {
