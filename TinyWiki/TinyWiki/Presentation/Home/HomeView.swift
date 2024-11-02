@@ -8,7 +8,9 @@
 import SwiftUI
 
 struct HomeView: View {
-    @Environment(PathModel.self) private var pathModel
+    @State private var pathModel: PathModel = .init()
+    @State private var nameQuizUseCase: NameQuizUseCase = .init(nameQuizService: NameQuizService())
+    @State private var imageQuizUseCase: ImageQuizUseCase = .init(imageQuizService: ImageQuizService())
     @Environment(\.colorScheme) var colorScheme
     @State private var selectedTab: Tab = .wiki
     // TODO: 임시 데이터 추후 수정하기
@@ -24,7 +26,7 @@ struct HomeView: View {
                 Header(searchKeyword: $searchKeyword, selectedTab: $selectedTab)
                 switch selectedTab {
                 case .wiki: WikiView(searchKeyword: $searchKeyword, selectedTinyping: $selectedTinyPing)
-//                case .quiz: QuizView()
+                case .quiz: QuizView()
                 }
                 TabBar(selection: $selectedTab)
             }
@@ -34,6 +36,16 @@ struct HomeView: View {
                 case .detailView: WikiDetailView(tinyPing: selectedTinyPing)
                         .navigationTitle("♡\(selectedTinyPing.name)♡")
                         .navigationBarTitleDisplayMode(.inline)
+                case .nameQuizView: NameQuizView()
+                        .navigationBarTitleDisplayMode(.inline)
+                case .nameQuizResultView: NameQuizResultView()
+                        .navigationBarTitleDisplayMode(.inline)
+                        .navigationBarBackButtonHidden()
+                case .imageQuizView: ImageQuizView()
+                        .navigationBarTitleDisplayMode(.inline)
+                case .imageQuizResultView: ImageQuizResultView()
+                        .navigationBarTitleDisplayMode(.inline)
+                        .navigationBarBackButtonHidden()
                 }
             }
             .background {
@@ -44,6 +56,8 @@ struct HomeView: View {
             }
         }
         .environment(pathModel)
+        .environment(nameQuizUseCase)
+        .environment(imageQuizUseCase)
     }
 }
 
@@ -110,35 +124,32 @@ private struct TabBar: View {
         HStack {
             // TODO: 티니퀴즈 구현되면 아래 코드 주석 복원하기
             Spacer()
-//            ForEach(Tab.allCases) { tab in
+            ForEach(Tab.allCases) { tab in
                 Button {
                     print(selection)
-//                    selection = tab
-                    selection = .wiki
+                    selection = tab
                 } label: {
                     VStack {
-                        Image(systemName: /*selection == tab ? tab.icon : tab.emptyIcon*/ selection.icon)
+                        Image(systemName: selection == tab ? tab.icon : tab.emptyIcon)
                             .resizable()
                             .scaledToFit()
                             .frame(height: 24)
-                        Text(selection.title)
+                        Text(tab.title)
                             .font(.Body.body5)
                     }
                 }
                 .contentShape(Rectangle())
                 .foregroundStyle(.tinyWhite)
                 .frame(width: 60)
-//                if tab != .quiz {
-//                    Spacer()
-//                        .frame(width: 128)
-//                }
-//            }
+                if tab != .quiz {
+                    Spacer()
+                        .frame(width: 128)
+                }
+            }
             Spacer()
         }
         .frame(height: 88)
-//        .padding(30)
         .background(Color.tinyLightpink)
-//        .cornerRadius(20)
     }
 }
 
@@ -147,6 +158,7 @@ private struct TabBar: View {
 #Preview {
     HomeView()
         .environment(PathModel())
+        .environment(NameQuizUseCase(nameQuizService: NameQuizService()))
 }
 
 //#Preview {

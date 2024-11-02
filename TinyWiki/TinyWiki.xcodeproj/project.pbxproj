@@ -7,6 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F303219A2CB6F5A800CFEF63 /* FeedTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30321992CB6F5A800CFEF63 /* FeedTemplate.swift */; };
+		F303219D2CB6FA4C00CFEF63 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = F303219B2CB6FA4C00CFEF63 /* README.md */; };
+		F303219F2CB6FA9500CFEF63 /* Secrets.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = F303219E2CB6FA9500CFEF63 /* Secrets.xcconfig */; };
+		F30321A22CB7020500CFEF63 /* KakaoSDKCommon in Frameworks */ = {isa = PBXBuildFile; productRef = F30321A12CB7020500CFEF63 /* KakaoSDKCommon */; };
+		F30321A52CB7052B00CFEF63 /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30321A42CB7052B00CFEF63 /* TestView.swift */; };
+		F30321A72CB7068900CFEF63 /* KakaoSDK in Frameworks */ = {isa = PBXBuildFile; productRef = F30321A62CB7068900CFEF63 /* KakaoSDK */; };
+		F30321A92CB7068900CFEF63 /* KakaoSDKCommon in Frameworks */ = {isa = PBXBuildFile; productRef = F30321A82CB7068900CFEF63 /* KakaoSDKCommon */; };
+		F30321AC2CB7090B00CFEF63 /* KakaoSDK in Frameworks */ = {isa = PBXBuildFile; productRef = F30321AB2CB7090B00CFEF63 /* KakaoSDK */; };
+		F30321AE2CB7090B00CFEF63 /* KakaoSDKAuth in Frameworks */ = {isa = PBXBuildFile; productRef = F30321AD2CB7090B00CFEF63 /* KakaoSDKAuth */; };
+		F30321B02CB7090B00CFEF63 /* KakaoSDKCert in Frameworks */ = {isa = PBXBuildFile; productRef = F30321AF2CB7090B00CFEF63 /* KakaoSDKCert */; };
+		F30321B22CB7090B00CFEF63 /* KakaoSDKCertCore in Frameworks */ = {isa = PBXBuildFile; productRef = F30321B12CB7090B00CFEF63 /* KakaoSDKCertCore */; };
+		F30321B42CB7090B00CFEF63 /* KakaoSDKCommon in Frameworks */ = {isa = PBXBuildFile; productRef = F30321B32CB7090B00CFEF63 /* KakaoSDKCommon */; };
 		F31ED79B2C9B0EA600FD6142 /* BackgroundColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F31ED79A2C9B0EA600FD6142 /* BackgroundColor.swift */; };
 		F31ED79D2C9C1D0E00FD6142 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = F31ED79C2C9C1D0E00FD6142 /* Localizable.xcstrings */; };
 		F328E4602C9DF51C00C7E4BF /* WikiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F328E45F2C9DF51C00C7E4BF /* WikiView.swift */; };
@@ -42,6 +54,17 @@
 		F35960942C99FAF000951F88 /* WikiDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35960932C99FAF000951F88 /* WikiDetailView.swift */; };
 		F35960962C9A047200951F88 /* TinyPing.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35960952C9A047200951F88 /* TinyPing.swift */; };
 		F35960982C9A04A500951F88 /* Sex.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35960972C9A04A500951F88 /* Sex.swift */; };
+		F3B06A8B2CA6D09C004961D2 /* StrokeText.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B06A8A2CA6D09C004961D2 /* StrokeText.swift */; };
+		F3B06A932CA6DCD3004961D2 /* NameQuizView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B06A922CA6DCD3004961D2 /* NameQuizView.swift */; };
+		F3B06A952CA6DCDD004961D2 /* ImageQuizView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B06A942CA6DCDD004961D2 /* ImageQuizView.swift */; };
+		F3B06A982CA848BA004961D2 /* NameQuizResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B06A972CA848BA004961D2 /* NameQuizResultView.swift */; };
+		F3B06A9C2CA8590D004961D2 /* NameQuizUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B06A9B2CA8590D004961D2 /* NameQuizUseCase.swift */; };
+		F3B06A9E2CA85951004961D2 /* NameQuizServiceInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B06A9D2CA85951004961D2 /* NameQuizServiceInterface.swift */; };
+		F3B06AA02CA86302004961D2 /* NameQuizService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B06A9F2CA86302004961D2 /* NameQuizService.swift */; };
+		F3B06AA32CA9C307004961D2 /* ImageQuizResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B06AA22CA9C307004961D2 /* ImageQuizResultView.swift */; };
+		F3B06AA52CA9C39C004961D2 /* ImageQuizServiceInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B06AA42CA9C39C004961D2 /* ImageQuizServiceInterface.swift */; };
+		F3B06AA72CA9C3AA004961D2 /* ImageQuizService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B06AA62CA9C3AA004961D2 /* ImageQuizService.swift */; };
+		F3B06AA92CA9C3C6004961D2 /* ImageQuizUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B06AA82CA9C3C6004961D2 /* ImageQuizUseCase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +85,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F30321992CB6F5A800CFEF63 /* FeedTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTemplate.swift; sourceTree = "<group>"; };
+		F303219B2CB6FA4C00CFEF63 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		F303219E2CB6FA9500CFEF63 /* Secrets.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Secrets.xcconfig; sourceTree = "<group>"; };
+		F30321A42CB7052B00CFEF63 /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
 		F31ED79A2C9B0EA600FD6142 /* BackgroundColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundColor.swift; sourceTree = "<group>"; };
 		F31ED79C2C9C1D0E00FD6142 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		F328E45F2C9DF51C00C7E4BF /* WikiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WikiView.swift; sourceTree = "<group>"; };
@@ -101,6 +128,17 @@
 		F35960932C99FAF000951F88 /* WikiDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WikiDetailView.swift; sourceTree = "<group>"; };
 		F35960952C9A047200951F88 /* TinyPing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TinyPing.swift; sourceTree = "<group>"; };
 		F35960972C9A04A500951F88 /* Sex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sex.swift; sourceTree = "<group>"; };
+		F3B06A8A2CA6D09C004961D2 /* StrokeText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrokeText.swift; sourceTree = "<group>"; };
+		F3B06A922CA6DCD3004961D2 /* NameQuizView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameQuizView.swift; sourceTree = "<group>"; };
+		F3B06A942CA6DCDD004961D2 /* ImageQuizView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageQuizView.swift; sourceTree = "<group>"; };
+		F3B06A972CA848BA004961D2 /* NameQuizResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameQuizResultView.swift; sourceTree = "<group>"; };
+		F3B06A9B2CA8590D004961D2 /* NameQuizUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameQuizUseCase.swift; sourceTree = "<group>"; };
+		F3B06A9D2CA85951004961D2 /* NameQuizServiceInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameQuizServiceInterface.swift; sourceTree = "<group>"; };
+		F3B06A9F2CA86302004961D2 /* NameQuizService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameQuizService.swift; sourceTree = "<group>"; };
+		F3B06AA22CA9C307004961D2 /* ImageQuizResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageQuizResultView.swift; sourceTree = "<group>"; };
+		F3B06AA42CA9C39C004961D2 /* ImageQuizServiceInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageQuizServiceInterface.swift; sourceTree = "<group>"; };
+		F3B06AA62CA9C3AA004961D2 /* ImageQuizService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageQuizService.swift; sourceTree = "<group>"; };
+		F3B06AA82CA9C3C6004961D2 /* ImageQuizUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageQuizUseCase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +146,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F30321B42CB7090B00CFEF63 /* KakaoSDKCommon in Frameworks */,
+				F30321A22CB7020500CFEF63 /* KakaoSDKCommon in Frameworks */,
+				F30321AC2CB7090B00CFEF63 /* KakaoSDK in Frameworks */,
+				F30321A92CB7068900CFEF63 /* KakaoSDKCommon in Frameworks */,
+				F30321B02CB7090B00CFEF63 /* KakaoSDKCert in Frameworks */,
+				F30321A72CB7068900CFEF63 /* KakaoSDK in Frameworks */,
+				F30321AE2CB7090B00CFEF63 /* KakaoSDKAuth in Frameworks */,
+				F30321B22CB7090B00CFEF63 /* KakaoSDKCertCore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -128,6 +174,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F30321962CB6F53300CFEF63 /* Json */ = {
+			isa = PBXGroup;
+			children = (
+				F30321992CB6F5A800CFEF63 /* FeedTemplate.swift */,
+			);
+			path = Json;
+			sourceTree = "<group>";
+		};
+		F303219C2CB6FA4C00CFEF63 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				F303219B2CB6FA4C00CFEF63 /* README.md */,
+				F303219E2CB6FA9500CFEF63 /* Secrets.xcconfig */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		F30321A32CB7051B00CFEF63 /* TestView */ = {
+			isa = PBXGroup;
+			children = (
+				F30321A42CB7052B00CFEF63 /* TestView.swift */,
+			);
+			path = TestView;
+			sourceTree = "<group>";
+		};
 		F35841332C99CE190067AC0E = {
 			isa = PBXGroup;
 			children = (
@@ -151,6 +222,7 @@
 		F358413E2C99CE190067AC0E /* TinyWiki */ = {
 			isa = PBXGroup;
 			children = (
+				F303219C2CB6FA4C00CFEF63 /* Config */,
 				F31ED79C2C9C1D0E00FD6142 /* Localizable.xcstrings */,
 				F358419F2C99D6BB0067AC0E /* Info.plist */,
 				F35841842C99D56E0067AC0E /* Domain */,
@@ -199,7 +271,13 @@
 		F358416A2C99CE2C0067AC0E /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				F35960922C99FAE400951F88 /* Detail */,
+				F30321A32CB7051B00CFEF63 /* TestView */,
+				F3B06AA12CA9C2F5004961D2 /* ImageQuizResult */,
+				F3B06A962CA84893004961D2 /* NameQuizResult */,
+				F3B06A8F2CA6DCB7004961D2 /* NameQuiz */,
+				F3B06A8E2CA6DC5B004961D2 /* ImageQuiz */,
+				F3B06A892CA6D062004961D2 /* Component */,
+				F35960922C99FAE400951F88 /* WikiDetail */,
 				F35841AA2C99E6FF0067AC0E /* Quiz */,
 				F35841A72C99E68A0067AC0E /* Wiki */,
 				F35841A02C99D8500067AC0E /* Home */,
@@ -230,6 +308,7 @@
 		F35841712C99CE8D0067AC0E /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				F30321962CB6F53300CFEF63 /* Json */,
 				F358417A2C99D08A0067AC0E /* Fonts */,
 				F35841732C99CEA00067AC0E /* SystemImage */,
 				F35841722C99CE940067AC0E /* Assets */,
@@ -310,6 +389,8 @@
 			isa = PBXGroup;
 			children = (
 				F358418C2C99D5E00067AC0E /* DummyUseCase.swift */,
+				F3B06A9B2CA8590D004961D2 /* NameQuizUseCase.swift */,
+				F3B06AA82CA9C3C6004961D2 /* ImageQuizUseCase.swift */,
 			);
 			path = UseCase;
 			sourceTree = "<group>";
@@ -318,6 +399,8 @@
 			isa = PBXGroup;
 			children = (
 				F358418F2C99D5F40067AC0E /* DummyInterface.swift */,
+				F3B06A9D2CA85951004961D2 /* NameQuizServiceInterface.swift */,
+				F3B06AA42CA9C39C004961D2 /* ImageQuizServiceInterface.swift */,
 			);
 			path = Interface;
 			sourceTree = "<group>";
@@ -344,6 +427,8 @@
 			isa = PBXGroup;
 			children = (
 				F35841942C99D6200067AC0E /* DummyService.swift */,
+				F3B06A9F2CA86302004961D2 /* NameQuizService.swift */,
+				F3B06AA62CA9C3AA004961D2 /* ImageQuizService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -389,12 +474,52 @@
 			path = Quiz;
 			sourceTree = "<group>";
 		};
-		F35960922C99FAE400951F88 /* Detail */ = {
+		F35960922C99FAE400951F88 /* WikiDetail */ = {
 			isa = PBXGroup;
 			children = (
 				F35960932C99FAF000951F88 /* WikiDetailView.swift */,
 			);
-			path = Detail;
+			path = WikiDetail;
+			sourceTree = "<group>";
+		};
+		F3B06A892CA6D062004961D2 /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				F3B06A8A2CA6D09C004961D2 /* StrokeText.swift */,
+			);
+			path = Component;
+			sourceTree = "<group>";
+		};
+		F3B06A8E2CA6DC5B004961D2 /* ImageQuiz */ = {
+			isa = PBXGroup;
+			children = (
+				F3B06A942CA6DCDD004961D2 /* ImageQuizView.swift */,
+			);
+			path = ImageQuiz;
+			sourceTree = "<group>";
+		};
+		F3B06A8F2CA6DCB7004961D2 /* NameQuiz */ = {
+			isa = PBXGroup;
+			children = (
+				F3B06A922CA6DCD3004961D2 /* NameQuizView.swift */,
+			);
+			path = NameQuiz;
+			sourceTree = "<group>";
+		};
+		F3B06A962CA84893004961D2 /* NameQuizResult */ = {
+			isa = PBXGroup;
+			children = (
+				F3B06A972CA848BA004961D2 /* NameQuizResultView.swift */,
+			);
+			path = NameQuizResult;
+			sourceTree = "<group>";
+		};
+		F3B06AA12CA9C2F5004961D2 /* ImageQuizResult */ = {
+			isa = PBXGroup;
+			children = (
+				F3B06AA22CA9C307004961D2 /* ImageQuizResultView.swift */,
+			);
+			path = ImageQuizResult;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -486,6 +611,9 @@
 				ko,
 			);
 			mainGroup = F35841332C99CE190067AC0E;
+			packageReferences = (
+				F30321AA2CB7090B00CFEF63 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */,
+			);
 			productRefGroup = F358413D2C99CE190067AC0E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -504,6 +632,7 @@
 			files = (
 				F35841812C99D0BE0067AC0E /* Hakgyoansim Dunggeunmiso TTF R.ttf in Resources */,
 				F35841472C99CE1A0067AC0E /* Preview Assets.xcassets in Resources */,
+				F303219D2CB6FA4C00CFEF63 /* README.md in Resources */,
 				F35841822C99D0BE0067AC0E /* Hakgyoansim Dunggeunmiso OTF B.otf in Resources */,
 				F35841792C99CED30067AC0E /* Colors.xcassets in Resources */,
 				F35841772C99CECB0067AC0E /* Icons.xcassets in Resources */,
@@ -511,6 +640,7 @@
 				F35841832C99D0BE0067AC0E /* Hakgyoansim Dunggeunmiso TTF B.ttf in Resources */,
 				F35841802C99D0BE0067AC0E /* Hakgyoansim Dunggeunmiso OTF R.otf in Resources */,
 				F31ED79D2C9C1D0E00FD6142 /* Localizable.xcstrings in Resources */,
+				F303219F2CB6FA9500CFEF63 /* Secrets.xcconfig in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -536,26 +666,39 @@
 			buildActionMask = 2147483647;
 			files = (
 				F35960982C9A04A500951F88 /* Sex.swift in Sources */,
+				F3B06A9E2CA85951004961D2 /* NameQuizServiceInterface.swift in Sources */,
+				F3B06AA92CA9C3C6004961D2 /* ImageQuizUseCase.swift in Sources */,
 				F358419E2C99D6690067AC0E /* DummyDTO.swift in Sources */,
 				F35960942C99FAF000951F88 /* WikiDetailView.swift in Sources */,
+				F3B06A932CA6DCD3004961D2 /* NameQuizView.swift in Sources */,
 				F35841982C99D63D0067AC0E /* DummyStubService.swift in Sources */,
 				F35841A22C99D8590067AC0E /* HomeView.swift in Sources */,
 				F328E4602C9DF51C00C7E4BF /* WikiView.swift in Sources */,
+				F3B06AA52CA9C39C004961D2 /* ImageQuizServiceInterface.swift in Sources */,
 				F328E4622C9E061700C7E4BF /* Helper+UIApplication.swift in Sources */,
 				F358418D2C99D5E00067AC0E /* DummyUseCase.swift in Sources */,
 				F35841752C99CEAB0067AC0E /* SystemImage.swift in Sources */,
 				F328E4642C9E16A200C7E4BF /* NavigationBarAppearanceModifier.swift in Sources */,
+				F3B06A9C2CA8590D004961D2 /* NameQuizUseCase.swift in Sources */,
 				F358416D2C99CE4D0067AC0E /* SplashView.swift in Sources */,
 				F35841AC2C99E70B0067AC0E /* QuizView.swift in Sources */,
+				F3B06AA02CA86302004961D2 /* NameQuizService.swift in Sources */,
 				F35841402C99CE190067AC0E /* TinyWikiApp.swift in Sources */,
 				F35841902C99D5F40067AC0E /* DummyInterface.swift in Sources */,
 				F35841872C99D5830067AC0E /* Path.swift in Sources */,
 				F31ED79B2C9B0EA600FD6142 /* BackgroundColor.swift in Sources */,
+				F3B06A8B2CA6D09C004961D2 /* StrokeText.swift in Sources */,
+				F3B06A952CA6DCDD004961D2 /* ImageQuizView.swift in Sources */,
+				F30321A52CB7052B00CFEF63 /* TestView.swift in Sources */,
 				F35841702C99CE810067AC0E /* Helper+PretendardFont.swift in Sources */,
 				F35841A42C99D9830067AC0E /* Helper+HakgyoansimDunggeunmiso.swift in Sources */,
+				F3B06A982CA848BA004961D2 /* NameQuizResultView.swift in Sources */,
 				F358419B2C99D6560067AC0E /* MockDataBuilder.swift in Sources */,
 				F35841A62C99E57A0067AC0E /* Tab.swift in Sources */,
+				F303219A2CB6F5A800CFEF63 /* FeedTemplate.swift in Sources */,
 				F35960962C9A047200951F88 /* TinyPing.swift in Sources */,
+				F3B06AA72CA9C3AA004961D2 /* ImageQuizService.swift in Sources */,
+				F3B06AA32CA9C307004961D2 /* ImageQuizResultView.swift in Sources */,
 				F35841952C99D6200067AC0E /* DummyService.swift in Sources */,
 				F358418A2C99D5CE0067AC0E /* DummyEntity.swift in Sources */,
 			);
@@ -596,6 +739,7 @@
 /* Begin XCBuildConfiguration section */
 		F358415E2C99CE1A0067AC0E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F303219E2CB6FA9500CFEF63 /* Secrets.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -659,6 +803,7 @@
 		};
 		F358415F2C99CE1A0067AC0E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F303219E2CB6FA9500CFEF63 /* Secrets.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -715,6 +860,7 @@
 		};
 		F35841612C99CE1A0067AC0E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F303219E2CB6FA9500CFEF63 /* Secrets.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -751,6 +897,7 @@
 		};
 		F35841622C99CE1A0067AC0E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F303219E2CB6FA9500CFEF63 /* Secrets.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -787,6 +934,7 @@
 		};
 		F35841642C99CE1A0067AC0E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F303219E2CB6FA9500CFEF63 /* Secrets.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -807,6 +955,7 @@
 		};
 		F35841652C99CE1A0067AC0E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F303219E2CB6FA9500CFEF63 /* Secrets.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -827,6 +976,7 @@
 		};
 		F35841672C99CE1A0067AC0E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F303219E2CB6FA9500CFEF63 /* Secrets.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -845,6 +995,7 @@
 		};
 		F35841682C99CE1A0067AC0E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F303219E2CB6FA9500CFEF63 /* Secrets.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -901,6 +1052,68 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F30321A02CB7020500CFEF63 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kakao/kakao-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.22.7;
+			};
+		};
+		F30321AA2CB7090B00CFEF63 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kakao/kakao-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.22.7;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F30321A12CB7020500CFEF63 /* KakaoSDKCommon */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F30321A02CB7020500CFEF63 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */;
+			productName = KakaoSDKCommon;
+		};
+		F30321A62CB7068900CFEF63 /* KakaoSDK */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F30321A02CB7020500CFEF63 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */;
+			productName = KakaoSDK;
+		};
+		F30321A82CB7068900CFEF63 /* KakaoSDKCommon */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F30321A02CB7020500CFEF63 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */;
+			productName = KakaoSDKCommon;
+		};
+		F30321AB2CB7090B00CFEF63 /* KakaoSDK */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F30321AA2CB7090B00CFEF63 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */;
+			productName = KakaoSDK;
+		};
+		F30321AD2CB7090B00CFEF63 /* KakaoSDKAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F30321AA2CB7090B00CFEF63 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */;
+			productName = KakaoSDKAuth;
+		};
+		F30321AF2CB7090B00CFEF63 /* KakaoSDKCert */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F30321AA2CB7090B00CFEF63 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */;
+			productName = KakaoSDKCert;
+		};
+		F30321B12CB7090B00CFEF63 /* KakaoSDKCertCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F30321AA2CB7090B00CFEF63 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */;
+			productName = KakaoSDKCertCore;
+		};
+		F30321B32CB7090B00CFEF63 /* KakaoSDKCommon */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F30321AA2CB7090B00CFEF63 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */;
+			productName = KakaoSDKCommon;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F35841342C99CE190067AC0E /* Project object */;
 }

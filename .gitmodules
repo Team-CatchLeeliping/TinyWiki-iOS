@@ -1,0 +1,3 @@
+[submodule "TinyWiki/TinyWiki/Config"]
+	path = TinyWiki/TinyWiki/Config
+	url = https://github.com/Team-CatchLeeliping/TinyWiki-iOS-Config.git

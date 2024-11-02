@@ -13,4 +13,5 @@ enum SystemImage {
     static let menu = "book.fill"
     static let emptyHeart = "heart"
     static let emptyMenu = "book"
+    static let stopwatch = "stopwatch"
 }

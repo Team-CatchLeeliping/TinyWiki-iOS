@@ -12,14 +12,14 @@ struct MockDataBuilder {
     // tinyping 데이터를 반환합니다.
     static var tinyPing: TinyPing {
         return TinyPing(
-            name: "플로라 하츄핑",
-            avatar: "img_heartyouping",
+            name: "하츄핑",
+            avatar: "img_heartchuping",
             generation: 1,
             sex: Sex.female,
             nameDescription: "하트 + 츄",
-            item: "향수(3기)",
-            magic: "<사랑의 향기>(3기 향수)\n향수를 뿌려서 상대 공격을 막을 수 있으며\n대상을 향기에 취하게 만들 수 있다.",
-            favoriteThings: "로미와 함께 있는 모든 순간",
+            item: "손거울(1기)",
+            magic: "<사랑의 빛>(1기 손거울)밝은 빛으로 적들을 방해할 수 있다.",
+            favoriteThings: "손거울을 보며 사랑스러운 표정 연습하기",
             dislikeThings: "억지로 잠을 깨우는 것\n갑자기 깜짝 놀라게 하는 것",
             jewelry: nil,
             key: nil,
@@ -186,8 +186,8 @@ struct MockDataBuilder {
                 avatar: "img_blankping",
                 generation: 1,
                 sex: Sex.male,
-                nameDescription: "승부를 붙다 → 부투",
-                item: "깃발",
+                nameDescription: "깜빡 잊다 → 깜빡",
+                item: "지우개",
                 magic: "① 대상이 잠시동안 '깜빡' 잊어버리게 만들 수 있다.\n② 지우개로 사물을 지우면, 사물이 순간적으로 사라졌다 나타난다.",
                 favoriteThings: "여유, 느긋함",
                 dislikeThings: "정확한 규율과 규칙, 바로핑의 잔소리!",
@@ -232,7 +232,7 @@ struct MockDataBuilder {
                 generation: 1,
                 sex: Sex.male,
                 nameDescription: "귀찮아",
-                item: "커다란 베개",
+                item: "커다란 베개", 
                 magic: "상대의 의욕을 상실시키며, 행동이 느려지게 한다.",
                 favoriteThings: "낮잠, 주말, 그리고 모순적이지만 빠른 자동차!",
                 dislikeThings: "별 것 아닌데 말 시키는 것, 바로핑의 잔소리",
@@ -456,7 +456,7 @@ struct MockDataBuilder {
                 avatar: "img_ssingssingping",
                 generation: 1,
                 sex: Sex.male,
-                nameDescription: "거꾸로",
+                nameDescription: "씽씽(빠르게 지나갈 때 소리)",
                 item: "킥보드",
                 magic: "대상의 스피드를 자유자재로 제어할 수 있다.",
                 favoriteThings: "제트기 등의 빠른 것",
@@ -505,7 +505,7 @@ struct MockDataBuilder {
                 item: "딱풀",
                 magic: "싸우는 대상 둘을 붙여버릴 수 있다.",
                 favoriteThings:"사이좋게 지내는 것",
-                dislikeThings: "서로 싸우는 것y",
+                dislikeThings: "서로 싸우는 것",
                 jewelry: nil,
                 key: nil,
                 backgroundColor: .yellow,
@@ -571,8 +571,9 @@ struct MockDataBuilder {
                 backgroundColor: .green,
                 isLiked: false
             ),
+            // TODO: 노라핑 노리핑 나누기
             TinyPing(
-                name: "노라핑& 노리핑",
+                name: "노라핑 & 노리핑",
                 avatar: "img_norapingnoriping",
                 generation: 1,
                 sex: Sex.male,
@@ -591,7 +592,7 @@ struct MockDataBuilder {
                 avatar: "img_ahuping",
                 generation: 1,
                 sex: Sex.female,
-                nameDescription: "놀아, 놀이",
+                nameDescription: "아휴~(한숨 소리)",
                 item: "나팔",
                 magic: "나팔소리를 들으면 우울해져 한숨이 나오게 한다",
                 favoriteThings:"포기, 우울한 생각하기",
@@ -650,7 +651,7 @@ struct MockDataBuilder {
                 name: "홀로핑",
                 avatar: "img_holoping",
                 generation: 1,
-                sex: Sex.female,
+                sex: Sex.male,
                 nameDescription: "홀로",
                 item: "낚싯대",
                 magic: "낚싯대를 휘둘러 방어막을 만들 수 있다.",
@@ -780,7 +781,7 @@ struct MockDataBuilder {
                 dislikeThings: "아픈 것, 병원, 보석숲을 떠나는 것",
                 jewelry: "가넷",
                 key: nil,
-                backgroundColor: .green,
+                backgroundColor: .pink,
                 isLiked: false
             ),
             TinyPing(
@@ -1625,21 +1626,36 @@ struct MockDataBuilder {
                 backgroundColor: .pink,
                 isLiked: false
             ),
-//            TinyPing(
-//                name: "트러핑",
-//                avatar: "img_bbubbuping",
-//                generation: 4,
-//                sex: Sex.female,
-//                nameDescription: "트러블",
-//                item: "불명",
-//                magic: "불명",
-//                favoriteThings: "불명",
-//                dislikeThings: "티니핑과 인간이 친구가 되는 것",
-//                jewelry: nil,
-//                key: nil,
-//                backgroundColor: .purple,
-//                isLiked: false
-//            ),
+            TinyPing(
+                name: "다해핑",
+                avatar: "img_onlyping",
+                generation: 2,
+                sex: Sex.female,
+                nameDescription: "뭐든 다 하다 -> 다해",
+                item: "비녀",
+                magic: "전류 마법을 기본으로 사용하지만, 왕립 티니핑 스쿨 수석 졸업생인만큼 다양한 마법을 사용할 수 있다.",
+                favoriteThings: "제니, 제니와 함께하는 시간 전부",
+                dislikeThings: "제니에게 무례한 사람이나 행동",
+                jewelry: "흑진주",
+                key: nil,
+                backgroundColor: .purple,
+                isLiked: false
+            ),
+            TinyPing(
+                name: "트러핑",
+                avatar: "img_trustping",
+                generation: 0,
+                sex: Sex.male,
+                nameDescription: "Trouble(문제, 말썽) 혹은 사이가 틀어지다",
+                item: "없음",
+                magic: "석화 마법을 사용한다. 또한 티니핑들을 자신의 지시만 따르는 병사핑들로 만들거나 괴물로 만든다.",
+                favoriteThings: "???",
+                dislikeThings: "티니핑과 인간이 친구가 되는 것",
+                jewelry: "???",
+                key: nil,
+                backgroundColor: .purple,
+                isLiked: false
+            )
         ]
     }
 }
