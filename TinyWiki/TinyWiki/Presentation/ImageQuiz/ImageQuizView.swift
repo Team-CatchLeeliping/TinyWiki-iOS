@@ -181,7 +181,7 @@ private struct TinyPingNameCell: View {
                 .overlay(
                     RoundedRectangle(cornerRadius: 20)
                     // TODO: 삼항연산자로 반복해서 쓰여진 코드 함수화시키기
-                        .stroke(selectedTinyPing == nil ? .tinyWhite : selectedTinyPing == tinyPing && tinyPing == imageQuizUseCase.state.answerTinyPing ? Color.green : selectedTinyPing == tinyPing ? Color.red : tinyPing == imageQuizUseCase.state.answerTinyPing ? Color.blue : .tinyWhite, lineWidth: 10)
+                        .stroke(selectedTinyPing == nil ? .tinyWhite : selectedTinyPing == tinyPing && tinyPing == imageQuizUseCase.state.answerTinyPing ? Color.green : selectedTinyPing == tinyPing ? Color.red : tinyPing == imageQuizUseCase.state.answerTinyPing ? Color.blue : .tinyWhite, lineWidth: 6)
                 )
         }
         .disabled(isButtonDisabled) // 버튼 비활성화 상태 적용

@@ -62,7 +62,7 @@ private struct QuizCell: View {
             }
         } label: {
             HStack {
-                Image(.imgHeartyouping)
+                Image(quizKind.image)
                     .resizable()
                     .scaledToFit()
                     .frame(width: 64)
@@ -96,6 +96,13 @@ enum QuizKind: Identifiable, CaseIterable {
         switch self {
         case .name: return "이름"
         case .image: return "사진"
+        }
+    }
+    
+    var image: ImageResource {
+        switch self {
+        case .name: return .imgHeartyouping
+        case .image: return .imgGguraeping
         }
     }
 }

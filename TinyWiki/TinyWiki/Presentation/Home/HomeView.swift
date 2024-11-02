@@ -134,7 +134,7 @@ private struct TabBar: View {
                             .resizable()
                             .scaledToFit()
                             .frame(height: 24)
-                        Text(selection.title)
+                        Text(tab.title)
                             .font(.Body.body5)
                     }
                 }
