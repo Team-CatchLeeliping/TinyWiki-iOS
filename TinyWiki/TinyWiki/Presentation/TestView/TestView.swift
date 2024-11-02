@@ -12,15 +12,15 @@ import KakaoSDKCommon
 
 struct TestView: View {
     var body: some View {
-        Button(action: {
-                        kakaoButtonAction()
-                    }) {
-                        Text("카카오톡으로 공유하기")
-                            .foregroundColor(.white)
-                            .padding()
-                            .background(Color.blue)
-                            .cornerRadius(10)
-                    }
+        Button {
+            kakaoButtonAction()
+        } label: {
+            Text("카카오톡으로 공유하기")
+                .foregroundColor(.white)
+                .padding()
+                .background(Color.blue)
+                .cornerRadius(10)
+        }
     }
 }
 
@@ -29,7 +29,7 @@ var kakaoButtonAction: () -> Void = {
     guard let templatable = try? SdkJSONDecoder.custom.decode(FeedTemplate.self, from: feedTemplateJsonStringData) else {
         return
     }
-
+    
     // 카카오톡 설치여부 확인
     if ShareApi.isKakaoTalkSharingAvailable() {
         // 카카오톡으로 카카오톡 공유 가능
@@ -53,12 +53,7 @@ var kakaoButtonAction: () -> Void = {
         // Custom WebView 또는 디폴트 브라우져 사용 가능
         // 웹 공유 예시 코드
         if let url = ShareApi.shared.makeDefaultUrl(templatable: templatable) {
-//            self.safariViewController = SFSafariViewController(url: url)
-//            self.safariViewController?.modalTransitionStyle = .crossDissolve
-//            self.safariViewController?.modalPresentationStyle = .overCurrentContext
-//            self.present(self.safariViewController!, animated: true) {
-//                print("웹 present success")
-//            }
+            
         }
     }
 }

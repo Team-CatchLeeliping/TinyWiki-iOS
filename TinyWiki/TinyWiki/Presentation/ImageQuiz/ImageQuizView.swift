@@ -126,7 +126,7 @@ private struct TinyPingList: View {
     
     var body: some View {
         @Bindable var imageQuizUseCase = imageQuizUseCase
-        VStack {
+        VStack(spacing: 20) {
             ForEach(imageQuizUseCase.state.exmapleTinyPings) { tinyPing in
                 TinyPingNameCell(
                     selectedTinyPing: $selectedTinyPing,
@@ -145,28 +145,46 @@ private struct TinyPingNameCell: View {
     var tinyPing: TinyPing
     
     @Environment(ImageQuizUseCase.self) private var imageQuizUseCase: ImageQuizUseCase
+    @State private var isButtonDisabled: Bool = false
     
     var body: some View {
         @Bindable var imageQuizUseCase = imageQuizUseCase
         Button {
-            selectedTinyPing = tinyPing
-            if let selectedTinyPing = selectedTinyPing {
-                if selectedTinyPing.name == imageQuizUseCase.state.answerTinyPing.name {
-                    imageQuizUseCase.addCorrectTinyPing(tinyPing: imageQuizUseCase.state.answerTinyPing)
+            withAnimation {
+                
+                selectedTinyPing = tinyPing
+                isButtonDisabled = true // 버튼 비활성화
+                if let selectedTinyPing = selectedTinyPing {
+                    if selectedTinyPing.name == imageQuizUseCase.state.answerTinyPing.name {
+                        imageQuizUseCase.addCorrectTinyPing(tinyPing: imageQuizUseCase.state.answerTinyPing)
+                    }
+                    // 0.1초 딜레이 후 새로운 퀴즈 생성 및 버튼 활성화
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                        imageQuizUseCase.generateNewQuiz()
+                        self.selectedTinyPing = nil
+                    }
                 }
-                imageQuizUseCase.generateNewQuiz()  // 정답 맞췄을 때 새로운 퀴즈 생성
             }
         } label: {
             Text("♡\(tinyPing.name)♡")
                 .font(.CustomTitle.customTitle1)
                 .foregroundStyle(.tinyPink)
+                .lineLimit(1) // 한 줄로 제한
+                .minimumScaleFactor(0.5) // 텍스트를 최소 50% 크기까지 줄임
+                .frame(width: 320, height: 40)
                 .padding()
+            // TODO: 삼항연산자로 반복해서 쓰여진 코드 함수화시키기
                 .background {
-                    RoundedRectangle(cornerRadius: 10)
-                        .foregroundColor(.white)
-                        .frame(width: 340, height: 64)
+                    RoundedRectangle(cornerRadius: 20)
+                        .foregroundColor(selectedTinyPing == nil ? .tinyWhite : selectedTinyPing == tinyPing && tinyPing == imageQuizUseCase.state.answerTinyPing ? Color.green.opacity(0.4) : selectedTinyPing == tinyPing ? Color.red.opacity(0.4) : tinyPing == imageQuizUseCase.state.answerTinyPing ? Color.blue.opacity(0.4) : .tinyWhite)
                 }
+                .overlay(
+                    RoundedRectangle(cornerRadius: 20)
+                    // TODO: 삼항연산자로 반복해서 쓰여진 코드 함수화시키기
+                        .stroke(selectedTinyPing == nil ? .tinyWhite : selectedTinyPing == tinyPing && tinyPing == imageQuizUseCase.state.answerTinyPing ? Color.green : selectedTinyPing == tinyPing ? Color.red : tinyPing == imageQuizUseCase.state.answerTinyPing ? Color.blue : .tinyWhite, lineWidth: 10)
+                )
         }
+        .disabled(isButtonDisabled) // 버튼 비활성화 상태 적용
         .environment(pathModel)
     }
 }

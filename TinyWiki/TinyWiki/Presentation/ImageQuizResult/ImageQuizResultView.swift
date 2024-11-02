@@ -83,24 +83,21 @@ private struct ShareResultButton: View {
     @Environment(ImageQuizUseCase.self) private var imageQuizUseCase: ImageQuizUseCase
     
     @Binding private(set) var isPresentedSharedLink: Bool
-    var appStoreURL: URL = URL(string:"https://apps.apple.com/kr/app/%ED%8B%B0%EB%8B%88%EC%9C%84%ED%82%A4/id6705134139?l=en-GB")!
-    
     var body: some View {
         @Bindable var imageQuizUseCase = imageQuizUseCase
         // TODO: 이수랑 어떻게 할지 상의 필요
-            ShareLink (
-                item: appStoreURL,
-                subject: Text("티니위키"),
-                message: Text("\n티니위키로 너의 티니핑 지식을 뽐내봐 츄!\n나는 \(MockDataBuilder.tinyPings.count)개 중에 \(imageQuizUseCase.state.correctTinyPings.count)개나 맞췄어 츄!")
-            ) {
-                Text("♡결과 공유하기♡")
-                    .font(.Head.head6)
-                    .foregroundStyle(.tinyPink)
-                    .padding(EdgeInsets(top: 16, leading: 96, bottom: 16, trailing: 96))
-                    .background {
-                        RoundedRectangle(cornerRadius: 16)
-                    }
-            }
+        Button {
+            kakaoButtonAction()
+        } label: {
+            Text("♡카카오톡 공유하기♡")
+                .font(.Head.head6)
+                .foregroundStyle(.tinyPink)
+                .padding(EdgeInsets(top: 16, leading: 0, bottom: 16, trailing: 0))
+                .frame(width: 328, height: 52)
+                .background {
+                    RoundedRectangle(cornerRadius: 16)
+                }
+        }
     }
 }
 

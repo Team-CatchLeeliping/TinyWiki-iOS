@@ -6,6 +6,9 @@
 //
 
 import Foundation
+import KakaoSDKShare
+import KakaoSDKTemplate
+import KakaoSDKCommon
 
 @Observable
 final class ImageQuizUseCase {

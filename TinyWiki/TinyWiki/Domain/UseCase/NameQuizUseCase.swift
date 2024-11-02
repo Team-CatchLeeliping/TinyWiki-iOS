@@ -57,8 +57,8 @@ extension NameQuizUseCase {
         nameQuizService.addCorrectTinyPing(state: &state, tinyPing: tinyPing)
     }
     
-    
     func resetQuiz() {
         nameQuizService.resetQuiz(state: &state)
     }
+    
 }
